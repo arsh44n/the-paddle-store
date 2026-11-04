@@ -3,5 +3,5 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
-# Raw duplicate dump folder (media is standardized in public/assets/videos)
-videos/
+# Raw duplicate dump folder at root only
+/videos/
