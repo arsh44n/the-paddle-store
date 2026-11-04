@@ -1,0 +1,283 @@
+{
+  "client": {
+    "brand_name": "The Paddle Store",
+    "handle": "@the_paddle_store_",
+    "monogram": "TPS",
+    "industry": "Pickleball Performance Equipment & D2C Pro-Shop",
+    "locations": [
+      "Delhi",
+      "Hisar",
+      "PAN-India Delivery"
+    ],
+    "operating_hours": "WhatsApp Desk & Online Orders 24/7",
+    "seed_links": {
+      "instagram": "https://www.instagram.com/the_paddle_store_?dlrf=cnMwbDg3Z2V3dWQx"
+    }
+  },
+  "business_model": {
+    "archetype": "E_COMMERCE_D2C_STORE",
+    "rationale": "The Paddle Store is a direct-to-consumer sports equipment pro-shop selling tournament-legal pickleball paddles (Boomstik, Agassi V, OMNI, Kevlar, Perseus), performance balls (AK-40, AGASSI 40), and accessories with PAN-India delivery, 7-day returns, COD, and instant WhatsApp ordering.",
+    "recon_targets": [
+      "Paddle specifications (T700 Toray raw carbon, honeycomb core, thickness 16mm/14mm)",
+      "Pricing vs international brand MSRP (e.g. ₹5,500 vs ₹35,000 Selkirk Labs)",
+      "Freebies and package offers (Free paddle cover + tournament ball with every paddle)",
+      "Shipping terms (PAN-India express delivery, Cash on Delivery available, 7-day return policy)",
+      "B2B court owners & academy wholesale pricing"
+    ],
+    "asset_hunting_priorities": [
+      "Isolated high-res product packshots for every paddle model",
+      "Comparison and spec tear-down collateral",
+      "Macro carbon fiber texture and foam core graphics",
+      "Customer matchplay and review reels"
+    ],
+    "primary_conversion": {
+      "cta_text": "ADD TO CART / BUY NOW",
+      "secondary_cta": "ORDER VIA WHATSAPP",
+      "form_intent_options": [
+        "Product Inquiry / Custom Grip & Weight",
+        "Court Owner / Academy Bulk Wholesale",
+        "Order Tracking & Shipping",
+        "General Question / Play Advice"
+      ]
+    },
+    "benchmark_reference_pool": [
+      "CRBN Pickleball (crbnpickleball.com)",
+      "Gymshark Pro-Shop (gymshark.com)",
+      "Selkirk Labs Performance"
+    ]
+  },
+  "commercial_dna": {
+    "tagline": "SAME SPECS. SMARTER PRICE. Performance Paddles Built For Control, Power & Spin.",
+    "tone_of_voice": "High-Performance Technical Authority, Direct-to-Consumer Value Disruptor, Athletic Precision",
+    "offerings_catalog": [
+      {
+        "id": "boomstik-flagship",
+        "name": "Boomstik Carbon Flagship",
+        "category": "Pro Carbon Paddles",
+        "price": 5500,
+        "mrp": 35000,
+        "badge": "FLAGSHIP VALUE",
+        "specs": "16mm Thickness • Elongated Shape • Toray T700 Raw Carbon • Full Foam Injected Perimeter",
+        "freebies": "Free Agassi 40 Ball + Premium Thermal Paddle Cover",
+        "asset_ref": "public/assets/products/post_2.jpg"
+      },
+      {
+        "id": "omni-advanced",
+        "name": "OMNI Advanced Spin",
+        "category": "Pro Carbon Paddles",
+        "price": 5500,
+        "mrp": 6000,
+        "badge": "PRE-BOOKING SPECIAL",
+        "specs": "Adjustable Weight System • Gritty Friction Surface • 4 Colorways • Maximum RPM",
+        "freebies": "Free Agassi 40 Ball + Premium Cover",
+        "asset_ref": "public/assets/products/post_7.jpg"
+      },
+      {
+        "id": "agassi-v",
+        "name": "Agassi V Tournament Touch",
+        "category": "Control Series",
+        "price": 4500,
+        "mrp": 5000,
+        "badge": "BESTSELLER",
+        "specs": "16mm Honeycomb Core • Aerodynamic Curved Throat • Precision Dink Control",
+        "freebies": "Free Ball + Paddle Cover",
+        "asset_ref": "public/assets/products/post_5_c_1.jpg"
+      },
+      {
+        "id": "agassi-v-ltd",
+        "name": "Agassi V Limited Edition",
+        "category": "Control Series",
+        "price": 4700,
+        "mrp": 5200,
+        "badge": "LIMITED DROP",
+        "specs": "Custom Metallic Finish • Reinforced Perimeter Edge Guard • Balanced Swing Weight",
+        "freebies": "Free Ball + Paddle Cover",
+        "asset_ref": "public/assets/products/post_5_c_2.jpg"
+      },
+      {
+        "id": "perseus-v-titan",
+        "name": "Perseus V Titan",
+        "category": "Power Series",
+        "price": 4500,
+        "mrp": 5000,
+        "badge": "POWER HEAVY",
+        "specs": "Hyper-Rigid Carbon Face • Explosive Baseline Drives • Reinforced Neck",
+        "freebies": "Free Ball + Paddle Cover",
+        "asset_ref": "public/assets/products/post_5_c_6.jpg"
+      },
+      {
+        "id": "kevlar-pro",
+        "name": "Kevlar Pro Tour",
+        "category": "Pro Carbon Paddles",
+        "price": 5000,
+        "mrp": 6000,
+        "badge": "EXTREME DURABILITY",
+        "specs": "Aramid-Kevlar Cross-Weave • Zero Soft Spots • Crisp Pop on Drives & Speedups",
+        "freebies": "Free Ball + Paddle Cover",
+        "asset_ref": "public/assets/products/post_5_c_8.jpg"
+      },
+      {
+        "id": "agassi-40-balls",
+        "name": "AGASSI 40 Tournament Balls (3-Pack)",
+        "category": "Balls & Accessories",
+        "price": 499,
+        "mrp": 699,
+        "badge": "TOURNAMENT GRADE",
+        "specs": "40 Precision Drilled Holes • Single-Piece Roto-Molded • True Wind-Resistant Flight",
+        "freebies": "PAN India Delivery",
+        "asset_ref": "public/assets/products/post_6.jpg"
+      },
+      {
+        "id": "ak-40-balls",
+        "name": "AK-40 Club & Academy Balls (3-Pack)",
+        "category": "Balls & Accessories",
+        "price": 399,
+        "mrp": 550,
+        "badge": "ACADEMY FAVORITE",
+        "specs": "High-Durability Crack-Resistant Polymer • Optimized for Daily Practice & Coaching",
+        "freebies": "Bulk Court Discounts Available",
+        "asset_ref": "public/assets/products/post_6_c_2.jpg"
+      },
+      {
+        "id": "practice-caddy",
+        "name": "Portable Pickleball Ball Caddy",
+        "category": "Training Equipment",
+        "price": 1599,
+        "mrp": 2499,
+        "badge": "LAUNCH PRICE",
+        "specs": "Holds Up To 60 Balls • Foldable Steel Frame • Padded Base • Quick 30-Sec Setup",
+        "freebies": "COD Available",
+        "asset_ref": "public/assets/products/post_8.jpg"
+      }
+    ],
+    "value_pillars": [
+      {
+        "title": "Tour-Legal Specifications",
+        "desc": "Built with Toray T700 raw carbon fiber, precision 16mm honeycomb cores, and thermoformed foam-injected edges for ultimate power and dwell time."
+      },
+      {
+        "title": "Disruptive Honest Pricing",
+        "desc": "Why pay ₹35,000 for foreign labels when our Boomstik delivers identical carbon layup and full foam core for just ₹5,500?"
+      },
+      {
+        "title": "Risk-Free Player Guarantee",
+        "desc": "PAN-India express courier, Cash on Delivery (COD) supported nationwide, and an uncompromising 7-Day Return Policy."
+      },
+      {
+        "title": "Free Gear with Every Paddle",
+        "desc": "Every single paddle arrives court-ready with a complimentary AGASSI 40 tournament ball and a heavy-duty padded thermal paddle cover."
+      }
+    ],
+    "social_proof": [
+      {
+        "quote": "This paddle is an absolute gem. Replaced my ₹28,000 foreign paddle and my third-shot drops have never had so much spin and bite.",
+        "author": "Tournament Contender, Delhi NCR",
+        "dupr": "DUPR 4.2"
+      },
+      {
+        "quote": "The 16mm Boomstik is a beast at the net. The foam-injected perimeter completely eliminated edge dead spots on reset shots.",
+        "author": "Club Coach, Haryana",
+        "dupr": "DUPR 4.6"
+      },
+      {
+        "quote": "Ordered 12 paddles for our new club courts. Unbelievable build quality and quick delivery. Court players are loving them.",
+        "author": "Pickleball Facility Director, Hisar",
+        "dupr": "Club Partner"
+      }
+    ],
+    "target_inquiry_email": "Paddles017@gmail.com",
+    "whatsapp_phone": "+91 95 18 241474",
+    "whatsapp_clean": "919518241474"
+  },
+  "harvested_assets": {
+    "total_images": 29,
+    "total_videos": 5,
+    "logo": "public/assets/branding/logo.jpg",
+    "videos": [
+      {
+        "id": "boomstik_showcase",
+        "title": "Boomstik Carbon Flagship Showcase",
+        "desc": "Multiple colorways & Toray T700 carbon finish at ₹5,500 (up to 70% off retail)",
+        "path": "public/assets/videos/boomstik_showcase.mp4"
+      },
+      {
+        "id": "customer_reviews",
+        "title": "Customer Reviews & Unboxing",
+        "desc": "Real player testimonials, WhatsApp unboxing ratings & feedback",
+        "path": "public/assets/videos/customer_reviews.mp4"
+      },
+      {
+        "id": "matchplay_action",
+        "title": "Court Matchplay & Rally Action",
+        "desc": "High-octane game rallies, sweet spot pop & live court feel",
+        "path": "public/assets/videos/matchplay_action.mp4"
+      },
+      {
+        "id": "boomstik_mini",
+        "title": "Boomstik Mini Precision Edition",
+        "desc": "Compact control edition at ₹5,800 with enhanced hand speed",
+        "path": "public/assets/videos/boomstik_mini.mp4"
+      },
+      {
+        "id": "festive_offers",
+        "title": "Diwali & Festive Mega Sale",
+        "desc": "Exclusive festival drops with up to 40% off across all series",
+        "path": "public/assets/videos/festive_offers.mp4"
+      }
+    ],
+    "products": [
+      "public/assets/products/post_2.jpg",
+      "public/assets/products/post_3.jpg",
+      "public/assets/products/post_5_c_1.jpg",
+      "public/assets/products/post_5_c_2.jpg",
+      "public/assets/products/post_5_c_6.jpg",
+      "public/assets/products/post_5_c_8.jpg",
+      "public/assets/products/post_6.jpg",
+      "public/assets/products/post_6_c_2.jpg",
+      "public/assets/products/post_7.jpg",
+      "public/assets/products/post_8.jpg",
+      "public/assets/products/post_9.jpg",
+      "public/assets/products/post_10.jpg"
+    ]
+  },
+  "creative_direction": {
+    "top_benchmark": "CRBN Pickleball (crbnpickleball.com) + Gymshark (gymshark.com)",
+    "archetype_style": "Minimalist High-Contrast E-Commerce Pro-Shop (Engine A)",
+    "color_tokens": {
+      "bg_dark": "#0a0a0a",
+      "bg_card": "#141414",
+      "bg_card_elevated": "#1c1c1c",
+      "accent_orange": "#f97316",
+      "accent_orange_hover": "#ea580c",
+      "accent_green": "#22c55e",
+      "text_primary": "#ffffff",
+      "text_muted": "#a1a1aa",
+      "border": "#27272a"
+    },
+    "typography": {
+      "headline": "Bebas Neue, sans-serif",
+      "body": "Plus Jakarta Sans, sans-serif"
+    },
+    "layout_components": [
+      "Top Announcement Ticker (Pan-India Shipping + USAPA Specs)",
+      "Sticky E-Commerce Nav with Monogram, Categories, WhatsApp Desk & Live Cart Drawer Counter",
+      "Hero Split Showcase: Boomstik Flagship with 16mm/14mm Core Switcher, Price Comparison Tag (₹5,500 vs ₹35,000), Trust Badges",
+      "Infinite Partner / Trust Marquee (Tour Legal, USAPA Specs, T700 Toray Carbon, COD Available)",
+      "Collection Catalog Grid with Real Packshots & Instant 'Add to Cart' Mechanics",
+      "Interactive Multi-Layer Anatomical Teardown (T700 Carbon Skin, 16mm Core, Foam Injected Perimeter)",
+      "Slide-out Cart Drawer with Quantity Controls and 1-Click WhatsApp Order Link Encoder",
+      "Verified Customer Review & DUPR Rating Wall",
+      "B2B Court Owner & Academy Wholesale Bulk Inquiries Section",
+      "Asynchronous AJAX Inquiry Form (Direct to Paddles017@gmail.com via FormSubmit) + Mailto Fallback",
+      "Floating Glowing WhatsApp Action Button (+91 95 18 241474)"
+    ],
+    "anti_patterns_rejected": [
+      "NO hourly court booking or Playo calendars (this is an equipment pro-shop, not a court venue)",
+      "NO founder letters or narrative essays",
+      "NO assets borrowed from previous client repositories",
+      "NO multi-page routing or heavy frameworks (single zero-build index.html)"
+    ],
+    "checkpoint_approved": true,
+    "user_approval_notes": "User approved direction, uploaded 5 categorized MP4 videos: boomstik_showcase, customer_reviews, matchplay_action, boomstik_mini, festive_offers. All 5 integrated into context-appropriate sections."
+  }
+}
