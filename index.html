@@ -105,28 +105,55 @@
     .reel-container {
       aspect-ratio: 9 / 16;
     }
+    /* Moving Top Strip Animation from Left to Right */
+    @keyframes marqueeLtr {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0%); }
+    }
+    .animate-marquee-ltr {
+      display: flex;
+      width: max-content;
+      animation: marqueeLtr 24s linear infinite;
+    }
+    .animate-marquee-ltr:hover {
+      animation-play-state: paused;
+    }
   </style>
 </head>
 <body class="bg-brand-dark text-[#F2E6D8] antialiased selection:bg-brand-orange selection:text-[#262626]">
 
   <!-- ======================================================== -->
-  <!-- 1. TOP UTILITY ANNOUNCEMENT TICKER -->
+  <!-- 1. TOP UTILITY ANNOUNCEMENT TICKER (ANIMATED CONTINUOUS MOVING STRIP) -->
   <!-- ======================================================== -->
-  <div class="bg-gradient-to-r from-[#73641A] via-[#F2DA91] to-[#73641A] text-[#262626] text-xs font-black py-2 px-4 shadow-sm">
-    <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <div class="flex items-center space-x-3 overflow-hidden whitespace-nowrap">
-        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-wider bg-black text-white">PRO DEAL</span>
-        <span class="tracking-wide text-[11px] sm:text-xs">
-          🔥 FREE PAN-INDIA EXPRESS SHIPPING • 7-DAY RETURNS • CASH ON DELIVERY (COD) AVAILABLE • 100% TOUR-LEGAL SPECS
-        </span>
+  <div class="bg-gradient-to-r from-[#73641A] via-[#F2DA91] to-[#73641A] text-[#262626] text-xs font-black py-2.5 shadow-md overflow-hidden relative select-none">
+    <div class="animate-marquee-ltr flex items-center space-x-10 whitespace-nowrap">
+      <!-- Sequence 1 -->
+      <div class="flex items-center space-x-8 shrink-0">
+        <span class="inline-flex items-center gap-1.5"><span class="px-2 py-0.5 rounded bg-black text-[#F2DA91] text-[10px] uppercase font-black">PRO DEAL</span> 🔥 FREE PAN-INDIA EXPRESS SHIPPING ON ALL ORDERS</span>
+        <span>•</span>
+        <span class="inline-flex items-center gap-1.5">🔄 7-DAY ON-COURT PLAY GUARANTEE & EASY RETURNS</span>
+        <span>•</span>
+        <span class="inline-flex items-center gap-1.5">💵 CASH ON DELIVERY (COD) & UPI INSTANT CHECKOUT</span>
+        <span>•</span>
+        <span class="inline-flex items-center gap-1.5">🏆 100% TOUR-LEGAL USAPA SPECIFICATIONS</span>
+        <span>•</span>
+        <span class="inline-flex items-center gap-1.5">📍 PHYSICAL EXPERIENCE HUBS: HISAR (HARYANA) & PITAMPURA (DELHI)</span>
+        <span>•</span>
+        <span class="inline-flex items-center gap-1.5">🎁 FREE AGASSI 40 BALL + THERMAL COVER WITH EVERY PADDLE</span>
       </div>
-      <div class="hidden md:flex items-center space-x-4 text-xs font-semibold">
-        <span class="flex items-center gap-1">📍 Hubs: Delhi & Hisar</span>
-        <span class="opacity-40">|</span>
-        <a href="https://wa.me/919518241474" target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center gap-1">
-          <span>WhatsApp Gear Desk:</span>
-          <span class="font-bold">+91 95 18 241474</span>
-        </a>
+      <!-- Sequence 2 (Duplicate for infinite seamless loop) -->
+      <div class="flex items-center space-x-8 shrink-0">
+        <span class="inline-flex items-center gap-1.5"><span class="px-2 py-0.5 rounded bg-black text-[#F2DA91] text-[10px] uppercase font-black">PRO DEAL</span> 🔥 FREE PAN-INDIA EXPRESS SHIPPING ON ALL ORDERS</span>
+        <span>•</span>
+        <span class="inline-flex items-center gap-1.5">🔄 7-DAY ON-COURT PLAY GUARANTEE & EASY RETURNS</span>
+        <span>•</span>
+        <span class="inline-flex items-center gap-1.5">💵 CASH ON DELIVERY (COD) & UPI INSTANT CHECKOUT</span>
+        <span>•</span>
+        <span class="inline-flex items-center gap-1.5">🏆 100% TOUR-LEGAL USAPA SPECIFICATIONS</span>
+        <span>•</span>
+        <span class="inline-flex items-center gap-1.5">📍 PHYSICAL EXPERIENCE HUBS: HISAR (HARYANA) & PITAMPURA (DELHI)</span>
+        <span>•</span>
+        <span class="inline-flex items-center gap-1.5">🎁 FREE AGASSI 40 BALL + THERMAL COVER WITH EVERY PADDLE</span>
       </div>
     </div>
   </div>
@@ -154,19 +181,18 @@
         </a>
 
         <!-- Desktop Navigation Anchors -->
-        <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-zinc-300">
-          <a href="#flagship" class="hover:text-brand-orange transition-colors">Flagship</a>
+        <nav class="hidden lg:flex items-center space-x-6 text-sm font-semibold text-zinc-300">
+          <a href="#hero" class="hover:text-brand-orange transition-colors">Flagship</a>
+          <a href="#catalog" class="hover:text-brand-orange transition-colors">Collection</a>
           <a href="#videos" class="hover:text-brand-orange transition-colors flex items-center gap-1.5">
             <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
             Video Reels
           </a>
-          <a href="#catalog" class="hover:text-brand-orange transition-colors">Catalog</a>
-          <a href="#tech" class="hover:text-brand-orange transition-colors">Tech</a>
           <a href="#reviews" class="hover:text-brand-orange transition-colors">Reviews</a>
-          <a href="#venues" class="hover:text-brand-orange transition-colors flex items-center gap-1 text-brand-gold font-semibold">
-            <span>📍</span> Venues (Hisar & Delhi)
-          </a>
           <a href="#wholesale" class="hover:text-brand-orange transition-colors text-amber-400 font-semibold">Wholesale</a>
+          <a href="#venues" class="hover:text-brand-orange transition-colors flex items-center gap-1 text-brand-gold font-semibold">
+            <span>📍</span> Venues
+          </a>
           <a href="#contact" class="hover:text-brand-orange transition-colors">Contact</a>
         </nav>
 
@@ -201,16 +227,15 @@
 
     <!-- Mobile Dropdown Menu -->
     <div id="mobile-menu" class="hidden lg:hidden border-t border-zinc-800 bg-brand-dark/95 backdrop-blur-xl px-4 pt-3 pb-6 space-y-3">
-      <a href="#flagship" class="block py-2 text-zinc-200 hover:text-brand-orange font-semibold">Flagship Boomstik</a>
+      <a href="#hero" class="block py-2 text-zinc-200 hover:text-brand-orange font-semibold">Flagship Boomstik</a>
+      <a href="#catalog" class="block py-2 text-zinc-200 hover:text-brand-orange font-semibold">Tournament Collection</a>
       <a href="#videos" class="block py-2 text-zinc-200 hover:text-brand-orange font-semibold">Video Reels (5 Shows)</a>
-      <a href="#catalog" class="block py-2 text-zinc-200 hover:text-brand-orange font-semibold">Equipment Catalog</a>
-      <a href="#tech" class="block py-2 text-zinc-200 hover:text-brand-orange font-semibold">Tech Teardown</a>
       <a href="#reviews" class="block py-2 text-zinc-200 hover:text-brand-orange font-semibold">Player Reviews</a>
       <a href="#venues" class="block py-2 text-brand-gold hover:text-brand-orangeHover font-bold">📍 Physical Venues (Hisar & Delhi)</a>
       <a href="#wholesale" class="block py-2 text-amber-400 hover:text-amber-300 font-semibold">Academy & Court Wholesale</a>
       <a href="#contact" class="block py-2 text-zinc-200 hover:text-brand-orange font-semibold">Contact Desk</a>
       <div class="pt-2 border-t border-zinc-800">
-        <a href="https://wa.me/919518241474" class="w-full flex items-center justify-center gap-2 py-3 bg-brand-green text-black font-bold rounded-xl">
+        <a href="https://wa.me/919518241474" class="w-full flex items-center justify-center gap-2 py-3 bg-brand-orange text-black font-bold rounded-xl shadow-md">
           <span>Order Direct via WhatsApp</span>
         </a>
       </div>
@@ -436,9 +461,419 @@
   </div>
 
   <!-- ======================================================== -->
-  <!-- 5. 5-VIDEO REEL THEATRE & ACTION SHOWCASE -->
+  <!-- 4. EXPLORE THE FULL TOURNAMENT COLLECTION (LIGHT SECTION) -->
   <!-- ======================================================== -->
-  <section id="videos" class="py-20 bg-zinc-950/60 border-b border-zinc-800 relative">
+  <section id="catalog" class="py-20 bg-[#F2E6D8] border-b border-[#73641A]/20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Single Line Title + Full Width Caption + Single Line Filters -->
+      <div class="text-center mb-12 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#73641A]/10 border border-[#73641A]/30 text-[#73641A] text-xs font-black uppercase tracking-wider">
+          <span>Direct Pro-Shop Inventory</span>
+        </div>
+        
+        <!-- Single Line Title -->
+        <h2 class="heading-font text-3xl sm:text-4xl md:text-5xl text-[#262626] tracking-wide whitespace-nowrap overflow-hidden text-ellipsis">
+          EXPLORE THE FULL TOURNAMENT COLLECTION
+        </h2>
+        
+        <!-- Full Line Caption spanning naturally to borders -->
+        <p class="text-xs sm:text-sm md:text-base text-zinc-700 max-w-5xl mx-auto leading-relaxed">
+          Paddles, tournament balls, and training gear tested by competitive tournament players. Transparent pricing, complimentary freebies, and instant cart or WhatsApp ordering.
+        </p>
+
+        <!-- Single Line Filter Tabs (no awkward stacking) -->
+        <div class="flex items-center justify-center gap-2 overflow-x-auto no-scrollbar py-3 px-2 w-full max-w-4xl mx-auto" id="catalog-filters">
+          <button onclick="filterCatalog('all')" class="cat-filter-btn active shrink-0 px-4 py-2 rounded-xl text-xs font-bold border border-[#73641A] bg-[#73641A] text-white shadow-sm transition-all">
+            All Gear (9)
+          </button>
+          <button onclick="filterCatalog('pro-paddles')" class="cat-filter-btn shrink-0 px-4 py-2 rounded-xl text-xs font-bold border border-[#73641A]/30 bg-white text-[#262626] hover:border-[#73641A] transition-all">
+            Pro Carbon (5)
+          </button>
+          <button onclick="filterCatalog('control-series')" class="cat-filter-btn shrink-0 px-4 py-2 rounded-xl text-xs font-bold border border-[#73641A]/30 bg-white text-[#262626] hover:border-[#73641A] transition-all">
+            Control Series (2)
+          </button>
+          <button onclick="filterCatalog('balls')" class="cat-filter-btn shrink-0 px-4 py-2 rounded-xl text-xs font-bold border border-[#73641A]/30 bg-white text-[#262626] hover:border-[#73641A] transition-all">
+            Balls (2)
+          </button>
+          <button onclick="filterCatalog('accessories')" class="cat-filter-btn shrink-0 px-4 py-2 rounded-xl text-xs font-bold border border-[#73641A]/30 bg-white text-[#262626] hover:border-[#73641A] transition-all">
+            Accessories (1)
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Cards Grid (Clean Crisp White Cards on Light Background) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="product-grid">
+        
+        <!-- CARD 1: Boomstik Carbon Flagship -->
+        <div class="product-card rounded-3xl bg-white border border-[#73641A]/20 p-5 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-[#73641A]/60 transition-all duration-300" data-category="pro-paddles">
+          <div class="space-y-4">
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/4] bg-[#262626]">
+              <img src="public/assets/products/post_2.jpg" alt="Boomstik Carbon Flagship" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-[#73641A] text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
+                FLAGSHIP VALUE
+              </span>
+              <span class="absolute top-3 right-3 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded-md backdrop-blur-sm">
+                IN STOCK
+              </span>
+            </div>
+            <div>
+              <div class="text-[11px] text-[#73641A] font-bold uppercase tracking-wider">Pro Carbon Series</div>
+              <h3 class="text-xl font-bold text-[#262626] mt-0.5">Boomstik Carbon Flagship</h3>
+              <p class="text-xs text-zinc-600 mt-1 line-clamp-2">
+                16mm Thickness • Elongated Shape • Toray T700 Raw Carbon • Full Foam Core.
+              </p>
+              <div class="mt-2 text-[11px] text-[#73641A] font-bold bg-[#F2DA91]/30 px-2.5 py-1 rounded-lg inline-block">
+                🎁 Free Agassi 40 Ball + Thermal Cover Included
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-zinc-200 mt-4 space-y-3">
+            <div class="flex items-baseline justify-between">
+              <div class="flex items-baseline gap-2">
+                <span class="text-2xl font-black text-[#262626]">₹5,500</span>
+                <span class="text-xs text-zinc-400 line-through">₹35,000</span>
+              </div>
+              <span class="text-xs text-[#73641A] font-bold bg-[#73641A]/10 px-2 py-0.5 rounded">Save 84%</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToCart('Boomstik Carbon Flagship', 5500, 'public/assets/products/post_2.jpg', '16mm Control Core')" class="py-2.5 px-3 rounded-xl bg-[#73641A] text-white font-extrabold text-xs hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#73641A]/20">
+                <span>Add to Cart</span>
+              </button>
+              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Boomstik%20Carbon%20Flagship%20for%20%E2%82%B95,500" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#F2DA91]/30 border border-[#73641A]/40 text-[#262626] font-bold text-xs hover:bg-[#F2DA91]/50 transition-all text-center">
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: OMNI Advanced Spin -->
+        <div class="product-card rounded-3xl bg-white border border-[#73641A]/20 p-5 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-[#73641A]/60 transition-all duration-300" data-category="pro-paddles">
+          <div class="space-y-4">
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/4] bg-[#262626]">
+              <img src="public/assets/products/post_7.jpg" alt="OMNI Advanced Spin Paddle" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-amber-600 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
+                PRE-BOOKING SPECIAL
+              </span>
+              <span class="absolute top-3 right-3 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded-md backdrop-blur-sm">
+                4 COLORED EDITIONS
+              </span>
+            </div>
+            <div>
+              <div class="text-[11px] text-[#73641A] font-bold uppercase tracking-wider">Pro Carbon Series</div>
+              <h3 class="text-xl font-bold text-[#262626] mt-0.5">OMNI Advanced Gritty Spin</h3>
+              <p class="text-xs text-zinc-600 mt-1 line-clamp-2">
+                Adjustable Weight System • Gritty Friction Spin Surface • Premium Tournament Finish.
+              </p>
+              <div class="mt-2 text-[11px] text-[#73641A] font-bold bg-[#F2DA91]/30 px-2.5 py-1 rounded-lg inline-block">
+                🎁 Free Agassi 40 Ball + Thermal Cover Included
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-zinc-200 mt-4 space-y-3">
+            <div class="flex items-baseline justify-between">
+              <div class="flex items-baseline gap-2">
+                <span class="text-2xl font-black text-[#262626]">₹5,500</span>
+                <span class="text-xs text-zinc-400 line-through">₹6,000</span>
+              </div>
+              <span class="text-xs text-[#73641A] font-bold bg-[#73641A]/10 px-2 py-0.5 rounded">Festive Deal</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToCart('OMNI Advanced Gritty Spin', 5500, 'public/assets/products/post_7.jpg', 'Gritty Spin Edition')" class="py-2.5 px-3 rounded-xl bg-[#73641A] text-white font-extrabold text-xs hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#73641A]/20">
+                <span>Add to Cart</span>
+              </button>
+              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20OMNI%20Advanced%20Paddle%20for%20%E2%82%B95,500" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#F2DA91]/30 border border-[#73641A]/40 text-[#262626] font-bold text-xs hover:bg-[#F2DA91]/50 transition-all text-center">
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: Agassi V Tournament Touch -->
+        <div class="product-card rounded-3xl bg-white border border-[#73641A]/20 p-5 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-[#73641A]/60 transition-all duration-300" data-category="control-series">
+          <div class="space-y-4">
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/4] bg-[#262626]">
+              <img src="public/assets/products/post_5_c_1.jpg" alt="Agassi V Tournament Touch" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-emerald-700 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
+                BESTSELLER
+              </span>
+              <span class="absolute top-3 right-3 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded-md backdrop-blur-sm">
+                IN STOCK
+              </span>
+            </div>
+            <div>
+              <div class="text-[11px] text-emerald-800 font-bold uppercase tracking-wider">Control Series</div>
+              <h3 class="text-xl font-bold text-[#262626] mt-0.5">Agassi V Tournament Touch</h3>
+              <p class="text-xs text-zinc-600 mt-1 line-clamp-2">
+                16mm Precision Honeycomb Core • Aerodynamic Curved Throat • Silky Dink Feel.
+              </p>
+              <div class="mt-2 text-[11px] text-[#73641A] font-bold bg-[#F2DA91]/30 px-2.5 py-1 rounded-lg inline-block">
+                🎁 Free Agassi 40 Ball + Thermal Cover Included
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-zinc-200 mt-4 space-y-3">
+            <div class="flex items-baseline justify-between">
+              <div class="flex items-baseline gap-2">
+                <span class="text-2xl font-black text-[#262626]">₹4,500</span>
+                <span class="text-xs text-zinc-400 line-through">₹5,000</span>
+              </div>
+              <span class="text-xs text-emerald-800 font-bold bg-emerald-50 px-2 py-0.5 rounded">Save ₹500</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToCart('Agassi V Tournament Touch', 4500, 'public/assets/products/post_5_c_1.jpg', 'Touch Control')" class="py-2.5 px-3 rounded-xl bg-[#73641A] text-white font-extrabold text-xs hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#73641A]/20">
+                <span>Add to Cart</span>
+              </button>
+              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Agassi%20V%20Paddle%20for%20%E2%82%B94,500" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#F2DA91]/30 border border-[#73641A]/40 text-[#262626] font-bold text-xs hover:bg-[#F2DA91]/50 transition-all text-center">
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4: Agassi V Limited Edition -->
+        <div class="product-card rounded-3xl bg-white border border-[#73641A]/20 p-5 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-[#73641A]/60 transition-all duration-300" data-category="control-series">
+          <div class="space-y-4">
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/4] bg-[#262626]">
+              <img src="public/assets/products/post_5_c_2.jpg" alt="Agassi V Limited Edition" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-purple-700 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
+                LIMITED DROP
+              </span>
+            </div>
+            <div>
+              <div class="text-[11px] text-purple-700 font-bold uppercase tracking-wider">Control Series</div>
+              <h3 class="text-xl font-bold text-[#262626] mt-0.5">Agassi V Limited Edition</h3>
+              <p class="text-xs text-zinc-600 mt-1 line-clamp-2">
+                Custom Metallic Treatment • Perimeter Weighted Rim • Superior Off-Center Forgiveness.
+              </p>
+              <div class="mt-2 text-[11px] text-[#73641A] font-bold bg-[#F2DA91]/30 px-2.5 py-1 rounded-lg inline-block">
+                🎁 Free Agassi 40 Ball + Thermal Cover Included
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-zinc-200 mt-4 space-y-3">
+            <div class="flex items-baseline justify-between">
+              <div class="flex items-baseline gap-2">
+                <span class="text-2xl font-black text-[#262626]">₹4,700</span>
+                <span class="text-xs text-zinc-400 line-through">₹5,200</span>
+              </div>
+              <span class="text-xs text-purple-700 font-bold bg-purple-50 px-2 py-0.5 rounded">Save ₹500</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToCart('Agassi V Limited Edition', 4700, 'public/assets/products/post_5_c_2.jpg', 'Metallic Limited')" class="py-2.5 px-3 rounded-xl bg-[#73641A] text-white font-extrabold text-xs hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#73641A]/20">
+                <span>Add to Cart</span>
+              </button>
+              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Agassi%20V%20Limited%20Edition%20for%20%E2%82%B94,700" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#F2DA91]/30 border border-[#73641A]/40 text-[#262626] font-bold text-xs hover:bg-[#F2DA91]/50 transition-all text-center">
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 5: Perseus V Titan Power -->
+        <div class="product-card rounded-3xl bg-white border border-[#73641A]/20 p-5 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-[#73641A]/60 transition-all duration-300" data-category="pro-paddles">
+          <div class="space-y-4">
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/4] bg-[#262626]">
+              <img src="public/assets/products/post_5_c_6.jpg" alt="Perseus V Titan Power" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-red-700 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
+                POWER HEAVY
+              </span>
+            </div>
+            <div>
+              <div class="text-[11px] text-red-700 font-bold uppercase tracking-wider">Pro Carbon Series</div>
+              <h3 class="text-xl font-bold text-[#262626] mt-0.5">Perseus V Titan</h3>
+              <p class="text-xs text-zinc-600 mt-1 line-clamp-2">
+                Hyper-Rigid Face • Explosive Baseline Power Drives • Reinforced Unibody Neck.
+              </p>
+              <div class="mt-2 text-[11px] text-[#73641A] font-bold bg-[#F2DA91]/30 px-2.5 py-1 rounded-lg inline-block">
+                🎁 Free Agassi 40 Ball + Thermal Cover Included
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-zinc-200 mt-4 space-y-3">
+            <div class="flex items-baseline justify-between">
+              <div class="flex items-baseline gap-2">
+                <span class="text-2xl font-black text-[#262626]">₹4,500</span>
+                <span class="text-xs text-zinc-400 line-through">₹5,000</span>
+              </div>
+              <span class="text-xs text-red-700 font-bold bg-red-50 px-2 py-0.5 rounded">Festive Price</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToCart('Perseus V Titan', 4500, 'public/assets/products/post_5_c_6.jpg', 'Titan Power Face')" class="py-2.5 px-3 rounded-xl bg-[#73641A] text-white font-extrabold text-xs hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#73641A]/20">
+                <span>Add to Cart</span>
+              </button>
+              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Perseus%20V%20Titan%20for%20%E2%82%B94,500" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#F2DA91]/30 border border-[#73641A]/40 text-[#262626] font-bold text-xs hover:bg-[#F2DA91]/50 transition-all text-center">
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 6: Kevlar Pro Tour Hybrid -->
+        <div class="product-card rounded-3xl bg-white border border-[#73641A]/20 p-5 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-[#73641A]/60 transition-all duration-300" data-category="pro-paddles">
+          <div class="space-y-4">
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/4] bg-[#262626]">
+              <img src="public/assets/products/post_5_c_8.jpg" alt="Kevlar Pro Tour Hybrid" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-amber-600 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
+                EXTREME DURABILITY
+              </span>
+            </div>
+            <div>
+              <div class="text-[11px] text-amber-700 font-bold uppercase tracking-wider">Pro Carbon Series</div>
+              <h3 class="text-xl font-bold text-[#262626] mt-0.5">Kevlar Pro Tour Hybrid</h3>
+              <p class="text-xs text-zinc-600 mt-1 line-clamp-2">
+                Aramid-Kevlar Cross-Weave • Zero Soft Spots • Crisp Pop on Drives & Speedups.
+              </p>
+              <div class="mt-2 text-[11px] text-[#73641A] font-bold bg-[#F2DA91]/30 px-2.5 py-1 rounded-lg inline-block">
+                🎁 Free Agassi 40 Ball + Thermal Cover Included
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-zinc-200 mt-4 space-y-3">
+            <div class="flex items-baseline justify-between">
+              <div class="flex items-baseline gap-2">
+                <span class="text-2xl font-black text-[#262626]">₹5,000</span>
+                <span class="text-xs text-zinc-400 line-through">₹6,000</span>
+              </div>
+              <span class="text-xs text-amber-800 font-bold bg-amber-50 px-2 py-0.5 rounded">Save ₹1,000</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToCart('Kevlar Pro Tour Hybrid', 5000, 'public/assets/products/post_5_c_8.jpg', 'Kevlar Cross-Weave')" class="py-2.5 px-3 rounded-xl bg-[#73641A] text-white font-extrabold text-xs hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#73641A]/20">
+                <span>Add to Cart</span>
+              </button>
+              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Kevlar%20Pro%20Tour%20for%20%E2%82%B95,000" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#F2DA91]/30 border border-[#73641A]/40 text-[#262626] font-bold text-xs hover:bg-[#F2DA91]/50 transition-all text-center">
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 7: AGASSI 40 Tournament Balls -->
+        <div class="product-card rounded-3xl bg-white border border-[#73641A]/20 p-5 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-[#73641A]/60 transition-all duration-300" data-category="balls">
+          <div class="space-y-4">
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/4] bg-[#262626]">
+              <img src="public/assets/products/post_6.jpg" alt="AGASSI 40 Tournament Balls" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-[#73641A] text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
+                TOURNAMENT OFFICIAL
+              </span>
+            </div>
+            <div>
+              <div class="text-[11px] text-[#73641A] font-bold uppercase tracking-wider">Tournament Balls</div>
+              <h3 class="text-xl font-bold text-[#262626] mt-0.5">AGASSI 40 Tournament Balls (3-Pack)</h3>
+              <p class="text-xs text-zinc-600 mt-1 line-clamp-2">
+                40 Precision Holes • Single-Piece Roto-Molded • True Wind-Resistant Trajectory & Bounce.
+              </p>
+              <div class="mt-2 text-[11px] text-[#73641A] font-semibold">
+                Ideal for competitive matches, club leagues & court venues.
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-zinc-200 mt-4 space-y-3">
+            <div class="flex items-baseline justify-between">
+              <div class="flex items-baseline gap-2">
+                <span class="text-2xl font-black text-[#262626]">₹499</span>
+                <span class="text-xs text-zinc-400 line-through">₹699</span>
+              </div>
+              <span class="text-xs text-[#73641A] font-bold bg-[#73641A]/10 px-2 py-0.5 rounded">3-Pack Bundle</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToCart('AGASSI 40 Tournament Balls (3-Pack)', 499, 'public/assets/products/post_6.jpg', '3-Pack Yellow')" class="py-2.5 px-3 rounded-xl bg-[#73641A] text-white font-extrabold text-xs hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#73641A]/20">
+                <span>Add to Cart</span>
+              </button>
+              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20AGASSI%2040%20Tournament%20Balls" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#F2DA91]/30 border border-[#73641A]/40 text-[#262626] font-bold text-xs hover:bg-[#F2DA91]/50 transition-all text-center">
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 8: AK-40 Club & Academy Balls -->
+        <div class="product-card rounded-3xl bg-white border border-[#73641A]/20 p-5 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-[#73641A]/60 transition-all duration-300" data-category="balls">
+          <div class="space-y-4">
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/4] bg-[#262626]">
+              <img src="public/assets/products/post_6_c_2.jpg" alt="AK-40 Club & Academy Balls" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-zinc-800 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
+                ACADEMY FAVORITE
+              </span>
+            </div>
+            <div>
+              <div class="text-[11px] text-zinc-600 font-bold uppercase tracking-wider">Tournament Balls</div>
+              <h3 class="text-xl font-bold text-[#262626] mt-0.5">AK-40 Club & Academy (3-Pack)</h3>
+              <p class="text-xs text-zinc-600 mt-1 line-clamp-2">
+                High-Durability Crack-Resistant Polymer • Optimized for High-Volume Coaching & Drill Sessions.
+              </p>
+              <div class="mt-2 text-[11px] text-[#73641A] font-semibold">
+                Bulk court crate rates available for facility owners.
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-zinc-200 mt-4 space-y-3">
+            <div class="flex items-baseline justify-between">
+              <div class="flex items-baseline gap-2">
+                <span class="text-2xl font-black text-[#262626]">₹399</span>
+                <span class="text-xs text-zinc-400 line-through">₹550</span>
+              </div>
+              <span class="text-xs text-zinc-700 font-bold bg-zinc-100 px-2 py-0.5 rounded">Academy Value</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToCart('AK-40 Club Balls (3-Pack)', 399, 'public/assets/products/post_6_c_2.jpg', '3-Pack Lime Green')" class="py-2.5 px-3 rounded-xl bg-[#73641A] text-white font-extrabold text-xs hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#73641A]/20">
+                <span>Add to Cart</span>
+              </button>
+              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20AK-40%20Club%20Balls" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#F2DA91]/30 border border-[#73641A]/40 text-[#262626] font-bold text-xs hover:bg-[#F2DA91]/50 transition-all text-center">
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 9: Portable Practice Ball Caddy -->
+        <div class="product-card rounded-3xl bg-white border border-[#73641A]/20 p-5 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-[#73641A]/60 transition-all duration-300" data-category="accessories">
+          <div class="space-y-4">
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/4] bg-[#262626]">
+              <img src="public/assets/products/post_8.jpg" alt="Portable Pickleball Ball Caddy Basket" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-[#73641A] text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
+                LAUNCH DEAL
+              </span>
+            </div>
+            <div>
+              <div class="text-[11px] text-[#73641A] font-bold uppercase tracking-wider">Training Gear</div>
+              <h3 class="text-xl font-bold text-[#262626] mt-0.5">Portable Ball Caddy Basket</h3>
+              <p class="text-xs text-zinc-600 mt-1 line-clamp-2">
+                Holds Up to 60 Balls • Foldable Steel Frame • Soft Padded Base • Quick 30-Sec Setup.
+              </p>
+              <div class="mt-2 text-[11px] text-zinc-600 font-semibold">
+                Perfect for drill practice, personal sessions, and academy coaches.
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-zinc-200 mt-4 space-y-3">
+            <div class="flex items-baseline justify-between">
+              <div class="flex items-baseline gap-2">
+                <span class="text-2xl font-black text-[#262626]">₹1,599</span>
+                <span class="text-xs text-zinc-400 line-through">₹2,499</span>
+              </div>
+              <span class="text-xs text-[#73641A] font-bold bg-[#73641A]/10 px-2 py-0.5 rounded">Save ₹900</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToCart('Portable Ball Caddy Basket', 1599, 'public/assets/products/post_8.jpg', '60-Ball Capacity')" class="py-2.5 px-3 rounded-xl bg-[#73641A] text-white font-extrabold text-xs hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#73641A]/20">
+                <span>Add to Cart</span>
+              </button>
+              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Portable%20Ball%20Caddy%20Basket%20for%20%E2%82%B91,599" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#F2DA91]/30 border border-[#73641A]/40 text-[#262626] font-bold text-xs hover:bg-[#F2DA91]/50 transition-all text-center">
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- 5. 5-VIDEO REEL THEATRE & ACTION SHOWCASE (DARK THEATRE) -->
+  <!-- ======================================================== -->
+  <section id="videos" class="py-20 bg-[#262626] border-b border-zinc-800 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
@@ -446,7 +881,7 @@
           <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
           <span>Official 9:16 Video Showcase</span>
         </div>
-        <h2 class="heading-font text-4xl sm:text-5xl text-white tracking-wide">
+        <h2 class="heading-font text-4xl sm:text-5xl text-brand-ivory tracking-wide">
           WATCH THE GEAR IN LIVE COURT ACTION
         </h2>
         <p class="text-zinc-400 text-sm sm:text-base">
@@ -454,13 +889,13 @@
         </p>
       </div>
 
-      <!-- Video Reel Tabs -->
+      <!-- Video Reel Tabs (Customer Reviews as FIRST TAB) -->
       <div class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap mb-10 no-scrollbar overflow-x-auto" id="video-reel-tabs">
         <button onclick="switchReel(0)" class="reel-tab-btn active px-4 py-2 rounded-full text-xs font-bold border border-brand-orange bg-brand-orange text-black transition-all">
-          🔥 Boomstik Showcase (₹5,500)
+          ⭐ Customer Journey & Reviews
         </button>
         <button onclick="switchReel(1)" class="reel-tab-btn px-4 py-2 rounded-full text-xs font-bold border border-zinc-700 bg-zinc-900 text-zinc-300 hover:text-white transition-all">
-          ⭐ Customer Journey & Reviews
+          🔥 Boomstik Showcase (₹5,500)
         </button>
         <button onclick="switchReel(2)" class="reel-tab-btn px-4 py-2 rounded-full text-xs font-bold border border-zinc-700 bg-zinc-900 text-zinc-300 hover:text-white transition-all">
           🎾 Court Matchplay Action
@@ -476,12 +911,12 @@
       <!-- Main Active Reel Showcase Stage -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto">
         
-        <!-- Video Player Frame (9:16 Mobile Aspect Ratio) -->
+        <!-- Video Player Frame (9:16 Mobile Aspect Ratio - Customer Reviews Playing First) -->
         <div class="lg:col-span-6 flex justify-center">
           <div class="relative w-full max-w-[340px] reel-container rounded-3xl overflow-hidden shadow-2xl shadow-black border-2 border-zinc-700 bg-black group">
             
             <video id="main-active-video" 
-                   src="public/assets/videos/boomstik_showcase.mp4" 
+                   src="public/assets/videos/customer_reviews.mp4" 
                    class="w-full h-full object-cover cursor-pointer" 
                    playsinline 
                    webkit-playsinline 
@@ -496,7 +931,7 @@
               <!-- Top Badges -->
               <div class="flex items-center justify-between pointer-events-auto">
                 <span id="reel-badge" class="px-2.5 py-1 rounded-full bg-brand-orange text-black font-extrabold text-[11px] tracking-wide">
-                  SHOWCASE REEL
+                  CUSTOMER REVIEWS
                 </span>
                 <!-- Sound Toggle Button -->
                 <button id="reel-sound-btn" onclick="toggleMainVideoSound()" class="p-2 rounded-full bg-black/70 border border-zinc-600 text-white hover:bg-black transition-all">
@@ -518,9 +953,7 @@
               <!-- Bottom Captions -->
               <div class="pointer-events-auto space-y-1">
                 <div class="text-[11px] text-amber-400 font-bold uppercase tracking-wider">@the_paddle_store_</div>
-                <div id="reel-caption-title" class="text-sm font-bold text-white leading-tight">
-                  Boomstik Carbon Series: Multiple Colorways at ₹5,500
-                </div>
+                <div id="reel-title-overlay" class="text-sm font-bold text-white line-clamp-1">PLAYER UNBOXING & CUSTOMER JOURNEY REVIEWS</div>
               </div>
 
             </div>
@@ -528,77 +961,51 @@
           </div>
         </div>
 
-        <!-- Reel Context & Direct Action Card -->
+        <!-- Right Side: Commercial Narrative, Review Notes & Instant Purchase -->
         <div class="lg:col-span-6 space-y-6 text-left">
+          
           <div class="space-y-2">
-            <span id="reel-context-tag" class="text-xs font-bold uppercase tracking-wider text-brand-orange">
-              Featured Product Video
-            </span>
-            <h3 id="reel-context-headline" class="heading-font text-3xl sm:text-4xl text-white">
-              BOOMSTIK MULTI-PATTERN CARBON EDITION
+            <span id="reel-model-tag" class="text-xs font-bold text-brand-orange uppercase tracking-wider">Player Feedback & Unboxing</span>
+            <h3 id="reel-narrative-title" class="heading-font text-3xl sm:text-4xl text-brand-ivory tracking-wide">
+              PLAYER UNBOXING & CUSTOMER JOURNEY REVIEWS
             </h3>
-            <p id="reel-context-desc" class="text-zinc-300 text-sm leading-relaxed">
-              Witness the craftsmanship, raw carbon grit texture, and high-tensile edge construction. Available in custom limited color patterns for up to 70% less than foreign retail brands.
+            <p id="reel-narrative-desc" class="text-zinc-300 text-sm leading-relaxed">
+              Unfiltered feedback from tournament players and coaches across Delhi NCR, Haryana, and Gujarat who switched from international ₹35,000 paddles to The Paddle Store.
             </p>
           </div>
 
-          <!-- Feature Bullets -->
-          <div id="reel-bullets" class="space-y-2.5 text-xs text-zinc-300">
-            <div class="flex items-center gap-2">
-              <span class="text-brand-orange">✓</span> 
-              <span>Authentic Toray T700 3K carbon fiber skin with textured grit for top-spin.</span>
+          <!-- Feature Bullets Card -->
+          <div id="reel-bullets" class="p-5 rounded-2xl glass-card border border-zinc-800 space-y-2.5 text-xs text-zinc-300">
+            <div class="flex items-start gap-2.5">
+              <span class="text-brand-orange text-sm font-bold">✓</span>
+              <span id="reel-bullet-1">Genuine WhatsApp reactions, unboxing videos, and on-court play feedback.</span>
             </div>
-            <div class="flex items-center gap-2">
-              <span class="text-brand-orange">✓</span> 
-              <span>16mm honeycomb core provides generous sweet spot and effortless resets.</span>
+            <div class="flex items-start gap-2.5">
+              <span class="text-brand-orange text-sm font-bold">✓</span>
+              <span id="reel-bullet-2">Players highlight immense topspin bite, lightweight resets, and zero dead spots.</span>
             </div>
-            <div class="flex items-center gap-2">
-              <span class="text-brand-orange">✓</span> 
-              <span>Includes Free AGASSI 40 Tournament Ball & Thermal Protective Paddle Case.</span>
+            <div class="flex items-start gap-2.5">
+              <span class="text-brand-orange text-sm font-bold">✓</span>
+              <span id="reel-bullet-3">Pan-India express 2-3 day courier delivery with Cash On Delivery (COD).</span>
             </div>
           </div>
 
-          <!-- Reel Specific Action Button -->
-          <div class="pt-2 flex flex-col sm:flex-row gap-3" id="reel-action-container">
-            <button onclick="addCurrentReelProductToCart()" class="py-3 px-6 rounded-xl bg-brand-orange text-black font-extrabold text-sm hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-2 shadow-lg shadow-orange-500/20">
+          <!-- Purchase Action Button for this Reel -->
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <button id="reel-order-btn" onclick="addCurrentReelProductToCart()" class="flex-1 py-3.5 px-6 rounded-xl bg-brand-orange text-black font-extrabold text-xs sm:text-sm tracking-wide hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-2 shadow-lg shadow-orange-500/20 active:scale-[0.98]">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-              <span id="reel-btn-text">Order Boomstik • ₹5,500</span>
+              <span id="reel-btn-label">Order Boomstik • ₹5,500</span>
             </button>
-            <a href="https://wa.me/919518241474?text=Hi!%20I%20saw%20your%20video%20reel%20and%20want%20to%20order%20this%20paddle." 
+
+            <a href="https://wa.me/919518241474?text=Hi%20The%20Paddle%20Store!%20I'm%20watching%20your%20customer%20review%20reel%20and%20want%20to%20order." 
                target="_blank" 
                rel="noopener noreferrer" 
-               class="py-3 px-5 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-200 text-sm font-semibold hover:border-brand-green hover:text-brand-green transition-all flex items-center justify-center gap-2">
-              <span>Inquire via WhatsApp</span>
+               class="py-3.5 px-6 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-bold text-xs sm:text-sm hover:border-brand-green hover:text-brand-green transition-all flex items-center justify-center gap-2">
+              <svg class="w-4 h-4 fill-current text-brand-green" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>Order via WhatsApp</span>
             </a>
           </div>
 
-          <!-- Mini 5-Reel Previews Strip -->
-          <div class="pt-4 border-t border-zinc-800">
-            <span class="text-xs uppercase font-bold text-zinc-500 mb-2 block tracking-wider">Quick Switch All 5 Videos:</span>
-            <div class="grid grid-cols-5 gap-2">
-              <button onclick="switchReel(0)" class="rounded-lg overflow-hidden border border-brand-orange aspect-[9/16] relative group">
-                <video src="public/assets/videos/boomstik_showcase.mp4" class="w-full h-full object-cover opacity-70 group-hover:opacity-100" muted></video>
-                <span class="absolute inset-x-0 bottom-0 text-[8px] bg-black/80 text-white font-bold py-0.5 truncate px-1">Boomstik</span>
-              </button>
-              <button onclick="switchReel(1)" class="rounded-lg overflow-hidden border border-zinc-800 hover:border-zinc-500 aspect-[9/16] relative group">
-                <video src="public/assets/videos/customer_reviews.mp4" class="w-full h-full object-cover opacity-70 group-hover:opacity-100" muted></video>
-                <span class="absolute inset-x-0 bottom-0 text-[8px] bg-black/80 text-white font-bold py-0.5 truncate px-1">Reviews</span>
-              </button>
-              <button onclick="switchReel(2)" class="rounded-lg overflow-hidden border border-zinc-800 hover:border-zinc-500 aspect-[9/16] relative group">
-                <video src="public/assets/videos/matchplay_action.mp4" class="w-full h-full object-cover opacity-70 group-hover:opacity-100" muted></video>
-                <span class="absolute inset-x-0 bottom-0 text-[8px] bg-black/80 text-white font-bold py-0.5 truncate px-1">Matchplay</span>
-              </button>
-              <button onclick="switchReel(3)" class="rounded-lg overflow-hidden border border-zinc-800 hover:border-zinc-500 aspect-[9/16] relative group">
-                <video src="public/assets/videos/boomstik_mini.mp4" class="w-full h-full object-cover opacity-70 group-hover:opacity-100" muted></video>
-                <span class="absolute inset-x-0 bottom-0 text-[8px] bg-black/80 text-white font-bold py-0.5 truncate px-1">Mini</span>
-              </button>
-              <button onclick="switchReel(4)" class="rounded-lg overflow-hidden border border-zinc-800 hover:border-zinc-500 aspect-[9/16] relative group">
-                <video src="public/assets/videos/festive_offers.mp4" class="w-full h-full object-cover opacity-70 group-hover:opacity-100" muted></video>
-                <span class="absolute inset-x-0 bottom-0 text-[8px] bg-black/80 text-white font-bold py-0.5 truncate px-1">Deals</span>
-              </button>
-            </div>
-          </div>
-
         </div>
 
       </div>
@@ -607,536 +1014,19 @@
   </section>
 
   <!-- ======================================================== -->
-  <!-- 6. INTERACTIVE EXPLODED VIEW & TECHNICAL TEARDOWN -->
+  <!-- 6. VERIFIED PLAYER TESTIMONIALS (LIGHT CHAMPAGNE SECTION) -->
   <!-- ======================================================== -->
-  <section id="tech" class="py-20 bg-brand-dark border-b border-zinc-800/80 relative">
+  <section id="reviews" class="py-20 bg-[#F2E5BD] border-b border-[#73641A]/20 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-700 text-zinc-300 text-xs font-bold uppercase tracking-wider">
-          <span>Tournament Anatomy</span>
-        </div>
-        <h2 class="heading-font text-4xl sm:text-5xl text-white tracking-wide">
-          ANATOMICAL TECH TEARDOWN: INSIDE THE PADDLE
-        </h2>
-        <p class="text-zinc-400 text-sm sm:text-base">
-          Click any layer below to inspect the internal physics and engineering layup that rivals international ₹35,000 tournament models.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        
-        <!-- Interactive Layer Selector List -->
-        <div class="lg:col-span-5 space-y-3" id="tech-layers">
-          
-          <button onclick="selectTechLayer(0)" class="tech-layer-card active w-full p-4 rounded-2xl glass-card border-brand-orange bg-brand-orange/10 text-left transition-all">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-bold text-brand-orange uppercase">Layer 01 • Surface</span>
-              <span class="text-xs font-black text-white">2,200+ RPM</span>
-            </div>
-            <div class="font-bold text-white text-base mt-1">Toray T700 Raw Carbon Fiber Face</div>
-            <div class="text-xs text-zinc-400 mt-1">Micro-etched raw carbon weave for immense ball dwell time and wicked spin on cuts and roll volleys.</div>
-          </button>
-
-          <button onclick="selectTechLayer(1)" class="tech-layer-card w-full p-4 rounded-2xl glass-card border-zinc-800 bg-zinc-900/40 text-left hover:border-zinc-700 transition-all">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-bold text-zinc-400 uppercase">Layer 02 • Core</span>
-              <span class="text-xs font-black text-white">16mm Cushion</span>
-            </div>
-            <div class="font-bold text-zinc-200 text-base mt-1">High-Density Polymer Honeycomb Core</div>
-            <div class="text-xs text-zinc-400 mt-1">Absorbs high-velocity third-shot drives and deadens vibrations to eliminate tennis elbow strain.</div>
-          </button>
-
-          <button onclick="selectTechLayer(2)" class="tech-layer-card w-full p-4 rounded-2xl glass-card border-zinc-800 bg-zinc-900/40 text-left hover:border-zinc-700 transition-all">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-bold text-zinc-400 uppercase">Layer 03 • Perimeter</span>
-              <span class="text-xs font-black text-white">Zero Dead Spots</span>
-            </div>
-            <div class="font-bold text-zinc-200 text-base mt-1">Thermoformed Foam Injected Perimeter</div>
-            <div class="text-xs text-zinc-400 mt-1">High-density structural foam extends the sweet spot right to the edge guard, ensuring mishits still clear the net.</div>
-          </button>
-
-          <button onclick="selectTechLayer(3)" class="tech-layer-card w-full p-4 rounded-2xl glass-card border-zinc-800 bg-zinc-900/40 text-left hover:border-zinc-700 transition-all">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-bold text-zinc-400 uppercase">Layer 04 • Handle</span>
-              <span class="text-xs font-black text-white">4.25" Ergonomic</span>
-            </div>
-            <div class="font-bold text-zinc-200 text-base mt-1">Carbon-Reinforced Hex Ergonomic Grip</div>
-            <div class="text-xs text-zinc-400 mt-1">Perforated sweat-wicking synthetic overgrip wrapped around a continuous solid carbon unibody throat.</div>
-          </button>
-
-        </div>
-
-        <!-- Layer Visual Spotlight -->
-        <div class="lg:col-span-7">
-          <div class="p-6 sm:p-8 rounded-3xl glass-card border border-zinc-800 bg-gradient-to-br from-brand-card to-zinc-900/80 relative overflow-hidden">
-            
-            <div class="flex items-center justify-between border-b border-zinc-800 pb-4 mb-6">
-              <div>
-                <span id="layer-tech-badge" class="text-xs font-black px-2.5 py-1 rounded bg-brand-orange text-black">TORAY T700 SPECIFICATION</span>
-                <h4 id="layer-tech-title" class="heading-font text-3xl text-white mt-2">Toray T700 Raw Carbon Fiber Texture</h4>
-              </div>
-              <div class="text-right">
-                <span class="text-[10px] text-zinc-400 uppercase block font-bold">Standard</span>
-                <span class="text-sm font-black text-brand-green">USAPA Tour Legal</span>
-              </div>
-            </div>
-
-            <p id="layer-tech-desc" class="text-zinc-300 text-sm leading-relaxed mb-6">
-              Unlike cheap painted fiberglass or smooth poly prints that lose their grit within two weeks, our raw Toray T700 carbon weave uses un-sanded carbon filaments that bite into the ball's plastic holes, delivering consistent 2,200+ RPM topspin on aggressive rolling dinks.
-            </p>
-
-            <!-- Metrics Matrix -->
-            <div class="grid grid-cols-3 gap-4 text-center">
-              <div class="p-4 rounded-2xl bg-black/60 border border-zinc-800">
-                <div id="layer-stat-1" class="text-2xl font-black text-brand-orange">2,240 RPM</div>
-                <div class="text-[11px] text-zinc-400 uppercase mt-1">Average Spin Rate</div>
-              </div>
-              <div class="p-4 rounded-2xl bg-black/60 border border-zinc-800">
-                <div id="layer-stat-2" class="text-2xl font-black text-white">16 mm</div>
-                <div class="text-[11px] text-zinc-400 uppercase mt-1">Damping Depth</div>
-              </div>
-              <div class="p-4 rounded-2xl bg-black/60 border border-zinc-800">
-                <div id="layer-stat-3" class="text-2xl font-black text-brand-green">8.0 oz</div>
-                <div class="text-[11px] text-zinc-400 uppercase mt-1">Balanced Weight</div>
-              </div>
-            </div>
-
-            <!-- Foreign Comparison Callout -->
-            <div class="mt-6 p-4 rounded-xl bg-orange-950/20 border border-brand-orange/30 flex items-center justify-between text-xs">
-              <span class="text-zinc-300">Compare: Selkirk Labs Boomstik charges <strong>₹35,000</strong> for this identical layup.</span>
-              <a href="#flagship" class="text-brand-orange font-bold hover:underline shrink-0 ml-3">Get Ours for ₹5,500 →</a>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ======================================================== -->
-  <!-- 7. COMPLETE EQUIPMENT CATALOG GRID WITH FILTER TABS -->
-  <!-- ======================================================== -->
-  <section id="catalog" class="py-20 bg-zinc-950 border-b border-zinc-800 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-        <div class="space-y-2">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/10 border border-brand-orange/30 text-brand-orange text-xs font-bold uppercase tracking-wider">
-            <span>Direct Pro-Shop Inventory</span>
-          </div>
-          <h2 class="heading-font text-4xl sm:text-5xl text-white tracking-wide">
-            EXPLORE THE FULL TOURNAMENT COLLECTION
-          </h2>
-          <p class="text-zinc-400 text-sm max-w-xl">
-            Paddles, tournament balls, and training gear tested by tournament players. Transparent pricing, complimentary freebies, and instant cart or WhatsApp ordering.
-          </p>
-        </div>
-
-        <!-- Filter Category Tabs -->
-        <div class="flex items-center gap-2 flex-wrap" id="catalog-filters">
-          <button onclick="filterCatalog('all')" class="cat-filter-btn active px-4 py-2 rounded-xl text-xs font-bold border border-brand-orange bg-brand-orange text-black transition-all">
-            All Gear (9)
-          </button>
-          <button onclick="filterCatalog('pro-paddles')" class="cat-filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-zinc-700 bg-zinc-900 text-zinc-300 hover:text-white transition-all">
-            Pro Carbon (5)
-          </button>
-          <button onclick="filterCatalog('control-series')" class="cat-filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-zinc-700 bg-zinc-900 text-zinc-300 hover:text-white transition-all">
-            Control Series (2)
-          </button>
-          <button onclick="filterCatalog('balls')" class="cat-filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-zinc-700 bg-zinc-900 text-zinc-300 hover:text-white transition-all">
-            Balls (2)
-          </button>
-          <button onclick="filterCatalog('accessories')" class="cat-filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-zinc-700 bg-zinc-900 text-zinc-300 hover:text-white transition-all">
-            Accessories (1)
-          </button>
-        </div>
-      </div>
-
-      <!-- Product Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="product-grid">
-        
-        <!-- CARD 1: Boomstik Carbon Flagship -->
-        <div class="product-card glass-card glass-card-hover rounded-3xl p-4 flex flex-col justify-between" data-category="pro-paddles">
-          <div class="space-y-4">
-            <div class="relative rounded-2xl overflow-hidden aspect-[4/4] bg-black">
-              <img src="public/assets/products/post_2.jpg" alt="Boomstik Carbon Flagship" class="w-full h-full object-cover">
-              <span class="absolute top-3 left-3 bg-brand-orange text-black text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
-                FLAGSHIP VALUE
-              </span>
-              <span class="absolute top-3 right-3 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded-md backdrop-blur-sm">
-                IN STOCK
-              </span>
-            </div>
-            <div>
-              <div class="text-[11px] text-brand-orange font-bold uppercase tracking-wider">Pro Carbon Series</div>
-              <h3 class="text-xl font-bold text-white mt-0.5">Boomstik Carbon Flagship</h3>
-              <p class="text-xs text-zinc-400 mt-1 line-clamp-2">
-                16mm Thickness • Elongated Shape • Toray T700 Raw Carbon • Full Foam Core.
-              </p>
-              <div class="mt-2 text-[11px] text-amber-400 font-semibold">
-                🎁 Free Agassi 40 Ball + Thermal Cover Included
-              </div>
-            </div>
-          </div>
-          <div class="pt-4 border-t border-zinc-800/80 mt-4 space-y-3">
-            <div class="flex items-baseline justify-between">
-              <div class="flex items-baseline gap-2">
-                <span class="text-2xl font-black text-white">₹5,500</span>
-                <span class="text-xs text-zinc-500 line-through">₹35,000</span>
-              </div>
-              <span class="text-xs text-brand-green font-bold">Save 84%</span>
-            </div>
-            <div class="grid grid-cols-2 gap-2">
-              <button onclick="addToCart('Boomstik Carbon Flagship', 5500, 'public/assets/products/post_2.jpg', '16mm Control Core')" class="py-2.5 px-3 rounded-xl bg-brand-orange text-black font-extrabold text-xs hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-1.5">
-                <span>Add to Cart</span>
-              </button>
-              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Boomstik%20Carbon%20Flagship%20for%20%E2%82%B95,500" target="_blank" class="py-2.5 px-3 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-200 font-semibold text-xs hover:border-brand-green hover:text-brand-green transition-all text-center">
-                WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 2: OMNI Advanced Spin -->
-        <div class="product-card glass-card glass-card-hover rounded-3xl p-4 flex flex-col justify-between" data-category="pro-paddles">
-          <div class="space-y-4">
-            <div class="relative rounded-2xl overflow-hidden aspect-[4/4] bg-black">
-              <img src="public/assets/products/post_7.jpg" alt="OMNI Advanced Spin Paddle" class="w-full h-full object-cover">
-              <span class="absolute top-3 left-3 bg-amber-500 text-black text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
-                PRE-BOOKING SPECIAL
-              </span>
-              <span class="absolute top-3 right-3 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded-md backdrop-blur-sm">
-                4 COLORED EDITIONS
-              </span>
-            </div>
-            <div>
-              <div class="text-[11px] text-brand-orange font-bold uppercase tracking-wider">Pro Carbon Series</div>
-              <h3 class="text-xl font-bold text-white mt-0.5">OMNI Advanced Gritty Spin</h3>
-              <p class="text-xs text-zinc-400 mt-1 line-clamp-2">
-                Adjustable Weight System • Gritty Friction Spin Surface • Premium Tournament Finish.
-              </p>
-              <div class="mt-2 text-[11px] text-amber-400 font-semibold">
-                🎁 Free Agassi 40 Ball + Thermal Cover Included
-              </div>
-            </div>
-          </div>
-          <div class="pt-4 border-t border-zinc-800/80 mt-4 space-y-3">
-            <div class="flex items-baseline justify-between">
-              <div class="flex items-baseline gap-2">
-                <span class="text-2xl font-black text-white">₹5,500</span>
-                <span class="text-xs text-zinc-500 line-through">₹6,000</span>
-              </div>
-              <span class="text-xs text-brand-green font-bold">Festive Deal</span>
-            </div>
-            <div class="grid grid-cols-2 gap-2">
-              <button onclick="addToCart('OMNI Advanced Gritty Spin', 5500, 'public/assets/products/post_7.jpg', 'Gritty Spin Edition')" class="py-2.5 px-3 rounded-xl bg-brand-orange text-black font-extrabold text-xs hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-1.5">
-                <span>Add to Cart</span>
-              </button>
-              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20OMNI%20Advanced%20Paddle%20for%20%E2%82%B95,500" target="_blank" class="py-2.5 px-3 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-200 font-semibold text-xs hover:border-brand-green hover:text-brand-green transition-all text-center">
-                WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 3: Agassi V Tournament Touch -->
-        <div class="product-card glass-card glass-card-hover rounded-3xl p-4 flex flex-col justify-between" data-category="control-series">
-          <div class="space-y-4">
-            <div class="relative rounded-2xl overflow-hidden aspect-[4/4] bg-black">
-              <img src="public/assets/products/post_5_c_1.jpg" alt="Agassi V Tournament Touch" class="w-full h-full object-cover">
-              <span class="absolute top-3 left-3 bg-emerald-500 text-black text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
-                BESTSELLER
-              </span>
-              <span class="absolute top-3 right-3 bg-black/80 text-white text-[10px] font-bold px-2 py-1 rounded-md backdrop-blur-sm">
-                IN STOCK
-              </span>
-            </div>
-            <div>
-              <div class="text-[11px] text-emerald-400 font-bold uppercase tracking-wider">Control Series</div>
-              <h3 class="text-xl font-bold text-white mt-0.5">Agassi V Tournament Touch</h3>
-              <p class="text-xs text-zinc-400 mt-1 line-clamp-2">
-                16mm Precision Honeycomb Core • Aerodynamic Curved Throat • Silky Dink Feel.
-              </p>
-              <div class="mt-2 text-[11px] text-amber-400 font-semibold">
-                🎁 Free Agassi 40 Ball + Thermal Cover Included
-              </div>
-            </div>
-          </div>
-          <div class="pt-4 border-t border-zinc-800/80 mt-4 space-y-3">
-            <div class="flex items-baseline justify-between">
-              <div class="flex items-baseline gap-2">
-                <span class="text-2xl font-black text-white">₹4,500</span>
-                <span class="text-xs text-zinc-500 line-through">₹5,000</span>
-              </div>
-              <span class="text-xs text-brand-green font-bold">Save ₹500</span>
-            </div>
-            <div class="grid grid-cols-2 gap-2">
-              <button onclick="addToCart('Agassi V Tournament Touch', 4500, 'public/assets/products/post_5_c_1.jpg', 'Touch Control')" class="py-2.5 px-3 rounded-xl bg-brand-orange text-black font-extrabold text-xs hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-1.5">
-                <span>Add to Cart</span>
-              </button>
-              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Agassi%20V%20Paddle%20for%20%E2%82%B94,500" target="_blank" class="py-2.5 px-3 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-200 font-semibold text-xs hover:border-brand-green hover:text-brand-green transition-all text-center">
-                WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 4: Agassi V Limited Edition -->
-        <div class="product-card glass-card glass-card-hover rounded-3xl p-4 flex flex-col justify-between" data-category="control-series">
-          <div class="space-y-4">
-            <div class="relative rounded-2xl overflow-hidden aspect-[4/4] bg-black">
-              <img src="public/assets/products/post_5_c_2.jpg" alt="Agassi V Limited Edition" class="w-full h-full object-cover">
-              <span class="absolute top-3 left-3 bg-purple-500 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
-                LIMITED DROP
-              </span>
-            </div>
-            <div>
-              <div class="text-[11px] text-purple-400 font-bold uppercase tracking-wider">Control Series</div>
-              <h3 class="text-xl font-bold text-white mt-0.5">Agassi V Limited Edition</h3>
-              <p class="text-xs text-zinc-400 mt-1 line-clamp-2">
-                Custom Metallic Treatment • Perimeter Weighted Rim • Superior Off-Center Forgiveness.
-              </p>
-              <div class="mt-2 text-[11px] text-amber-400 font-semibold">
-                🎁 Free Agassi 40 Ball + Thermal Cover Included
-              </div>
-            </div>
-          </div>
-          <div class="pt-4 border-t border-zinc-800/80 mt-4 space-y-3">
-            <div class="flex items-baseline justify-between">
-              <div class="flex items-baseline gap-2">
-                <span class="text-2xl font-black text-white">₹4,700</span>
-                <span class="text-xs text-zinc-500 line-through">₹5,200</span>
-              </div>
-              <span class="text-xs text-brand-green font-bold">Save ₹500</span>
-            </div>
-            <div class="grid grid-cols-2 gap-2">
-              <button onclick="addToCart('Agassi V Limited Edition', 4700, 'public/assets/products/post_5_c_2.jpg', 'Metallic Limited')" class="py-2.5 px-3 rounded-xl bg-brand-orange text-black font-extrabold text-xs hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-1.5">
-                <span>Add to Cart</span>
-              </button>
-              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Agassi%20V%20Limited%20Edition%20for%20%E2%82%B94,700" target="_blank" class="py-2.5 px-3 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-200 font-semibold text-xs hover:border-brand-green hover:text-brand-green transition-all text-center">
-                WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 5: Perseus V Titan Power -->
-        <div class="product-card glass-card glass-card-hover rounded-3xl p-4 flex flex-col justify-between" data-category="pro-paddles">
-          <div class="space-y-4">
-            <div class="relative rounded-2xl overflow-hidden aspect-[4/4] bg-black">
-              <img src="public/assets/products/post_5_c_6.jpg" alt="Perseus V Titan Power" class="w-full h-full object-cover">
-              <span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
-                POWER HEAVY
-              </span>
-            </div>
-            <div>
-              <div class="text-[11px] text-red-400 font-bold uppercase tracking-wider">Pro Carbon Series</div>
-              <h3 class="text-xl font-bold text-white mt-0.5">Perseus V Titan</h3>
-              <p class="text-xs text-zinc-400 mt-1 line-clamp-2">
-                Hyper-Rigid Face • Explosive Baseline Power Drives • Reinforced Unibody Neck.
-              </p>
-              <div class="mt-2 text-[11px] text-amber-400 font-semibold">
-                🎁 Free Agassi 40 Ball + Thermal Cover Included
-              </div>
-            </div>
-          </div>
-          <div class="pt-4 border-t border-zinc-800/80 mt-4 space-y-3">
-            <div class="flex items-baseline justify-between">
-              <div class="flex items-baseline gap-2">
-                <span class="text-2xl font-black text-white">₹4,500</span>
-                <span class="text-xs text-zinc-500 line-through">₹5,000</span>
-              </div>
-              <span class="text-xs text-brand-green font-bold">Festive Price</span>
-            </div>
-            <div class="grid grid-cols-2 gap-2">
-              <button onclick="addToCart('Perseus V Titan', 4500, 'public/assets/products/post_5_c_6.jpg', 'Titan Power Face')" class="py-2.5 px-3 rounded-xl bg-brand-orange text-black font-extrabold text-xs hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-1.5">
-                <span>Add to Cart</span>
-              </button>
-              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Perseus%20V%20Titan%20for%20%E2%82%B94,500" target="_blank" class="py-2.5 px-3 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-200 font-semibold text-xs hover:border-brand-green hover:text-brand-green transition-all text-center">
-                WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 6: Kevlar Pro Tour Hybrid -->
-        <div class="product-card glass-card glass-card-hover rounded-3xl p-4 flex flex-col justify-between" data-category="pro-paddles">
-          <div class="space-y-4">
-            <div class="relative rounded-2xl overflow-hidden aspect-[4/4] bg-black">
-              <img src="public/assets/products/post_5_c_8.jpg" alt="Kevlar Pro Tour Hybrid" class="w-full h-full object-cover">
-              <span class="absolute top-3 left-3 bg-yellow-500 text-black text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
-                EXTREME DURABILITY
-              </span>
-            </div>
-            <div>
-              <div class="text-[11px] text-yellow-400 font-bold uppercase tracking-wider">Pro Carbon Series</div>
-              <h3 class="text-xl font-bold text-white mt-0.5">Kevlar Pro Tour Hybrid</h3>
-              <p class="text-xs text-zinc-400 mt-1 line-clamp-2">
-                Aramid-Kevlar Cross-Weave • Zero Soft Spots • Crisp Pop on Drives & Speedups.
-              </p>
-              <div class="mt-2 text-[11px] text-amber-400 font-semibold">
-                🎁 Free Agassi 40 Ball + Thermal Cover Included
-              </div>
-            </div>
-          </div>
-          <div class="pt-4 border-t border-zinc-800/80 mt-4 space-y-3">
-            <div class="flex items-baseline justify-between">
-              <div class="flex items-baseline gap-2">
-                <span class="text-2xl font-black text-white">₹5,000</span>
-                <span class="text-xs text-zinc-500 line-through">₹6,000</span>
-              </div>
-              <span class="text-xs text-brand-green font-bold">Save ₹1,000</span>
-            </div>
-            <div class="grid grid-cols-2 gap-2">
-              <button onclick="addToCart('Kevlar Pro Tour Hybrid', 5000, 'public/assets/products/post_5_c_8.jpg', 'Kevlar Cross-Weave')" class="py-2.5 px-3 rounded-xl bg-brand-orange text-black font-extrabold text-xs hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-1.5">
-                <span>Add to Cart</span>
-              </button>
-              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Kevlar%20Pro%20Tour%20for%20%E2%82%B95,000" target="_blank" class="py-2.5 px-3 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-200 font-semibold text-xs hover:border-brand-green hover:text-brand-green transition-all text-center">
-                WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 7: AGASSI 40 Tournament Balls -->
-        <div class="product-card glass-card glass-card-hover rounded-3xl p-4 flex flex-col justify-between" data-category="balls">
-          <div class="space-y-4">
-            <div class="relative rounded-2xl overflow-hidden aspect-[4/4] bg-black">
-              <img src="public/assets/products/post_6.jpg" alt="AGASSI 40 Tournament Balls" class="w-full h-full object-cover">
-              <span class="absolute top-3 left-3 bg-amber-400 text-black text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
-                TOURNAMENT OFFICIAL
-              </span>
-            </div>
-            <div>
-              <div class="text-[11px] text-amber-400 font-bold uppercase tracking-wider">Tournament Balls</div>
-              <h3 class="text-xl font-bold text-white mt-0.5">AGASSI 40 Tournament Balls (3-Pack)</h3>
-              <p class="text-xs text-zinc-400 mt-1 line-clamp-2">
-                40 Precision Holes • Single-Piece Roto-Molded • True Wind-Resistant Trajectory & Bounce.
-              </p>
-              <div class="mt-2 text-[11px] text-zinc-400 font-semibold">
-                Ideal for competitive matches, club leagues & court venues.
-              </div>
-            </div>
-          </div>
-          <div class="pt-4 border-t border-zinc-800/80 mt-4 space-y-3">
-            <div class="flex items-baseline justify-between">
-              <div class="flex items-baseline gap-2">
-                <span class="text-2xl font-black text-white">₹499</span>
-                <span class="text-xs text-zinc-500 line-through">₹699</span>
-              </div>
-              <span class="text-xs text-brand-green font-bold">3-Pack Bundle</span>
-            </div>
-            <div class="grid grid-cols-2 gap-2">
-              <button onclick="addToCart('AGASSI 40 Tournament Balls (3-Pack)', 499, 'public/assets/products/post_6.jpg', '3-Pack Yellow')" class="py-2.5 px-3 rounded-xl bg-brand-orange text-black font-extrabold text-xs hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-1.5">
-                <span>Add to Cart</span>
-              </button>
-              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20AGASSI%2040%20Tournament%20Balls" target="_blank" class="py-2.5 px-3 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-200 font-semibold text-xs hover:border-brand-green hover:text-brand-green transition-all text-center">
-                WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 8: AK-40 Club & Academy Balls -->
-        <div class="product-card glass-card glass-card-hover rounded-3xl p-4 flex flex-col justify-between" data-category="balls">
-          <div class="space-y-4">
-            <div class="relative rounded-2xl overflow-hidden aspect-[4/4] bg-black">
-              <img src="public/assets/products/post_6_c_2.jpg" alt="AK-40 Club & Academy Balls" class="w-full h-full object-cover">
-              <span class="absolute top-3 left-3 bg-zinc-700 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
-                ACADEMY FAVORITE
-              </span>
-            </div>
-            <div>
-              <div class="text-[11px] text-zinc-400 font-bold uppercase tracking-wider">Tournament Balls</div>
-              <h3 class="text-xl font-bold text-white mt-0.5">AK-40 Club & Academy (3-Pack)</h3>
-              <p class="text-xs text-zinc-400 mt-1 line-clamp-2">
-                High-Durability Crack-Resistant Polymer • Optimized for High-Volume Coaching & Drill Sessions.
-              </p>
-              <div class="mt-2 text-[11px] text-zinc-400 font-semibold">
-                Bulk court crate rates available for facility owners.
-              </div>
-            </div>
-          </div>
-          <div class="pt-4 border-t border-zinc-800/80 mt-4 space-y-3">
-            <div class="flex items-baseline justify-between">
-              <div class="flex items-baseline gap-2">
-                <span class="text-2xl font-black text-white">₹399</span>
-                <span class="text-xs text-zinc-500 line-through">₹550</span>
-              </div>
-              <span class="text-xs text-brand-green font-bold">Academy Value</span>
-            </div>
-            <div class="grid grid-cols-2 gap-2">
-              <button onclick="addToCart('AK-40 Club Balls (3-Pack)', 399, 'public/assets/products/post_6_c_2.jpg', '3-Pack Lime Green')" class="py-2.5 px-3 rounded-xl bg-brand-orange text-black font-extrabold text-xs hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-1.5">
-                <span>Add to Cart</span>
-              </button>
-              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20AK-40%20Club%20Balls" target="_blank" class="py-2.5 px-3 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-200 font-semibold text-xs hover:border-brand-green hover:text-brand-green transition-all text-center">
-                WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 9: Portable Practice Ball Caddy -->
-        <div class="product-card glass-card glass-card-hover rounded-3xl p-4 flex flex-col justify-between" data-category="accessories">
-          <div class="space-y-4">
-            <div class="relative rounded-2xl overflow-hidden aspect-[4/4] bg-black">
-              <img src="public/assets/products/post_8.jpg" alt="Portable Pickleball Ball Caddy Basket" class="w-full h-full object-cover">
-              <span class="absolute top-3 left-3 bg-brand-orange text-black text-[10px] font-black uppercase px-2.5 py-1 rounded-full">
-                LAUNCH DEAL
-              </span>
-            </div>
-            <div>
-              <div class="text-[11px] text-brand-orange font-bold uppercase tracking-wider">Training Gear</div>
-              <h3 class="text-xl font-bold text-white mt-0.5">Portable Ball Caddy Basket</h3>
-              <p class="text-xs text-zinc-400 mt-1 line-clamp-2">
-                Holds Up to 60 Balls • Foldable Steel Frame • Soft Padded Base • Quick 30-Sec Setup.
-              </p>
-              <div class="mt-2 text-[11px] text-zinc-400 font-semibold">
-                Perfect for drill practice, personal sessions, and academy coaches.
-              </div>
-            </div>
-          </div>
-          <div class="pt-4 border-t border-zinc-800/80 mt-4 space-y-3">
-            <div class="flex items-baseline justify-between">
-              <div class="flex items-baseline gap-2">
-                <span class="text-2xl font-black text-white">₹1,599</span>
-                <span class="text-xs text-zinc-500 line-through">₹2,499</span>
-              </div>
-              <span class="text-xs text-brand-green font-bold">Save ₹900</span>
-            </div>
-            <div class="grid grid-cols-2 gap-2">
-              <button onclick="addToCart('Portable Ball Caddy Basket', 1599, 'public/assets/products/post_8.jpg', '60-Ball Capacity')" class="py-2.5 px-3 rounded-xl bg-brand-orange text-black font-extrabold text-xs hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-1.5">
-                <span>Add to Cart</span>
-              </button>
-              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Portable%20Ball%20Caddy%20Basket%20for%20%E2%82%B91,599" target="_blank" class="py-2.5 px-3 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-200 font-semibold text-xs hover:border-brand-green hover:text-brand-green transition-all text-center">
-                WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ======================================================== -->
-  <!-- 8. VERIFIED CUSTOMER REVIEWS & DUPR RATING WALL -->
-  <!-- ======================================================== -->
-  <section id="reviews" class="py-20 bg-brand-dark border-b border-zinc-800/80 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#73641A]/15 border border-[#73641A]/30 text-[#73641A] text-xs font-bold uppercase tracking-wider">
           <span>Verified Player Feedback</span>
         </div>
-        <h2 class="heading-font text-4xl sm:text-5xl text-white tracking-wide">
+        <h2 class="heading-font text-4xl sm:text-5xl text-[#262626] tracking-wide">
           TRUSTED ON COURT BY COMPETITIVE CONTENDERS
         </h2>
-        <p class="text-zinc-400 text-sm sm:text-base">
+        <p class="text-zinc-800 text-sm sm:text-base">
           From third-shot drop resets to aggressive overhead smashes, read what tournament players and coaches have to say.
         </p>
       </div>
@@ -1144,99 +1034,91 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
         <!-- Review 1 -->
-        <div class="p-6 rounded-3xl glass-card border border-zinc-800 flex flex-col justify-between space-y-4">
+        <div class="p-6 rounded-3xl bg-white border border-[#73641A]/20 shadow-sm hover:shadow-xl flex flex-col justify-between space-y-4 transition-all">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <div class="flex text-amber-400 text-sm">★★★★★</div>
-              <span class="text-[10px] font-black px-2 py-0.5 rounded bg-brand-orange/20 text-brand-orange border border-brand-orange/40">
+              <div class="flex text-[#73641A] text-sm font-bold">★★★★★</div>
+              <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">
                 DUPR 4.2
               </span>
             </div>
-            <p class="text-zinc-300 text-sm leading-relaxed italic">
+            <p class="text-[#262626] text-sm leading-relaxed italic">
               "This paddle is an absolute gem. Replaced my ₹28,000 foreign paddle with the Boomstik, and my third-shot drops have never had so much spin and bite. The grit has held up beautifully."
             </p>
           </div>
-          <div class="pt-3 border-t border-zinc-800 flex items-center justify-between text-xs">
-            <span class="font-bold text-white">Rohit M. • Delhi NCR</span>
-            <span class="text-zinc-500">Boomstik 16mm</span>
+          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between text-xs">
+            <span class="font-bold text-[#262626]">Rohit M. • Delhi NCR</span>
+            <span class="text-zinc-500 font-semibold">Boomstik 16mm</span>
           </div>
         </div>
 
         <!-- Review 2 -->
-        <div class="p-6 rounded-3xl glass-card border border-zinc-800 flex flex-col justify-between space-y-4">
+        <div class="p-6 rounded-3xl bg-white border border-[#73641A]/20 shadow-sm hover:shadow-xl flex flex-col justify-between space-y-4 transition-all">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <div class="flex text-amber-400 text-sm">★★★★★</div>
-              <span class="text-[10px] font-black px-2 py-0.5 rounded bg-brand-green/20 text-brand-green border border-brand-green/40">
+              <div class="flex text-[#73641A] text-sm font-bold">★★★★★</div>
+              <span class="text-[10px] font-black px-2 py-0.5 rounded bg-emerald-800/10 text-emerald-800 border border-emerald-800/30">
                 DUPR 4.6 COACH
               </span>
             </div>
-            <p class="text-zinc-300 text-sm leading-relaxed italic">
+            <p class="text-[#262626] text-sm leading-relaxed italic">
               "The 16mm Boomstik is a beast at the net. The perimeter foam injection completely eliminates dead spots on block resets. Our academy recommends this to every rising tournament player."
             </p>
           </div>
-          <div class="pt-3 border-t border-zinc-800 flex items-center justify-between text-xs">
-            <span class="font-bold text-white">Coach Vikram S. • Haryana</span>
-            <span class="text-zinc-500">Academy Director</span>
+          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between text-xs">
+            <span class="font-bold text-[#262626]">Coach Vikram S. • Haryana</span>
+            <span class="text-zinc-500 font-semibold">Academy Director</span>
           </div>
         </div>
 
         <!-- Review 3 -->
-        <div class="p-6 rounded-3xl glass-card border border-zinc-800 flex flex-col justify-between space-y-4">
+        <div class="p-6 rounded-3xl bg-white border border-[#73641A]/20 shadow-sm hover:shadow-xl flex flex-col justify-between space-y-4 transition-all">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <div class="flex text-amber-400 text-sm">★★★★★</div>
-              <span class="text-[10px] font-black px-2 py-0.5 rounded bg-amber-400/20 text-amber-400 border border-amber-400/40">
+              <div class="flex text-[#73641A] text-sm font-bold">★★★★★</div>
+              <span class="text-[10px] font-black px-2 py-0.5 rounded bg-amber-800/10 text-amber-800 border border-amber-800/30">
                 CLUB PARTNER
               </span>
             </div>
-            <p class="text-zinc-300 text-sm leading-relaxed italic">
+            <p class="text-[#262626] text-sm leading-relaxed italic">
               "Ordered 14 paddles and 20 packs of AGASSI 40 balls for our newly built courts. Unbelievable build quality and express delivery. Players constantly ask where they can buy their own."
             </p>
           </div>
-          <div class="pt-3 border-t border-zinc-800 flex items-center justify-between text-xs">
-            <span class="font-bold text-white">Sameer K. • Hisar Facility</span>
-            <span class="text-zinc-500">Court Facility Owner</span>
+          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between text-xs">
+            <span class="font-bold text-[#262626]">Sameer K. • Hisar Facility</span>
+            <span class="text-zinc-500 font-semibold">Court Facility Owner</span>
           </div>
         </div>
 
-      </div>
-
-      <!-- Video Review Spotlight Link -->
-      <div class="mt-8 text-center">
-        <button onclick="switchReel(1); document.getElementById('videos').scrollIntoView({behavior: 'smooth'})" class="inline-flex items-center gap-2 text-xs font-bold text-zinc-300 hover:text-brand-orange transition-colors">
-          <span>▶ Watch the Customer Review & WhatsApp Journey Video Reel</span>
-          <span class="text-brand-orange">→</span>
-        </button>
       </div>
 
     </div>
   </section>
 
   <!-- ======================================================== -->
-  <!-- 9. B2B ACADEMY & COURT OWNERS WHOLESALE PORTAL -->
+  <!-- 7. B2B ACADEMY & COURT OWNERS WHOLESALE PORTAL (DARK) -->
   <!-- ======================================================== -->
-  <section id="wholesale" class="py-20 bg-zinc-950 border-b border-zinc-800 relative">
+  <section id="wholesale" class="py-20 bg-[#262626] border-b border-zinc-800 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="rounded-3xl glass-card border border-amber-500/30 p-8 sm:p-12 relative overflow-hidden bg-gradient-to-br from-zinc-950 via-zinc-900 to-amber-950/20">
+      <div class="rounded-3xl glass-card border border-[#73641A]/40 p-8 sm:p-12 relative overflow-hidden bg-gradient-to-br from-zinc-950 via-zinc-900 to-[#73641A]/15">
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           <div class="lg:col-span-7 space-y-4">
-            <span class="px-3 py-1 rounded-full bg-amber-400/15 border border-amber-400/40 text-amber-400 text-xs font-black tracking-wider uppercase">
+            <span class="px-3 py-1 rounded-full bg-[#73641A]/20 border border-[#73641A]/40 text-[#F2DA91] text-xs font-black tracking-wider uppercase">
               B2B & WHOLESALE DESK
             </span>
-            <h2 class="heading-font text-4xl sm:text-5xl text-white tracking-wide">
+            <h2 class="heading-font text-4xl sm:text-5xl text-brand-ivory tracking-wide">
               COURT OWNERS, ACADEMIES & TOURNAMENT DIRECTORS
             </h2>
             <p class="text-zinc-300 text-sm sm:text-base leading-relaxed">
               Equipping a new venue or running state tournament draws? The Paddle Store supplies bulk paddle sets, AGASSI 40 tournament ball crates, ball caddies, and branded demo gear at dedicated wholesale margins.
             </p>
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-xs text-zinc-300 font-semibold">
-              <div class="flex items-center gap-1.5"><span class="text-amber-400">✓</span> Tiered Volume MOQs</div>
-              <div class="flex items-center gap-1.5"><span class="text-amber-400">✓</span> Custom Court Bundles</div>
-              <div class="flex items-center gap-1.5"><span class="text-amber-400">✓</span> Pan-India Freight</div>
+              <div class="flex items-center gap-1.5"><span class="text-brand-orange">✓</span> Tiered Volume MOQs</div>
+              <div class="flex items-center gap-1.5"><span class="text-brand-orange">✓</span> Custom Court Bundles</div>
+              <div class="flex items-center gap-1.5"><span class="text-brand-orange">✓</span> Pan-India Freight</div>
             </div>
           </div>
 
@@ -1244,7 +1126,7 @@
             <a href="https://wa.me/919518241474?text=Hi%20The%20Paddle%20Store!%20I%20am%20a%20court%20owner/coach%20and%20want%20to%20discuss%20bulk%20wholesale%20rates." 
                target="_blank" 
                rel="noopener noreferrer" 
-               class="py-4 px-6 rounded-2xl bg-amber-500 text-black font-extrabold text-sm hover:bg-amber-400 transition-all text-center shadow-xl shadow-amber-500/20 flex items-center justify-center gap-2">
+               class="py-4 px-6 rounded-2xl bg-brand-orange text-black font-extrabold text-sm hover:bg-brand-orangeHover transition-all text-center shadow-xl shadow-orange-500/20 flex items-center justify-center gap-2">
               <span>Request Wholesale Pricing on WhatsApp</span>
               <span>→</span>
             </a>
@@ -1261,195 +1143,112 @@
   </section>
 
   <!-- ======================================================== -->
-  <!-- 10. PHYSICAL HUBS & VENUES (HISAR, HARYANA & PITAMPURA, DELHI) -->
+  <!-- 8. PHYSICAL HUBS & VENUES (LIGHT WARM SECTION: #F2E6D8) -->
   <!-- ======================================================== -->
-  <section id="venues" class="py-20 bg-brand-dark border-b border-zinc-800/80 relative overflow-hidden">
-    <!-- Ambient Glow -->
-    <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-brand-orange/5 rounded-full blur-[140px] pointer-events-none -z-10"></div>
-    <div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-brand-bronze/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
-
+  <section id="venues" class="py-20 bg-[#F2E6D8] border-b border-[#73641A]/20 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/15 border border-brand-orange/40 text-brand-orange text-xs font-black uppercase tracking-wider">
-          <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
-          <span>PHYSICAL VENUES & EXPERIENCE HUBS</span>
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#73641A]/10 border border-[#73641A]/30 text-[#73641A] text-xs font-black uppercase tracking-wider">
+          <span>PHYSICAL VENUES & EXPERIENCE CENTERS</span>
         </div>
-        <h2 class="heading-font text-4xl sm:text-5xl text-brand-ivory tracking-wide">
-          VISIT OUR PHYSICAL HUBS IN HARYANA & DELHI
+        <h2 class="heading-font text-4xl sm:text-5xl text-[#262626] tracking-wide">
+          VISIT OUR PHYSICAL HUBS
         </h2>
-        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed">
-          Want to feel the raw Toray T700 carbon friction skin or test swing weight before ordering? 
-          Drop by our physical venues in <strong class="text-brand-orange">Hisar, Haryana</strong> and <strong class="text-brand-orange">Pitampura, Delhi</strong> for live paddle demos, court testing, and instant pick-ups.
+        <p class="text-zinc-700 text-sm sm:text-base leading-relaxed">
+          Drop by our physical hubs in <strong class="text-[#73641A]">Hisar, Haryana</strong> and <strong class="text-[#73641A]">Pitampura, Delhi</strong> to test paddles, feel swing weights, and collect your gear in person.
         </p>
       </div>
 
-      <!-- 2 Flagship Venue Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- 2 Clean Visual Cards (No Text Dump - Clean Pro-Store Image & Connect Button) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         
-        <!-- VENUE 1: HISAR, HARYANA -->
-        <div class="rounded-3xl glass-card border border-brand-orange/30 p-8 sm:p-10 flex flex-col justify-between space-y-6 relative overflow-hidden group hover:border-brand-orange/60 transition-all duration-300">
-          
-          <div class="space-y-5">
-            <!-- Header Pill & Badge -->
+        <!-- VENUE 1: HISAR EXPERIENCE HUB -->
+        <div class="rounded-3xl bg-white border border-[#73641A]/20 p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-[#73641A]/50 transition-all duration-300">
+          <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-brand-orange/20 border border-brand-orange/40 text-brand-orange text-[11px] font-black tracking-wider uppercase">
-                📍 HARYANA HUB
+              <span class="px-3 py-1 rounded-full bg-[#73641A]/15 border border-[#73641A]/30 text-[#73641A] text-[11px] font-black tracking-wider uppercase">
+                📍 HARYANA
               </span>
-              <span class="inline-flex items-center gap-1.5 text-xs text-brand-orange font-bold">
-                <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
+              <span class="text-xs font-bold text-[#73641A] flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-[#73641A] animate-ping"></span>
                 Walk-ins Welcome
               </span>
             </div>
-
+            
             <div>
-              <h3 class="heading-font text-3xl sm:text-4xl text-brand-ivory tracking-wide">
+              <h3 class="heading-font text-3xl sm:text-4xl text-[#262626] tracking-wide">
                 HISAR EXPERIENCE HUB
               </h3>
-              <p class="text-xs sm:text-sm text-brand-orange font-semibold mt-1">
-                The Paddle Store Pro-Desk & Demo Courts • Hisar, Haryana
-              </p>
+              <p class="text-xs text-zinc-600 mt-1">The Paddle Store Pro-Desk & Demo Courts • Hisar, Haryana</p>
             </div>
 
-            <!-- Features List -->
-            <div class="space-y-3 pt-2 text-xs sm:text-sm text-zinc-300">
-              <div class="flex items-start gap-3 p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
-                <span class="text-base shrink-0">🏓</span>
-                <div>
-                  <strong class="text-brand-ivory block">Live On-Court Paddle Locker</strong>
-                  <span class="text-zinc-400 text-xs">Test the Boomstik 16mm Control & 14mm Power models on live courts before buying.</span>
-                </div>
+            <!-- Pro Shop Image Placeholder -->
+            <div class="relative rounded-2xl overflow-hidden aspect-[16/10] bg-zinc-900 border border-[#73641A]/20 shadow-inner group">
+              <img src="public/assets/products/post_5_c_1.jpg" alt="The Paddle Store Hisar Hub" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-4">
+                <span class="text-white text-xs font-bold">Hisar Pro-Locker & Court Demo Center</span>
               </div>
-
-              <div class="flex items-start gap-3 p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
-                <span class="text-base shrink-0">🛍️</span>
-                <div>
-                  <strong class="text-brand-ivory block">Instant Store Inventory Pickup</strong>
-                  <span class="text-zinc-400 text-xs">Full stock of tournament balls, thermal protective cases, grip rolls, and replacement covers.</span>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3 p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
-                <span class="text-base shrink-0">👥</span>
-                <div>
-                  <strong class="text-brand-ivory block">Player Fitting & Grip Tuning</strong>
-                  <span class="text-zinc-400 text-xs">Consult with experienced players for proper sweet-spot selection and hand sizing.</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Operational Meta -->
-            <div class="pt-2 border-t border-zinc-800/80 flex items-center justify-between text-xs text-zinc-400">
-              <div class="flex items-center gap-1.5">
-                <span>🕒</span>
-                <span>Open Daily: <strong>7:00 AM – 10:00 PM</strong></span>
-              </div>
-              <div class="text-brand-orange font-bold">Haryana Center</div>
             </div>
           </div>
 
-          <!-- Direct Inquiries Action -->
-          <div class="pt-2">
-            <a href="https://wa.me/919518241474?text=Hi%20The%20Paddle%20Store!%20I'd%20like%20to%20visit%20your%20Hisar%20venue%20in%20Haryana%20for%20paddle%20trials." 
+          <div class="pt-6">
+            <a href="https://wa.me/919518241474?text=Hi%20The%20Paddle%20Store!%20I'd%20like%20to%20connect%20with%20your%20Hisar%20Desk%20for%20paddle%20trials." 
                target="_blank" 
                rel="noopener noreferrer" 
-               class="w-full py-3.5 px-6 rounded-xl bg-brand-orange text-black font-extrabold text-xs sm:text-sm tracking-wide hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-2 shadow-lg shadow-orange-500/20 active:scale-[0.99]">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+               class="w-full py-4 px-6 rounded-xl bg-[#73641A] text-white font-extrabold text-sm tracking-wide hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#73641A]/20 active:scale-[0.99]">
               <span>Connect with Hisar Desk</span>
+              <span>→</span>
             </a>
           </div>
-
         </div>
 
-        <!-- VENUE 2: PITAMPURA, DELHI -->
-        <div class="rounded-3xl glass-card border border-brand-orange/30 p-8 sm:p-10 flex flex-col justify-between space-y-6 relative overflow-hidden group hover:border-brand-orange/60 transition-all duration-300">
-          
-          <div class="space-y-5">
-            <!-- Header Pill & Badge -->
+        <!-- VENUE 2: PITAMPURA PRO HUB -->
+        <div class="rounded-3xl bg-white border border-[#73641A]/20 p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-[#73641A]/50 transition-all duration-300">
+          <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-brand-orange/20 border border-brand-orange/40 text-brand-orange text-[11px] font-black tracking-wider uppercase">
-                📍 DELHI NCR HUB
+              <span class="px-3 py-1 rounded-full bg-[#73641A]/15 border border-[#73641A]/30 text-[#73641A] text-[11px] font-black tracking-wider uppercase">
+                📍 DELHI NCR
               </span>
-              <span class="inline-flex items-center gap-1.5 text-xs text-brand-orange font-bold">
-                <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
+              <span class="text-xs font-bold text-[#73641A] flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-[#73641A] animate-ping"></span>
                 Pickup Station Active
               </span>
             </div>
 
             <div>
-              <h3 class="heading-font text-3xl sm:text-4xl text-brand-ivory tracking-wide">
-                PITAMPURA PRO-HUB
+              <h3 class="heading-font text-3xl sm:text-4xl text-[#262626] tracking-wide">
+                PITAMPURA PRO HUB
               </h3>
-              <p class="text-xs sm:text-sm text-brand-orange font-semibold mt-1">
-                The Paddle Store Delhi Metro Hub • Pitampura, New Delhi
-              </p>
+              <p class="text-xs text-zinc-600 mt-1">The Paddle Store Delhi Metro Hub • Pitampura, New Delhi</p>
             </div>
 
-            <!-- Features List -->
-            <div class="space-y-3 pt-2 text-xs sm:text-sm text-zinc-300">
-              <div class="flex items-start gap-3 p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
-                <span class="text-base shrink-0">⚡</span>
-                <div>
-                  <strong class="text-brand-ivory block">Delhi Same-Day Pickup Point</strong>
-                  <span class="text-zinc-400 text-xs">Place your order online or via WhatsApp and collect immediately from our Pitampura locker.</span>
-                </div>
+            <!-- Pro Shop Image Placeholder -->
+            <div class="relative rounded-2xl overflow-hidden aspect-[16/10] bg-zinc-900 border border-[#73641A]/20 shadow-inner group">
+              <img src="public/assets/products/post_6_c_1.jpg" alt="The Paddle Store Pitampura Hub" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-4">
+                <span class="text-white text-xs font-bold">Delhi NCR Pro-Desk & Direct Pickup Station</span>
               </div>
-
-              <div class="flex items-start gap-3 p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
-                <span class="text-base shrink-0">🏓</span>
-                <div>
-                  <strong class="text-brand-ivory block">Feel & Inspect Carbon Surface</strong>
-                  <span class="text-zinc-400 text-xs">Examine the micro-textured carbon grit, edge guards, and handle circumference in person.</span>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3 p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
-                <span class="text-base shrink-0">📦</span>
-                <div>
-                  <strong class="text-brand-ivory block">Club & Bulk Crate Distribution</strong>
-                  <span class="text-zinc-400 text-xs">Direct staging center for Delhi NCR court venues, corporate tournament organizers & academies.</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Operational Meta -->
-            <div class="pt-2 border-t border-zinc-800/80 flex items-center justify-between text-xs text-zinc-400">
-              <div class="flex items-center gap-1.5">
-                <span>🕒</span>
-                <span>Open Daily: <strong>8:00 AM – 9:30 PM</strong></span>
-              </div>
-              <div class="text-brand-orange font-bold">Delhi NCR Center</div>
             </div>
           </div>
 
-          <!-- Direct Inquiries Action -->
-          <div class="pt-2">
-            <a href="https://wa.me/919518241474?text=Hi%20The%20Paddle%20Store!%20I'd%20like%20to%20visit%20your%20Pitampura%20Delhi%20hub%20for%20gear%20pickup." 
+          <div class="pt-6">
+            <a href="https://wa.me/919518241474?text=Hi%20The%20Paddle%20Store!%20I'd%20like%20to%20connect%20with%20your%20Delhi%20Desk%20for%20gear%20pickup." 
                target="_blank" 
                rel="noopener noreferrer" 
-               class="w-full py-3.5 px-6 rounded-xl bg-brand-orange text-black font-extrabold text-xs sm:text-sm tracking-wide hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-2 shadow-lg shadow-orange-500/20 active:scale-[0.99]">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+               class="w-full py-4 px-6 rounded-xl bg-[#73641A] text-white font-extrabold text-sm tracking-wide hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#73641A]/20 active:scale-[0.99]">
               <span>Connect with Delhi Desk</span>
+              <span>→</span>
             </a>
           </div>
-
         </div>
 
       </div>
 
-      <!-- Navigation & Maps Note -->
-      <div class="mt-8 text-center">
-        <p class="text-xs text-zinc-400">
-          📍 Direct Google Maps coordinates & court reservation booking links will be enabled shortly. 
-          To schedule a demo session or arrange an in-person visit today, reach our team directly on WhatsApp or call <strong class="text-brand-orange">+91 95182 41474</strong>.
-        </p>
-      </div>
-
     </div>
   </section>
-
-  <!-- ======================================================== -->
+<!-- ======================================================== -->
   <!-- 11. ASYNCHRONOUS FORM SUBMISSION & CONTACT DESK -->
   <!-- ======================================================== -->
   <section id="contact" class="py-20 bg-brand-dark relative">
@@ -1773,7 +1572,8 @@
           <a href="#flagship" class="hover:text-white transition-colors">Flagship</a>
           <a href="#videos" class="hover:text-white transition-colors">Video Reels</a>
           <a href="#catalog" class="hover:text-white transition-colors">Equipment</a>
-          <a href="#tech" class="hover:text-white transition-colors">Tech Teardown</a>
+          <a href="#venues" class="hover:text-white transition-colors">Experience Hubs</a>
+          <a href="#reviews" class="hover:text-white transition-colors">Reviews</a>
           <a href="https://www.instagram.com/the_paddle_store_/" target="_blank" class="hover:text-brand-orange transition-colors">Instagram @the_paddle_store_</a>
         </div>
       </div>
@@ -1801,21 +1601,6 @@
     // ----------------------------------------------------
     const REELS = [
       {
-        id: 'boomstik_showcase',
-        videoSrc: 'public/assets/videos/boomstik_showcase.mp4',
-        badge: 'SHOWCASE REEL',
-        tag: 'Featured Flagship Model',
-        title: 'BOOMSTIK MULTI-PATTERN CARBON SERIES (₹5,500)',
-        desc: 'Witness the craftsmanship, raw carbon grit texture, and high-tensile edge construction. Available in custom limited color patterns for up to 70% less than foreign retail brands.',
-        bullets: [
-          'Authentic Toray T700 3K carbon fiber skin with textured grit for top-spin.',
-          '16mm honeycomb core provides generous sweet spot and effortless resets.',
-          'Includes Free AGASSI 40 Tournament Ball & Thermal Protective Paddle Case.'
-        ],
-        btnText: 'Order Boomstik • ₹5,500',
-        product: { name: 'Boomstik Carbon Flagship', price: 5500, img: 'public/assets/products/post_2.jpg', variant: '16mm Multi-Pattern' }
-      },
-      {
         id: 'customer_reviews',
         videoSrc: 'public/assets/videos/customer_reviews.mp4',
         badge: 'CUSTOMER REVIEWS',
@@ -1829,6 +1614,21 @@
         ],
         btnText: 'Join the Player Ranks • Shop Gear',
         product: { name: 'Boomstik Carbon Flagship', price: 5500, img: 'public/assets/products/post_2.jpg', variant: '16mm Tour Edition' }
+      },
+      {
+        id: 'boomstik_showcase',
+        videoSrc: 'public/assets/videos/boomstik_showcase.mp4',
+        badge: 'SHOWCASE REEL',
+        tag: 'Featured Flagship Model',
+        title: 'BOOMSTIK MULTI-PATTERN CARBON SERIES (₹5,500)',
+        desc: 'Witness the craftsmanship, raw carbon grit texture, and high-tensile edge construction. Available in custom limited color patterns for up to 70% less than foreign retail brands.',
+        bullets: [
+          'Authentic Toray T700 3K carbon fiber skin with textured grit for top-spin.',
+          '16mm honeycomb core provides generous sweet spot and effortless resets.',
+          'Includes Free AGASSI 40 Tournament Ball & Thermal Protective Paddle Case.'
+        ],
+        btnText: 'Order Boomstik • ₹5,500',
+        product: { name: 'Boomstik Carbon Flagship', price: 5500, img: 'public/assets/products/post_2.jpg', variant: '16mm Multi-Pattern' }
       },
       {
         id: 'matchplay_action',
@@ -1890,24 +1690,43 @@
       const data = REELS[index];
 
       // Update video source & play
-      mainVideo.src = data.videoSrc;
-      mainVideo.play().catch(e => console.log('Autoplay handled:', e));
+      if (mainVideo) {
+        mainVideo.src = data.videoSrc;
+        mainVideo.play().catch(e => console.log('Autoplay handled:', e));
+      }
 
-      // Update DOM
-      document.getElementById('reel-badge').textContent = data.badge;
-      document.getElementById('reel-caption-title').textContent = data.title;
-      document.getElementById('reel-context-tag').textContent = data.tag;
-      document.getElementById('reel-context-headline').textContent = data.title;
-      document.getElementById('reel-context-desc').textContent = data.desc;
-      document.getElementById('reel-btn-text').textContent = data.btnText;
+      // Update DOM with safe lookups
+      const badgeEl = document.getElementById('reel-badge');
+      if (badgeEl) badgeEl.textContent = data.badge;
+
+      const titleOverlayEl = document.getElementById('reel-title-overlay') || document.getElementById('reel-caption-title');
+      if (titleOverlayEl) titleOverlayEl.textContent = data.title;
+
+      const tagEl = document.getElementById('reel-model-tag') || document.getElementById('reel-context-tag');
+      if (tagEl) tagEl.textContent = data.tag;
+
+      const headlineEl = document.getElementById('reel-narrative-title') || document.getElementById('reel-context-headline');
+      if (headlineEl) headlineEl.textContent = data.title;
+
+      const descEl = document.getElementById('reel-narrative-desc') || document.getElementById('reel-context-desc');
+      if (descEl) descEl.textContent = data.desc;
+
+      const btnEl = document.getElementById('reel-btn-label') || document.getElementById('reel-btn-text');
+      if (btnEl) btnEl.textContent = data.btnText;
 
       const bulletsContainer = document.getElementById('reel-bullets');
-      bulletsContainer.innerHTML = data.bullets.map(b => `
-        <div class="flex items-center gap-2">
-          <span class="text-brand-orange">✓</span>
-          <span>${b}</span>
-        </div>
-      `).join('');
+      if (bulletsContainer && data.bullets) {
+        bulletsContainer.innerHTML = data.bullets.map(b => `
+          <div class="flex items-start gap-2.5">
+            <span class="text-brand-orange text-sm font-bold">✓</span>
+            <span>${b}</span>
+          </div>
+        `).join('');
+      } else {
+        if (data.bullets && data.bullets[0] && document.getElementById('reel-bullet-1')) document.getElementById('reel-bullet-1').textContent = data.bullets[0];
+        if (data.bullets && data.bullets[1] && document.getElementById('reel-bullet-2')) document.getElementById('reel-bullet-2').textContent = data.bullets[1];
+        if (data.bullets && data.bullets[2] && document.getElementById('reel-bullet-3')) document.getElementById('reel-bullet-3').textContent = data.bullets[2];
+      }
 
       // Update active tab buttons
       const tabs = document.querySelectorAll('.reel-tab-btn');
