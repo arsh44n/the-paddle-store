@@ -105,6 +105,10 @@
     .reel-container {
       aspect-ratio: 9 / 16;
     }
+    html, body {
+      max-width: 100vw;
+      overflow-x: hidden;
+    }
     /* Moving Top Strip Animation from Left to Right */
     @keyframes marqueeLtr {
       0% { transform: translateX(-50%); }
@@ -116,6 +120,15 @@
       animation: marqueeLtr 24s linear infinite;
     }
     .animate-marquee-ltr:hover {
+      animation-play-state: paused;
+    }
+    .animate-marquee-ltr-reviews {
+      display: flex;
+      width: max-content;
+      animation: marqueeLtr 32s linear infinite;
+    }
+    .animate-marquee-ltr-reviews:hover,
+    .animate-marquee-ltr-reviews:active {
       animation-play-state: paused;
     }
   </style>
@@ -245,124 +258,31 @@
   <!-- ======================================================== -->
   <!-- 3. HERO SHOWCASE SECTION: THE BOOMSTIK CARBON FLAGSHIP -->
   <!-- ======================================================== -->
-  <section id="hero" class="relative pt-8 pb-16 lg:py-24 overflow-hidden border-b border-zinc-800/80">
+  <section id="hero" class="relative pt-6 sm:pt-8 pb-16 lg:py-20 overflow-hidden border-b border-zinc-800/80">
     <!-- Ambient Background Lighting -->
     <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-orange/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
     <div class="absolute bottom-0 right-10 w-[400px] h-[400px] bg-amber-500/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
         
-        <!-- Left Column: Commercial Narrative & Variant Selector -->
-        <div class="lg:col-span-7 space-y-6 text-left">
-          
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-900 border border-zinc-700/80 text-xs font-semibold text-zinc-300">
-            <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+        <!-- HERO BLOCK 1: Top Badge & Main Headline (1st on mobile & desktop) -->
+        <div class="order-1 lg:col-span-7 space-y-3 text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-700/80 text-[11px] sm:text-xs font-semibold text-zinc-300">
+            <span class="w-2 h-2 rounded-full bg-[#F2DA91] animate-pulse"></span>
             <span>DIRECT-TO-CONSUMER DISRUPTOR</span>
             <span class="text-zinc-500">•</span>
-            <span class="text-amber-400 font-bold">SAME SPECS. SMARTER PRICE.</span>
+            <span class="text-[#F2DA91] font-bold">SAME SPECS. SMARTER PRICE.</span>
           </div>
 
-          <h1 class="heading-font text-5xl sm:text-6xl xl:text-7xl leading-[0.95] text-white tracking-wide">
+          <h1 class="heading-font text-4xl sm:text-6xl xl:text-7xl leading-[0.98] text-white tracking-wide">
             WHY PAY <span class="text-zinc-500 line-through">₹35,000</span><br>
-            WHEN YOUR PRO GAME COSTS <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-brand-orange to-amber-400">JUST ₹5,500?</span>
+            WHEN YOUR PRO GAME COSTS <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-[#F2DA91] to-amber-300">JUST ₹5,500?</span>
           </h1>
-
-          <p class="text-zinc-300 text-base sm:text-lg max-w-2xl leading-relaxed">
-            International equipment brands charge a 600% markup for labels and foreign marketing. 
-            <strong>The Paddle Store Boomstik</strong> delivers identical <strong>Toray T700 Raw Carbon Fiber</strong>, 
-            a full 16mm vibration-damping core, and thermoformed foam-injected sweet spot perimeter — built for competitive players who demand pure performance over logos.
-          </p>
-
-          <!-- Price & Savings Callout Box -->
-          <div class="p-5 rounded-2xl glass-card border border-brand-orange/30 bg-gradient-to-br from-zinc-900/90 to-brand-card/90 space-y-4">
-            <div class="flex flex-wrap items-baseline justify-between gap-4">
-              <div>
-                <span class="text-xs uppercase font-bold text-zinc-400 tracking-wider">Tournament Launch Price</span>
-                <div class="flex items-baseline gap-3">
-                  <span class="text-4xl sm:text-5xl font-black text-white">₹5,500</span>
-                  <span class="text-lg text-zinc-500 line-through">₹35,000 Selkirk Labs MRP</span>
-                </div>
-              </div>
-              <div class="px-3.5 py-1.5 rounded-xl bg-brand-orange/20 border border-brand-orange/50 text-brand-orange font-black text-sm tracking-wide">
-                SAVE 84% (₹29,500)
-              </div>
-            </div>
-
-            <!-- Freebies Bundle Strip -->
-            <div class="pt-3 border-t border-zinc-800 flex flex-wrap items-center gap-3 text-xs text-zinc-300">
-              <span class="font-bold text-amber-400 flex items-center gap-1">
-                🎁 FREE WITH EVERY PADDLE:
-              </span>
-              <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-zinc-800 text-zinc-200">
-                ✅ 1x AGASSI 40 Tournament Ball
-              </span>
-              <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-zinc-800 text-zinc-200">
-                ✅ 1x Premium Thermal Paddle Cover
-              </span>
-            </div>
-          </div>
-
-          <!-- Interactive Core Thickness Variant Selector -->
-          <div class="space-y-3">
-            <div class="flex justify-between items-center text-xs font-semibold text-zinc-400 uppercase tracking-wider">
-              <span>Select Core Engineering:</span>
-              <span id="selected-core-label" class="text-brand-orange font-bold">16mm Control & Reset (Recommended)</span>
-            </div>
-            <div class="grid grid-cols-2 gap-3" id="hero-core-selector">
-              <button data-core="16mm" class="core-btn active p-3 rounded-xl border border-brand-orange bg-brand-orange/15 text-left transition-all">
-                <div class="flex items-center justify-between">
-                  <span class="font-bold text-white text-sm">16mm Control Core</span>
-                  <span class="text-[10px] bg-brand-orange text-black font-extrabold px-1.5 py-0.5 rounded">POPULAR</span>
-                </div>
-                <div class="text-[11px] text-zinc-400 mt-1">Maximum dwell time, dink precision & shock absorption.</div>
-              </button>
-              <button data-core="14mm" class="core-btn p-3 rounded-xl border border-zinc-800 bg-zinc-900/60 text-left hover:border-zinc-700 transition-all">
-                <div class="flex items-center justify-between">
-                  <span class="font-bold text-zinc-200 text-sm">14mm Power Core</span>
-                  <span class="text-[10px] text-zinc-500 uppercase">SPEED</span>
-                </div>
-                <div class="text-[11px] text-zinc-400 mt-1">Explosive pop on overhead drives & rapid hand resets.</div>
-              </button>
-            </div>
-          </div>
-
-          <!-- Primary Hero Actions -->
-          <div class="flex flex-col sm:flex-row gap-4 pt-2">
-            <button id="hero-add-to-cart" class="flex-1 py-4 px-6 rounded-xl bg-brand-orange text-black font-extrabold text-base tracking-wide hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-2 shadow-xl shadow-orange-500/25 active:scale-[0.98]">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-              <span>ADD BOOMSTIK TO CART • ₹5,500</span>
-            </button>
-            
-            <a href="https://wa.me/919518241474?text=Hi%20The%20Paddle%20Store!%20I%20want%20to%20order%20the%20Boomstik%20Carbon%20Flagship%20Paddle%20for%20%E2%82%B95,500%20(with%20free%20Agassi%20ball%20and%20cover).%20Please%20confirm%20delivery%20details." 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="py-4 px-6 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-bold text-base hover:border-brand-green hover:text-brand-green transition-all flex items-center justify-center gap-2">
-              <svg class="w-5 h-5 fill-current text-brand-green" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-              <span>Instant WhatsApp Order</span>
-            </a>
-          </div>
-
-          <!-- Trust Guarantees Row -->
-          <div class="grid grid-cols-3 gap-3 pt-4 border-t border-zinc-800/80 text-center text-xs">
-            <div class="p-2 rounded-lg bg-zinc-900/50">
-              <div class="font-extrabold text-white">🚚 PAN-INDIA</div>
-              <div class="text-[10px] text-zinc-400">Express Courier</div>
-            </div>
-            <div class="p-2 rounded-lg bg-zinc-900/50">
-              <div class="font-extrabold text-white">🔄 7-DAY RETURN</div>
-              <div class="text-[10px] text-zinc-400">Play Guarantee</div>
-            </div>
-            <div class="p-2 rounded-lg bg-zinc-900/50">
-              <div class="font-extrabold text-white">💵 CASH ON DELIVERY</div>
-              <div class="text-[10px] text-zinc-400">Pay at Doorstep</div>
-            </div>
-          </div>
-
         </div>
 
-        <!-- Right Column: High-Impact Flagship Media & Video Spotlight -->
-        <div class="lg:col-span-5 space-y-4">
+        <!-- HERO BLOCK 2: Flagship Visual Reel & Thumbs (2nd on mobile directly under headline; Right Column on desktop) -->
+        <div class="order-2 lg:col-span-5 lg:row-span-2 space-y-3">
           <div class="relative rounded-3xl overflow-hidden glass-card border border-zinc-800 p-3 group">
             
             <!-- Video / Image Container (Video Reel Plays First on Load) -->
@@ -383,48 +303,135 @@
                      muted></video>
 
               <!-- Dynamic Pill Badge -->
-              <div class="absolute top-4 left-4 z-10 flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-brand-orange/60 text-xs font-bold text-white">
-                <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
-                <span>FLAGSHIP EDITION • LIVE REEL</span>
+              <div class="absolute top-3 left-3 z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-[#F2DA91]/60 text-[11px] font-bold text-white">
+                <span class="w-2 h-2 rounded-full bg-[#F2DA91] animate-ping"></span>
+                <span>FLAGSHIP REEL</span>
               </div>
 
               <!-- Floating Audio Toggle on Hero Video -->
-              <button id="hero-audio-toggle-btn" onclick="toggleHeroAudio()" class="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/80 backdrop-blur-md border border-zinc-700 text-white hover:border-brand-orange hover:text-brand-orange transition-all" title="Toggle Sound">
+              <button id="hero-audio-toggle-btn" onclick="toggleHeroAudio()" class="absolute top-3 right-3 z-10 p-2 rounded-full bg-black/80 backdrop-blur-md border border-zinc-700 text-white hover:border-[#F2DA91] hover:text-[#F2DA91] transition-all" title="Toggle Sound">
                 <span id="hero-audio-icon" class="text-xs">🔇</span>
               </button>
 
               <!-- Media View Toggle Switch (Photo / Reel) -->
-              <div class="absolute bottom-4 right-4 z-10 flex items-center gap-1 p-1 rounded-full bg-black/85 backdrop-blur-md border border-zinc-700 text-xs">
-                <button id="toggle-hero-photo" class="px-3 py-1 rounded-full text-zinc-300 hover:text-white font-bold text-[11px] transition-all">
+              <div class="absolute bottom-3 right-3 z-10 flex items-center gap-1 p-1 rounded-full bg-black/85 backdrop-blur-md border border-zinc-700 text-xs">
+                <button id="toggle-hero-photo" class="px-2.5 py-0.5 rounded-full text-zinc-300 hover:text-white font-bold text-[10px] transition-all">
                   Photo Specs
                 </button>
-                <button id="toggle-hero-reel" class="px-3 py-1 rounded-full bg-brand-orange text-black font-bold text-[11px] transition-all flex items-center gap-1">
-                  <span>▶ Playing Reel</span>
+                <button id="toggle-hero-reel" class="px-2.5 py-0.5 rounded-full bg-[#F2DA91] text-black font-bold text-[10px] transition-all flex items-center gap-1">
+                  <span>▶ Reel</span>
                 </button>
               </div>
             </div>
 
             <!-- Thumbnail Carousel Switcher -->
-            <div class="grid grid-cols-4 gap-2 pt-3">
-              <button id="thumb-reel" onclick="playHeroReel()" class="thumb-btn border-2 border-brand-orange rounded-xl overflow-hidden aspect-square relative bg-zinc-900 flex items-center justify-center">
+            <div class="grid grid-cols-4 gap-2 pt-2.5">
+              <button id="thumb-reel" onclick="playHeroReel()" class="thumb-btn border-2 border-[#F2DA91] rounded-xl overflow-hidden aspect-square relative bg-zinc-900 flex items-center justify-center">
                 <img src="public/assets/products/post_7.jpg" class="w-full h-full object-cover opacity-60" alt="Video preview">
-                <span class="absolute inset-0 flex items-center justify-center text-white text-xs font-bold bg-black/40">▶ Reel</span>
+                <span class="absolute inset-0 flex items-center justify-center text-white text-[11px] font-bold bg-black/40">▶ Reel</span>
               </button>
-              <button id="thumb-img-1" onclick="switchHeroMedia('public/assets/products/post_2.jpg', false)" class="thumb-btn border-2 border-transparent hover:border-brand-orange rounded-xl overflow-hidden aspect-square">
+              <button id="thumb-img-1" onclick="switchHeroMedia('public/assets/products/post_2.jpg', false)" class="thumb-btn border-2 border-transparent hover:border-[#F2DA91] rounded-xl overflow-hidden aspect-square">
                 <img src="public/assets/products/post_2.jpg" class="w-full h-full object-cover" alt="Boomstik specs">
               </button>
-              <button id="thumb-img-2" onclick="switchHeroMedia('public/assets/products/post_10.jpg', false)" class="thumb-btn border-2 border-transparent hover:border-brand-orange rounded-xl overflow-hidden aspect-square">
+              <button id="thumb-img-2" onclick="switchHeroMedia('public/assets/products/post_10.jpg', false)" class="thumb-btn border-2 border-transparent hover:border-[#F2DA91] rounded-xl overflow-hidden aspect-square">
                 <img src="public/assets/products/post_10.jpg" class="w-full h-full object-cover" alt="Boomstik edge">
               </button>
-              <button id="thumb-img-3" onclick="switchHeroMedia('public/assets/products/post_3.jpg', false)" class="thumb-btn border-2 border-transparent hover:border-brand-orange rounded-xl overflow-hidden aspect-square">
+              <button id="thumb-img-3" onclick="switchHeroMedia('public/assets/products/post_3.jpg', false)" class="thumb-btn border-2 border-transparent hover:border-[#F2DA91] rounded-xl overflow-hidden aspect-square">
                 <img src="public/assets/products/post_3.jpg" class="w-full h-full object-cover" alt="OMNI colors">
               </button>
             </div>
 
           </div>
+        </div>
 
-          <div class="p-3.5 rounded-xl bg-zinc-900/60 border border-zinc-800 text-xs flex items-center justify-between text-zinc-400">
-            <span>🛡️ <strong>Independent Seller:</strong> We deliver tour-legal equipment directly from the factory line without foreign retail markups.</span>
+        <!-- HERO BLOCK 3: Deal Callout, Core Selector, Cart & CTAs (3rd on mobile; Left Column bottom on desktop) -->
+        <div class="order-3 lg:col-span-7 space-y-4 text-left">
+          
+          <!-- Price & Savings Callout Box -->
+          <div class="p-4 sm:p-5 rounded-2xl glass-card border border-[#F2DA91]/30 bg-gradient-to-br from-zinc-900/90 to-brand-card/90 space-y-3">
+            <div class="flex flex-wrap items-baseline justify-between gap-3">
+              <div>
+                <span class="text-[11px] uppercase font-bold text-zinc-400 tracking-wider">Tournament Launch Price</span>
+                <div class="flex items-baseline gap-2.5">
+                  <span class="text-3xl sm:text-4xl font-black text-white">₹5,500</span>
+                  <span class="text-base text-zinc-500 line-through">₹35,000 Selkirk Labs MRP</span>
+                </div>
+              </div>
+              <div class="px-3 py-1 rounded-xl bg-[#F2DA91]/20 border border-[#F2DA91]/50 text-[#F2DA91] font-black text-xs sm:text-sm tracking-wide">
+                SAVE 84% (₹29,500)
+              </div>
+            </div>
+
+            <!-- Freebies Bundle Strip -->
+            <div class="pt-2.5 border-t border-zinc-800 flex flex-wrap items-center gap-2 text-xs text-zinc-300">
+              <span class="font-bold text-[#F2DA91] flex items-center gap-1">
+                🎁 FREE WITH EVERY PADDLE:
+              </span>
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-zinc-800 text-zinc-200 text-[11px]">
+                ✅ 1x AGASSI 40 Tournament Ball
+              </span>
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-zinc-800 text-zinc-200 text-[11px]">
+                ✅ 1x Thermal Paddle Cover
+              </span>
+            </div>
+          </div>
+
+          <!-- Interactive Core Thickness Variant Selector -->
+          <div class="space-y-2">
+            <div class="flex justify-between items-center text-xs font-semibold text-zinc-400 uppercase tracking-wider">
+              <span>Select Core:</span>
+              <span id="selected-core-label" class="text-[#F2DA91] font-bold">16mm Control & Reset (Recommended)</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2.5" id="hero-core-selector">
+              <button data-core="16mm" class="core-btn active p-3 rounded-xl border border-[#F2DA91] bg-[#F2DA91]/15 text-left transition-all">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-white text-xs sm:text-sm">16mm Control Core</span>
+                  <span class="text-[10px] bg-[#F2DA91] text-black font-extrabold px-1.5 py-0.5 rounded">POPULAR</span>
+                </div>
+                <p class="text-[11px] text-zinc-400 mt-0.5">Maximum dwell time, dink precision & shock absorption.</p>
+              </button>
+              
+              <button data-core="14mm" class="core-btn p-3 rounded-xl border border-zinc-800 bg-zinc-900/60 text-left hover:border-zinc-700 transition-all">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-white text-xs sm:text-sm">14mm Power Core</span>
+                  <span class="text-[10px] text-zinc-400 uppercase font-semibold">SPEED</span>
+                </div>
+                <p class="text-[11px] text-zinc-400 mt-0.5">Explosive pop on overhead drives & rapid hand resets.</p>
+              </button>
+            </div>
+          </div>
+
+          <!-- Primary CTA Buttons -->
+          <div class="space-y-2.5 pt-1">
+            <button id="hero-add-to-cart" onclick="addHeroProductToCart()" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#F2DA91] to-[#F2E5BD] text-black font-extrabold text-sm sm:text-base tracking-wide hover:brightness-105 transition-all flex items-center justify-center gap-2 shadow-xl shadow-yellow-500/20 active:scale-[0.99]">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+              <span id="hero-cta-text">ADD BOOMSTIK TO CART • ₹5,500</span>
+            </button>
+
+            <a id="hero-whatsapp-btn" 
+               href="https://wa.me/919518241474?text=Hi%20The%20Paddle%20Store!%20I'd%20like%20to%20order%20the%20Boomstik%20Carbon%20Paddle%20(16mm%20Control%20Core)%20at%20₹5,500." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="w-full py-3 px-6 rounded-xl bg-zinc-900/90 border border-zinc-700 text-white font-bold text-xs sm:text-sm tracking-wide hover:border-brand-green hover:text-brand-green transition-all flex items-center justify-center gap-2">
+              <svg class="w-4 h-4 fill-current text-brand-green" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>Instant WhatsApp Order</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges Bar -->
+          <div class="grid grid-cols-3 gap-2 pt-1 text-center text-xs">
+            <div class="p-2 rounded-xl bg-zinc-900/60 border border-zinc-800">
+              <div class="font-extrabold text-white text-[11px] sm:text-xs">🚚 PAN-INDIA</div>
+              <div class="text-[10px] text-zinc-400">Express Courier</div>
+            </div>
+            <div class="p-2 rounded-xl bg-zinc-900/60 border border-zinc-800">
+              <div class="font-extrabold text-white text-[11px] sm:text-xs">🔄 7-DAY RETURN</div>
+              <div class="text-[10px] text-zinc-400">Play Guarantee</div>
+            </div>
+            <div class="p-2 rounded-xl bg-zinc-900/60 border border-zinc-800">
+              <div class="font-extrabold text-white text-[11px] sm:text-xs">💵 COD READY</div>
+              <div class="text-[10px] text-zinc-400">Pay at Doorstep</div>
+            </div>
           </div>
 
         </div>
@@ -466,8 +473,8 @@
   <section id="catalog" class="py-20 bg-[#F2E6D8] border-b border-[#73641A]/20 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Single Line Title + Full Width Caption + Single Line Filters -->
-      <div class="text-center mb-12 space-y-3">
+      <!-- Single Line Title + Responsive Horizontal Filters (No Caption Text Dump) -->
+      <div class="text-center mb-10 space-y-3">
         <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#73641A]/10 border border-[#73641A]/30 text-[#73641A] text-xs font-black uppercase tracking-wider">
           <span>Direct Pro-Shop Inventory</span>
         </div>
@@ -476,27 +483,22 @@
         <h2 class="heading-font text-3xl sm:text-4xl md:text-5xl text-[#262626] tracking-wide whitespace-nowrap overflow-hidden text-ellipsis">
           EXPLORE THE FULL TOURNAMENT COLLECTION
         </h2>
-        
-        <!-- Full Line Caption spanning naturally to borders -->
-        <p class="text-xs sm:text-sm md:text-base text-zinc-700 max-w-5xl mx-auto leading-relaxed">
-          Paddles, tournament balls, and training gear tested by competitive tournament players. Transparent pricing, complimentary freebies, and instant cart or WhatsApp ordering.
-        </p>
 
-        <!-- Single Line Filter Tabs (no awkward stacking) -->
-        <div class="flex items-center justify-center gap-2 overflow-x-auto no-scrollbar py-3 px-2 w-full max-w-4xl mx-auto" id="catalog-filters">
-          <button onclick="filterCatalog('all')" class="cat-filter-btn active shrink-0 px-4 py-2 rounded-xl text-xs font-bold border border-[#73641A] bg-[#73641A] text-white shadow-sm transition-all">
+        <!-- Responsive Single-Row Filter Tabs (Mobile friendly horizontal swipe) -->
+        <div class="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar py-2 px-4 -mx-4 sm:mx-auto sm:px-0 scroll-smooth" id="catalog-filters">
+          <button onclick="filterCatalog('all', this)" class="cat-filter-btn active shrink-0 px-3.5 py-1.5 rounded-xl text-xs font-bold border border-[#73641A] bg-[#73641A] text-white shadow-sm transition-all">
             All Gear (9)
           </button>
-          <button onclick="filterCatalog('pro-paddles')" class="cat-filter-btn shrink-0 px-4 py-2 rounded-xl text-xs font-bold border border-[#73641A]/30 bg-white text-[#262626] hover:border-[#73641A] transition-all">
+          <button onclick="filterCatalog('pro-paddles', this)" class="cat-filter-btn shrink-0 px-3.5 py-1.5 rounded-xl text-xs font-bold border border-[#73641A]/30 bg-white text-[#262626] hover:border-[#73641A] transition-all">
             Pro Carbon (5)
           </button>
-          <button onclick="filterCatalog('control-series')" class="cat-filter-btn shrink-0 px-4 py-2 rounded-xl text-xs font-bold border border-[#73641A]/30 bg-white text-[#262626] hover:border-[#73641A] transition-all">
+          <button onclick="filterCatalog('control-series', this)" class="cat-filter-btn shrink-0 px-3.5 py-1.5 rounded-xl text-xs font-bold border border-[#73641A]/30 bg-white text-[#262626] hover:border-[#73641A] transition-all">
             Control Series (2)
           </button>
-          <button onclick="filterCatalog('balls')" class="cat-filter-btn shrink-0 px-4 py-2 rounded-xl text-xs font-bold border border-[#73641A]/30 bg-white text-[#262626] hover:border-[#73641A] transition-all">
+          <button onclick="filterCatalog('balls', this)" class="cat-filter-btn shrink-0 px-3.5 py-1.5 rounded-xl text-xs font-bold border border-[#73641A]/30 bg-white text-[#262626] hover:border-[#73641A] transition-all">
             Balls (2)
           </button>
-          <button onclick="filterCatalog('accessories')" class="cat-filter-btn shrink-0 px-4 py-2 rounded-xl text-xs font-bold border border-[#73641A]/30 bg-white text-[#262626] hover:border-[#73641A] transition-all">
+          <button onclick="filterCatalog('accessories', this)" class="cat-filter-btn shrink-0 px-3.5 py-1.5 rounded-xl text-xs font-bold border border-[#73641A]/30 bg-white text-[#262626] hover:border-[#73641A] transition-all">
             Accessories (1)
           </button>
         </div>
@@ -1014,84 +1016,184 @@
   </section>
 
   <!-- ======================================================== -->
-  <!-- 6. VERIFIED PLAYER TESTIMONIALS (LIGHT CHAMPAGNE SECTION) -->
+  <!-- 6. VERIFIED PLAYER TESTIMONIALS (ANIMATED STREAM TICKER) -->
   <!-- ======================================================== -->
-  <section id="reviews" class="py-20 bg-[#F2E5BD] border-b border-[#73641A]/20 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#73641A]/15 border border-[#73641A]/30 text-[#73641A] text-xs font-bold uppercase tracking-wider">
-          <span>Verified Player Feedback</span>
-        </div>
-        <h2 class="heading-font text-4xl sm:text-5xl text-[#262626] tracking-wide">
-          TRUSTED ON COURT BY COMPETITIVE CONTENDERS
-        </h2>
-        <p class="text-zinc-800 text-sm sm:text-base">
-          From third-shot drop resets to aggressive overhead smashes, read what tournament players and coaches have to say.
-        </p>
+  <section id="reviews" class="py-12 sm:py-16 bg-[#F2E5BD] border-b border-[#73641A]/20 relative overflow-hidden select-none">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6 sm:mb-8 text-center space-y-2">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#73641A]/15 border border-[#73641A]/30 text-[#73641A] text-xs font-bold uppercase tracking-wider">
+        <span class="w-2 h-2 rounded-full bg-[#73641A] animate-ping"></span>
+        <span>Verified Live Player Feedback</span>
       </div>
+      <h2 class="heading-font text-3xl sm:text-5xl text-[#262626] tracking-wide">
+        TRUSTED ON COURT BY COMPETITIVE CONTENDERS
+      </h2>
+    </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- Continuous Left-to-Right Animated Review Stream -->
+    <div class="relative w-full overflow-hidden py-2">
+      <div class="animate-marquee-ltr-reviews flex items-center space-x-4 sm:space-x-6 whitespace-nowrap">
         
-        <!-- Review 1 -->
-        <div class="p-6 rounded-3xl bg-white border border-[#73641A]/20 shadow-sm hover:shadow-xl flex flex-col justify-between space-y-4 transition-all">
-          <div class="space-y-3">
+        <!-- Review Cards Set 1 -->
+        <div class="flex items-center space-x-4 sm:space-x-6 shrink-0">
+          
+          <!-- Review Card 1 -->
+          <div class="w-[280px] sm:w-[320px] rounded-2xl bg-white border border-[#73641A]/20 p-4 shadow-sm hover:shadow-md transition-shadow shrink-0 whitespace-normal text-left space-y-2">
             <div class="flex items-center justify-between">
-              <div class="flex text-[#73641A] text-sm font-bold">★★★★★</div>
-              <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">
-                DUPR 4.2
-              </span>
+              <div class="text-[#73641A] text-xs font-bold tracking-tight">★★★★★</div>
+              <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">DUPR 4.2</span>
             </div>
-            <p class="text-[#262626] text-sm leading-relaxed italic">
-              "This paddle is an absolute gem. Replaced my ₹28,000 foreign paddle with the Boomstik, and my third-shot drops have never had so much spin and bite. The grit has held up beautifully."
+            <p class="text-[#262626] text-xs sm:text-[13px] leading-snug italic line-clamp-2">
+              "Replaced my ₹28,000 foreign paddle with the Boomstik. Third-shot drops have never had so much spin and bite."
             </p>
+            <div class="pt-2 border-t border-zinc-100 flex items-center justify-between text-[11px]">
+              <span class="font-bold text-[#262626]">Rohit M. • Delhi NCR</span>
+              <span class="text-zinc-500 font-medium">Boomstik 16mm</span>
+            </div>
           </div>
-          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between text-xs">
-            <span class="font-bold text-[#262626]">Rohit M. • Delhi NCR</span>
-            <span class="text-zinc-500 font-semibold">Boomstik 16mm</span>
+
+          <!-- Review Card 2 -->
+          <div class="w-[280px] sm:w-[320px] rounded-2xl bg-white border border-[#73641A]/20 p-4 shadow-sm hover:shadow-md transition-shadow shrink-0 whitespace-normal text-left space-y-2">
+            <div class="flex items-center justify-between">
+              <div class="text-[#73641A] text-xs font-bold tracking-tight">★★★★★</div>
+              <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">DUPR 4.6 COACH</span>
+            </div>
+            <p class="text-[#262626] text-xs sm:text-[13px] leading-snug italic line-clamp-2">
+              "The 16mm Boomstik is a beast at the net. Perimeter foam injection completely eliminates dead spots on resets."
+            </p>
+            <div class="pt-2 border-t border-zinc-100 flex items-center justify-between text-[11px]">
+              <span class="font-bold text-[#262626]">Coach Vikram S. • Haryana</span>
+              <span class="text-zinc-500 font-medium">Academy Director</span>
+            </div>
           </div>
+
+          <!-- Review Card 3 -->
+          <div class="w-[280px] sm:w-[320px] rounded-2xl bg-white border border-[#73641A]/20 p-4 shadow-sm hover:shadow-md transition-shadow shrink-0 whitespace-normal text-left space-y-2">
+            <div class="flex items-center justify-between">
+              <div class="text-[#73641A] text-xs font-bold tracking-tight">★★★★★</div>
+              <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">CLUB PARTNER</span>
+            </div>
+            <p class="text-[#262626] text-xs sm:text-[13px] leading-snug italic line-clamp-2">
+              "Ordered 14 paddles and 20 packs of AGASSI 40 balls for our courts. Unbelievable build quality."
+            </p>
+            <div class="pt-2 border-t border-zinc-100 flex items-center justify-between text-[11px]">
+              <span class="font-bold text-[#262626]">Sameer K. • Hisar Facility</span>
+              <span class="text-zinc-500 font-medium">Court Owner</span>
+            </div>
+          </div>
+
+          <!-- Review Card 4 -->
+          <div class="w-[280px] sm:w-[320px] rounded-2xl bg-white border border-[#73641A]/20 p-4 shadow-sm hover:shadow-md transition-shadow shrink-0 whitespace-normal text-left space-y-2">
+            <div class="flex items-center justify-between">
+              <div class="text-[#73641A] text-xs font-bold tracking-tight">★★★★★</div>
+              <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">TOURNAMENT GOLD</span>
+            </div>
+            <p class="text-[#262626] text-xs sm:text-[13px] leading-snug italic line-clamp-2">
+              "Insane grit texture and balance. Plays identically to $250 USAPA paddles at a fraction of the cost."
+            </p>
+            <div class="pt-2 border-t border-zinc-100 flex items-center justify-between text-[11px]">
+              <span class="font-bold text-[#262626]">Aman P. • Bengaluru</span>
+              <span class="text-zinc-500 font-medium">Boomstik 14mm</span>
+            </div>
+          </div>
+
+          <!-- Review Card 5 -->
+          <div class="w-[280px] sm:w-[320px] rounded-2xl bg-white border border-[#73641A]/20 p-4 shadow-sm hover:shadow-md transition-shadow shrink-0 whitespace-normal text-left space-y-2">
+            <div class="flex items-center justify-between">
+              <div class="text-[#73641A] text-xs font-bold tracking-tight">★★★★★</div>
+              <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">DUPR 4.8 PRO</span>
+            </div>
+            <p class="text-[#262626] text-xs sm:text-[13px] leading-snug italic line-clamp-2">
+              "Best paddle in India right now. Grip comfort and kitchen hand speed are tournament grade."
+            </p>
+            <div class="pt-2 border-t border-zinc-100 flex items-center justify-between text-[11px]">
+              <span class="font-bold text-[#262626]">Tanmay D. • Delhi Metro</span>
+              <span class="text-zinc-500 font-medium">Boomstik Mini</span>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Review 2 -->
-        <div class="p-6 rounded-3xl bg-white border border-[#73641A]/20 shadow-sm hover:shadow-xl flex flex-col justify-between space-y-4 transition-all">
-          <div class="space-y-3">
+        <!-- Review Cards Set 2 (Duplicate for infinite seamless loop) -->
+        <div class="flex items-center space-x-4 sm:space-x-6 shrink-0">
+          
+          <!-- Review Card 1 Duplicate -->
+          <div class="w-[280px] sm:w-[320px] rounded-2xl bg-white border border-[#73641A]/20 p-4 shadow-sm hover:shadow-md transition-shadow shrink-0 whitespace-normal text-left space-y-2">
             <div class="flex items-center justify-between">
-              <div class="flex text-[#73641A] text-sm font-bold">★★★★★</div>
-              <span class="text-[10px] font-black px-2 py-0.5 rounded bg-emerald-800/10 text-emerald-800 border border-emerald-800/30">
-                DUPR 4.6 COACH
-              </span>
+              <div class="text-[#73641A] text-xs font-bold tracking-tight">★★★★★</div>
+              <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">DUPR 4.2</span>
             </div>
-            <p class="text-[#262626] text-sm leading-relaxed italic">
-              "The 16mm Boomstik is a beast at the net. The perimeter foam injection completely eliminates dead spots on block resets. Our academy recommends this to every rising tournament player."
+            <p class="text-[#262626] text-xs sm:text-[13px] leading-snug italic line-clamp-2">
+              "Replaced my ₹28,000 foreign paddle with the Boomstik. Third-shot drops have never had so much spin and bite."
             </p>
+            <div class="pt-2 border-t border-zinc-100 flex items-center justify-between text-[11px]">
+              <span class="font-bold text-[#262626]">Rohit M. • Delhi NCR</span>
+              <span class="text-zinc-500 font-medium">Boomstik 16mm</span>
+            </div>
           </div>
-          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between text-xs">
-            <span class="font-bold text-[#262626]">Coach Vikram S. • Haryana</span>
-            <span class="text-zinc-500 font-semibold">Academy Director</span>
-          </div>
-        </div>
 
-        <!-- Review 3 -->
-        <div class="p-6 rounded-3xl bg-white border border-[#73641A]/20 shadow-sm hover:shadow-xl flex flex-col justify-between space-y-4 transition-all">
-          <div class="space-y-3">
+          <!-- Review Card 2 Duplicate -->
+          <div class="w-[280px] sm:w-[320px] rounded-2xl bg-white border border-[#73641A]/20 p-4 shadow-sm hover:shadow-md transition-shadow shrink-0 whitespace-normal text-left space-y-2">
             <div class="flex items-center justify-between">
-              <div class="flex text-[#73641A] text-sm font-bold">★★★★★</div>
-              <span class="text-[10px] font-black px-2 py-0.5 rounded bg-amber-800/10 text-amber-800 border border-amber-800/30">
-                CLUB PARTNER
-              </span>
+              <div class="text-[#73641A] text-xs font-bold tracking-tight">★★★★★</div>
+              <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">DUPR 4.6 COACH</span>
             </div>
-            <p class="text-[#262626] text-sm leading-relaxed italic">
-              "Ordered 14 paddles and 20 packs of AGASSI 40 balls for our newly built courts. Unbelievable build quality and express delivery. Players constantly ask where they can buy their own."
+            <p class="text-[#262626] text-xs sm:text-[13px] leading-snug italic line-clamp-2">
+              "The 16mm Boomstik is a beast at the net. Perimeter foam injection completely eliminates dead spots on resets."
             </p>
+            <div class="pt-2 border-t border-zinc-100 flex items-center justify-between text-[11px]">
+              <span class="font-bold text-[#262626]">Coach Vikram S. • Haryana</span>
+              <span class="text-zinc-500 font-medium">Academy Director</span>
+            </div>
           </div>
-          <div class="pt-3 border-t border-zinc-200 flex items-center justify-between text-xs">
-            <span class="font-bold text-[#262626]">Sameer K. • Hisar Facility</span>
-            <span class="text-zinc-500 font-semibold">Court Facility Owner</span>
+
+          <!-- Review Card 3 Duplicate -->
+          <div class="w-[280px] sm:w-[320px] rounded-2xl bg-white border border-[#73641A]/20 p-4 shadow-sm hover:shadow-md transition-shadow shrink-0 whitespace-normal text-left space-y-2">
+            <div class="flex items-center justify-between">
+              <div class="text-[#73641A] text-xs font-bold tracking-tight">★★★★★</div>
+              <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">CLUB PARTNER</span>
+            </div>
+            <p class="text-[#262626] text-xs sm:text-[13px] leading-snug italic line-clamp-2">
+              "Ordered 14 paddles and 20 packs of AGASSI 40 balls for our courts. Unbelievable build quality."
+            </p>
+            <div class="pt-2 border-t border-zinc-100 flex items-center justify-between text-[11px]">
+              <span class="font-bold text-[#262626]">Sameer K. • Hisar Facility</span>
+              <span class="text-zinc-500 font-medium">Court Owner</span>
+            </div>
           </div>
+
+          <!-- Review Card 4 Duplicate -->
+          <div class="w-[280px] sm:w-[320px] rounded-2xl bg-white border border-[#73641A]/20 p-4 shadow-sm hover:shadow-md transition-shadow shrink-0 whitespace-normal text-left space-y-2">
+            <div class="flex items-center justify-between">
+              <div class="text-[#73641A] text-xs font-bold tracking-tight">★★★★★</div>
+              <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">TOURNAMENT GOLD</span>
+            </div>
+            <p class="text-[#262626] text-xs sm:text-[13px] leading-snug italic line-clamp-2">
+              "Insane grit texture and balance. Plays identically to $250 USAPA paddles at a fraction of the cost."
+            </p>
+            <div class="pt-2 border-t border-zinc-100 flex items-center justify-between text-[11px]">
+              <span class="font-bold text-[#262626]">Aman P. • Bengaluru</span>
+              <span class="text-zinc-500 font-medium">Boomstik 14mm</span>
+            </div>
+          </div>
+
+          <!-- Review Card 5 Duplicate -->
+          <div class="w-[280px] sm:w-[320px] rounded-2xl bg-white border border-[#73641A]/20 p-4 shadow-sm hover:shadow-md transition-shadow shrink-0 whitespace-normal text-left space-y-2">
+            <div class="flex items-center justify-between">
+              <div class="text-[#73641A] text-xs font-bold tracking-tight">★★★★★</div>
+              <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">DUPR 4.8 PRO</span>
+            </div>
+            <p class="text-[#262626] text-xs sm:text-[13px] leading-snug italic line-clamp-2">
+              "Best paddle in India right now. Grip comfort and kitchen hand speed are tournament grade."
+            </p>
+            <div class="pt-2 border-t border-zinc-100 flex items-center justify-between text-[11px]">
+              <span class="font-bold text-[#262626]">Tanmay D. • Delhi Metro</span>
+              <span class="text-zinc-500 font-medium">Boomstik Mini</span>
+            </div>
+          </div>
+
         </div>
 
       </div>
-
     </div>
   </section>
 
@@ -1112,8 +1214,8 @@
             <h2 class="heading-font text-4xl sm:text-5xl text-brand-ivory tracking-wide">
               COURT OWNERS, ACADEMIES & TOURNAMENT DIRECTORS
             </h2>
-            <p class="text-zinc-300 text-sm sm:text-base leading-relaxed">
-              Equipping a new venue or running state tournament draws? The Paddle Store supplies bulk paddle sets, AGASSI 40 tournament ball crates, ball caddies, and branded demo gear at dedicated wholesale margins.
+            <p class="text-zinc-300 text-xs sm:text-sm leading-relaxed">
+              Equipping a club, academy, or tournament? Access bulk paddle sets, AGASSI 40 ball crates, and demo gear at direct factory wholesale rates.
             </p>
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-xs text-zinc-300 font-semibold">
               <div class="flex items-center gap-1.5"><span class="text-brand-orange">✓</span> Tiered Volume MOQs</div>
@@ -1148,17 +1250,14 @@
   <section id="venues" class="py-20 bg-[#F2E6D8] border-b border-[#73641A]/20 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#73641A]/10 border border-[#73641A]/30 text-[#73641A] text-xs font-black uppercase tracking-wider">
+      <!-- Section Header (Clean, No Caption Text Dump) -->
+      <div class="text-center max-w-3xl mx-auto mb-10 space-y-2">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#73641A]/10 border border-[#73641A]/30 text-[#73641A] text-xs font-black uppercase tracking-wider">
           <span>PHYSICAL VENUES & EXPERIENCE CENTERS</span>
         </div>
-        <h2 class="heading-font text-4xl sm:text-5xl text-[#262626] tracking-wide">
+        <h2 class="heading-font text-3xl sm:text-5xl text-[#262626] tracking-wide">
           VISIT OUR PHYSICAL HUBS
         </h2>
-        <p class="text-zinc-700 text-sm sm:text-base leading-relaxed">
-          Drop by our physical hubs in <strong class="text-[#73641A]">Hisar, Haryana</strong> and <strong class="text-[#73641A]">Pitampura, Delhi</strong> to test paddles, feel swing weights, and collect your gear in person.
-        </p>
       </div>
 
       <!-- 2 Clean Visual Cards (No Text Dump - Clean Pro-Store Image & Connect Button) -->
@@ -1261,9 +1360,7 @@
           <div class="space-y-2">
             <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">Direct Concierge</span>
             <h2 class="heading-font text-4xl sm:text-5xl text-white">GET IN TOUCH WITH THE PADDLE STORE</h2>
-            <p class="text-zinc-400 text-sm">
-              Need custom grip weight advice, bulk tournament quotes, or order tracking? Drop a message or reach our direct desk.
-            </p>
+
           </div>
 
           <div class="space-y-4 pt-4">
@@ -1597,184 +1694,34 @@
   <!-- ======================================================== -->
   <script>
     // ----------------------------------------------------
-    // Video Reel Data Definition (5 Authentic Videos)
     // ----------------------------------------------------
-    const REELS = [
-      {
-        id: 'customer_reviews',
-        videoSrc: 'public/assets/videos/customer_reviews.mp4',
-        badge: 'CUSTOMER REVIEWS',
-        tag: 'Player Feedback & Unboxing',
-        title: 'REAL PLAYER REVIEWS & WHATSAPP JOURNEY',
-        desc: 'Nothing makes us happier than seeing players dominate on the court. Watch real tournament contenders share their unboxing and review feedback from across India.',
-        bullets: [
-          'High ratings verified on WhatsApp from Delhi NCR, Haryana and Bengaluru.',
-          'Praised for extreme control on third-shot drops and baseline power.',
-          '100% genuine customer reviews with zero paid celebrity sponsorships.'
-        ],
-        btnText: 'Join the Player Ranks • Shop Gear',
-        product: { name: 'Boomstik Carbon Flagship', price: 5500, img: 'public/assets/products/post_2.jpg', variant: '16mm Tour Edition' }
-      },
-      {
-        id: 'boomstik_showcase',
-        videoSrc: 'public/assets/videos/boomstik_showcase.mp4',
-        badge: 'SHOWCASE REEL',
-        tag: 'Featured Flagship Model',
-        title: 'BOOMSTIK MULTI-PATTERN CARBON SERIES (₹5,500)',
-        desc: 'Witness the craftsmanship, raw carbon grit texture, and high-tensile edge construction. Available in custom limited color patterns for up to 70% less than foreign retail brands.',
-        bullets: [
-          'Authentic Toray T700 3K carbon fiber skin with textured grit for top-spin.',
-          '16mm honeycomb core provides generous sweet spot and effortless resets.',
-          'Includes Free AGASSI 40 Tournament Ball & Thermal Protective Paddle Case.'
-        ],
-        btnText: 'Order Boomstik • ₹5,500',
-        product: { name: 'Boomstik Carbon Flagship', price: 5500, img: 'public/assets/products/post_2.jpg', variant: '16mm Multi-Pattern' }
-      },
-      {
-        id: 'matchplay_action',
-        videoSrc: 'public/assets/videos/matchplay_action.mp4',
-        badge: 'COURT MATCHPLAY',
-        tag: 'Live Game Atmosphere',
-        title: 'COURT MATCHPLAY & HIGH-OCTANE RALLIES',
-        desc: 'Experience the crisp crack of the ball meeting Toray T700 raw carbon. See how the paddle holds stability during rapid kitchen line firefights and drive resets.',
-        bullets: [
-          'Crisp acoustic pop on full swings with zero dead spots on the perimeter.',
-          'Balanced 8.0 oz swing weight for lightning-fast kitchen hand speed.',
-          'Tested across 1,000+ matches in tournament court conditions.'
-        ],
-        btnText: 'Level Up Your Game • ₹5,500',
-        product: { name: 'Boomstik Carbon Flagship', price: 5500, img: 'public/assets/products/post_2.jpg', variant: 'Matchplay Pro' }
-      },
-      {
-        id: 'boomstik_mini',
-        videoSrc: 'public/assets/videos/boomstik_mini.mp4',
-        badge: 'MINI EDITION',
-        tag: 'Precision & Compact Speed',
-        title: 'BOOMSTIK MINI PRECISION EDITION (₹5,800)',
-        desc: 'Designed for players looking for increased hand agility and hyper-accurate sweet spot striking. Crafted with the exact same tournament-legal foam core construction.',
-        bullets: [
-          'Slightly condensed paddle face for blistering kitchen reload speed.',
-          'Full perimeter foam dampening and shock reduction unibody core.',
-          'Includes Free AGASSI 40 Tournament Ball & Thermal Protective Paddle Case.'
-        ],
-        btnText: 'Order Boomstik Mini • ₹5,800',
-        product: { name: 'Boomstik Mini Precision Edition', price: 5800, img: 'public/assets/products/post_10.jpg', variant: 'Compact Precision' }
-      },
-      {
-        id: 'festive_offers',
-        videoSrc: 'public/assets/videos/festive_offers.mp4',
-        badge: 'FESTIVE SALE',
-        tag: 'Limited Drop Specials',
-        title: 'DIWALI & FESTIVE MEGA SALE (UP TO 40% OFF)',
-        desc: 'Grab your tournament-level paddles at festive rates. Limited inventory drops across Agassi V, OMNI, Kevlar, and Perseus series with free PAN-India shipping.',
-        bullets: [
-          'Agassi V at ₹4,500 (Reg ₹5,000) • Agassi V Limited at ₹4,700.',
-          'Kevlar Hybrid at ₹5,000 (Reg ₹6,000) • Tesla Series at ₹5,000.',
-          'Every order includes Free AGASSI 40 Ball + Thermal Paddle Case.'
-        ],
-        btnText: 'Shop Festive Drop • ₹4,500+',
-        product: { name: 'Agassi V Tournament Touch', price: 4500, img: 'public/assets/products/post_5_c_1.jpg', variant: 'Festive Special' }
-      }
-    ];
-
-    let currentReelIndex = 0;
-    const mainVideo = document.getElementById('main-active-video');
-    const soundBtn = document.getElementById('reel-sound-btn');
-    const soundIconMuted = document.getElementById('sound-icon-muted');
-    const soundIconUnmuted = document.getElementById('sound-icon-unmuted');
-    const playIndicator = document.getElementById('play-pause-indicator');
-
-    function switchReel(index) {
-      if (index < 0 || index >= REELS.length) return;
-      currentReelIndex = index;
-      const data = REELS[index];
-
-      // Update video source & play
-      if (mainVideo) {
-        mainVideo.src = data.videoSrc;
-        mainVideo.play().catch(e => console.log('Autoplay handled:', e));
-      }
-
-      // Update DOM with safe lookups
-      const badgeEl = document.getElementById('reel-badge');
-      if (badgeEl) badgeEl.textContent = data.badge;
-
-      const titleOverlayEl = document.getElementById('reel-title-overlay') || document.getElementById('reel-caption-title');
-      if (titleOverlayEl) titleOverlayEl.textContent = data.title;
-
-      const tagEl = document.getElementById('reel-model-tag') || document.getElementById('reel-context-tag');
-      if (tagEl) tagEl.textContent = data.tag;
-
-      const headlineEl = document.getElementById('reel-narrative-title') || document.getElementById('reel-context-headline');
-      if (headlineEl) headlineEl.textContent = data.title;
-
-      const descEl = document.getElementById('reel-narrative-desc') || document.getElementById('reel-context-desc');
-      if (descEl) descEl.textContent = data.desc;
-
-      const btnEl = document.getElementById('reel-btn-label') || document.getElementById('reel-btn-text');
-      if (btnEl) btnEl.textContent = data.btnText;
-
-      const bulletsContainer = document.getElementById('reel-bullets');
-      if (bulletsContainer && data.bullets) {
-        bulletsContainer.innerHTML = data.bullets.map(b => `
-          <div class="flex items-start gap-2.5">
-            <span class="text-brand-orange text-sm font-bold">✓</span>
-            <span>${b}</span>
-          </div>
-        `).join('');
-      } else {
-        if (data.bullets && data.bullets[0] && document.getElementById('reel-bullet-1')) document.getElementById('reel-bullet-1').textContent = data.bullets[0];
-        if (data.bullets && data.bullets[1] && document.getElementById('reel-bullet-2')) document.getElementById('reel-bullet-2').textContent = data.bullets[1];
-        if (data.bullets && data.bullets[2] && document.getElementById('reel-bullet-3')) document.getElementById('reel-bullet-3').textContent = data.bullets[2];
-      }
-
-      // Update active tab buttons
-      const tabs = document.querySelectorAll('.reel-tab-btn');
-      tabs.forEach((tab, i) => {
-        if (i === index) {
-          tab.classList.add('bg-brand-orange', 'text-black', 'border-brand-orange');
-          tab.classList.remove('bg-zinc-900', 'text-zinc-300', 'border-zinc-700');
-        } else {
-          tab.classList.remove('bg-brand-orange', 'text-black', 'border-brand-orange');
-          tab.classList.add('bg-zinc-900', 'text-zinc-300', 'border-zinc-700');
-        }
-      });
-    }
-
-    function toggleMainVideoPlay() {
-      if (mainVideo.paused) {
-        mainVideo.play();
-        showPlayIndicator(false);
-      } else {
-        mainVideo.pause();
-        showPlayIndicator(true);
-      }
-    }
-
-    function showPlayIndicator(isPaused) {
-      playIndicator.style.opacity = '1';
-      setTimeout(() => { playIndicator.style.opacity = '0'; }, 600);
-    }
-
-    function toggleMainVideoSound() {
-      mainVideo.muted = !mainVideo.muted;
-      if (mainVideo.muted) {
-        soundIconMuted.classList.remove('hidden');
-        soundIconUnmuted.classList.add('hidden');
-        showToast('Video muted');
-      } else {
-        soundIconMuted.classList.add('hidden');
-        soundIconUnmuted.classList.remove('hidden');
-        showToast('Audio unmuted 🔊');
-      }
-    }
-
-    function addCurrentReelProductToCart() {
-      const p = REELS[currentReelIndex].product;
-      addToCart(p.name, p.price, p.img, p.variant);
-    }
-
+    // Horizontal 9:16 Video Shelf Controller
     // ----------------------------------------------------
+    function toggleReelPlay(idx) {
+      const vid = document.getElementById(`reel-vid-${idx}`);
+      if (vid) {
+        if (vid.paused) vid.play();
+        else vid.pause();
+      }
+    }
+
+    function toggleReelAudio(idx) {
+      const vid = document.getElementById(`reel-vid-${idx}`);
+      const icon = document.getElementById(`reel-sound-icon-${idx}`);
+      if (vid) {
+        vid.muted = !vid.muted;
+        if (icon) icon.textContent = vid.muted ? '🔇' : '🔊';
+        showToast(vid.muted ? 'Reel muted' : 'Reel audio unmuted 🔊');
+      }
+    }
+
+    function scrollReelsTrack(direction) {
+      const track = document.getElementById('reels-track');
+      if (track) {
+        track.scrollBy({ left: direction * 320, behavior: 'smooth' });
+      }
+    }
+
     // Hero Section Image / Video Switcher
     // ----------------------------------------------------
     const heroMainImg = document.getElementById('hero-main-img');
@@ -1849,83 +1796,35 @@
     coreBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         coreBtns.forEach(b => {
-          b.classList.remove('border-brand-orange', 'bg-brand-orange/15');
+          b.classList.remove('border-[#F2DA91]', 'bg-[#F2DA91]/15');
           b.classList.add('border-zinc-800', 'bg-zinc-900/60');
         });
-        btn.classList.add('border-brand-orange', 'bg-brand-orange/15');
+        btn.classList.add('border-[#F2DA91]', 'bg-[#F2DA91]/15');
         btn.classList.remove('border-zinc-800', 'bg-zinc-900/60');
         selectedHeroCore = btn.getAttribute('data-core') === '16mm' ? '16mm Control & Reset' : '14mm Power Drive';
-        document.getElementById('selected-core-label').textContent = selectedHeroCore;
+        const label = document.getElementById('selected-core-label');
+        if (label) label.textContent = selectedHeroCore;
+        const waBtn = document.getElementById('hero-whatsapp-btn');
+        if (waBtn) {
+          waBtn.href = `https://wa.me/919518241474?text=${encodeURIComponent(`Hi The Paddle Store! I'd like to order the Boomstik Carbon Paddle (${selectedHeroCore}) at ₹5,500.`)}`;
+        }
       });
     });
 
-    document.getElementById('hero-add-to-cart').addEventListener('click', () => {
+    function addHeroProductToCart() {
       addToCart('Boomstik Carbon Flagship', 5500, 'public/assets/products/post_2.jpg', selectedHeroCore);
-    });
-
-    // ----------------------------------------------------
-    // Tech Teardown Layer Selector
-    // ----------------------------------------------------
-    const TECH_LAYERS = [
-      {
-        badge: 'TORAY T700 SPECIFICATION',
-        title: 'Toray T700 Raw Carbon Fiber Texture',
-        desc: 'Unlike cheap painted fiberglass or smooth poly prints that lose their friction within two weeks, our raw Toray T700 carbon weave uses un-sanded carbon filaments that bite into the ball\'s plastic holes, delivering consistent 2,200+ RPM topspin on aggressive rolling dinks.',
-        stat1: '2,240 RPM',
-        stat2: '16 mm',
-        stat3: '8.0 oz'
-      },
-      {
-        badge: 'SHOCK DAMPENING CORE',
-        title: 'High-Density Polymer Honeycomb Core',
-        desc: 'Engineered with tuned structural cell geometries that compress upon impact. High-velocity overhead drives are dampened instantly, giving you soft hands on drop shots and eliminating arm shock.',
-        stat1: '16 mm',
-        stat2: '0.85 COR',
-        stat3: '99.4% Touch'
-      },
-      {
-        badge: 'PERIMETER FOAM EXPANSION',
-        title: 'Thermoformed Foam-Injected Perimeter',
-        desc: 'High-pressure foam injected all around the outer perimeter under heat presses. This dramatically expands the effective sweet spot to the edge guard, meaning off-center miss-hits still clear the net cleanly.',
-        stat1: '+35% Sweet Spot',
-        stat2: 'Zero Dead Zones',
-        stat3: 'Tour Legal'
-      },
-      {
-        badge: 'UNIBODY ERGONOMIC GRIP',
-        title: 'Carbon-Reinforced Hex Ergonomic Grip',
-        desc: 'The carbon fiber skin runs continuously from the paddle face down through the handle into an octagonal unibody. Wrapped in a perforated moisture-absorbing overgrip for secure leverage even during long summer rallies.',
-        stat1: '4.25" Circumf.',
-        stat2: '5.25" Length',
-        stat3: 'Anti-Slip Wrap'
-      }
-    ];
-
-    function selectTechLayer(index) {
-      const data = TECH_LAYERS[index];
-      document.getElementById('layer-tech-badge').textContent = data.badge;
-      document.getElementById('layer-tech-title').textContent = data.title;
-      document.getElementById('layer-tech-desc').textContent = data.desc;
-      document.getElementById('layer-stat-1').textContent = data.stat1;
-      document.getElementById('layer-stat-2').textContent = data.stat2;
-      document.getElementById('layer-stat-3').textContent = data.stat3;
-
-      const layerCards = document.querySelectorAll('.tech-layer-card');
-      layerCards.forEach((card, i) => {
-        if (i === index) {
-          card.classList.add('border-brand-orange', 'bg-brand-orange/10');
-          card.classList.remove('border-zinc-800', 'bg-zinc-900/40');
-        } else {
-          card.classList.remove('border-brand-orange', 'bg-brand-orange/10');
-          card.classList.add('border-zinc-800', 'bg-zinc-900/40');
-        }
+    }
+    const heroAddBtn = document.getElementById('hero-add-to-cart');
+    if (heroAddBtn) {
+      heroAddBtn.addEventListener('click', () => {
+        addHeroProductToCart();
       });
     }
 
     // ----------------------------------------------------
-    // Catalog Filtering Tabs
+    // Catalog Filtering Tabs (Matches Light Section Styling)
     // ----------------------------------------------------
-    function filterCatalog(category) {
+    function filterCatalog(category, el) {
       const cards = document.querySelectorAll('.product-card');
       cards.forEach(card => {
         if (category === 'all' || card.getAttribute('data-category') === category) {
@@ -1937,11 +1836,17 @@
 
       const buttons = document.querySelectorAll('.cat-filter-btn');
       buttons.forEach(btn => {
-        btn.classList.remove('bg-brand-orange', 'text-black', 'border-brand-orange');
-        btn.classList.add('bg-zinc-900', 'text-zinc-300', 'border-zinc-700');
+        btn.className = 'cat-filter-btn shrink-0 px-3.5 py-1.5 rounded-xl text-xs font-bold border border-[#73641A]/30 bg-white text-[#262626] hover:border-[#73641A] transition-all';
       });
-      event.target.classList.add('bg-brand-orange', 'text-black', 'border-brand-orange');
-      event.target.classList.remove('bg-zinc-900', 'text-zinc-300', 'border-zinc-700');
+      if (el) {
+        el.className = 'cat-filter-btn active shrink-0 px-3.5 py-1.5 rounded-xl text-xs font-bold border border-[#73641A] bg-[#73641A] text-white shadow-sm transition-all';
+      } else {
+        buttons.forEach(btn => {
+          if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${category}'`)) {
+            btn.className = 'cat-filter-btn active shrink-0 px-3.5 py-1.5 rounded-xl text-xs font-bold border border-[#73641A] bg-[#73641A] text-white shadow-sm transition-all';
+          }
+        });
+      }
     }
 
     // ----------------------------------------------------
