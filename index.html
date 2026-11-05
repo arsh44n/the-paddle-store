@@ -21,14 +21,19 @@
         extend: {
           colors: {
             brand: {
-              dark: '#0a0a0a',
-              card: '#141414',
-              elevated: '#1c1c1c',
-              border: '#27272a',
-              orange: '#f97316',
-              orangeHover: '#ea580c',
-              green: '#22c55e',
-              greenHover: '#16a34a'
+              dark: '#262626',          /* #262626 Base Charcoal */
+              card: '#1e1e1e',          /* Card surface */
+              elevated: '#2a2a2a',      /* Elevated cards */
+              border: '#73641A',        /* #73641A Antique Bronze Gold */
+              bronze: '#73641A',        /* #73641A Deep Bronze Gold */
+              gold: '#F2DA91',          /* #F2DA91 Radiant Warm Gold */
+              champagne: '#F2E5BD',     /* #F2E5BD Cream Champagne */
+              ivory: '#F2E6D8',         /* #F2E6D8 Warm Linen Ivory */
+              charcoal: '#262626',      /* #262626 */
+              orange: '#F2DA91',        /* Primary Accent -> Radiant Gold */
+              orangeHover: '#F2E5BD',   /* Accent Hover -> Cream Champagne */
+              green: '#F2DA91',         /* Action Accent -> Gold */
+              greenHover: '#F2E5BD'     /* Action Hover */
             }
           },
           fontFamily: {
@@ -55,10 +60,10 @@
   </script>
 
   <style>
-    /* Custom Utilities & Polish */
+    /* Custom Utilities & Polish (Experimental Gold & Charcoal Palette: #73641A, #F2DA91, #F2E5BD, #F2E6D8, #262626) */
     body {
-      background-color: #0a0a0a;
-      color: #f4f4f5;
+      background-color: #262626;
+      color: #F2E6D8;
       font-family: 'Plus Jakarta Sans', sans-serif;
       overflow-x: hidden;
     }
@@ -67,26 +72,26 @@
       letter-spacing: 0.05em;
     }
     .glass-nav {
-      background: rgba(10, 10, 10, 0.85);
+      background: rgba(38, 38, 38, 0.92);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(242, 218, 145, 0.18);
     }
     .glass-card {
-      background: rgba(20, 20, 20, 0.75);
+      background: rgba(30, 30, 30, 0.85);
       backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(242, 218, 145, 0.15);
     }
     .glass-card-hover {
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .glass-card-hover:hover {
       transform: translateY(-4px);
-      border-color: rgba(249, 115, 22, 0.4);
-      box-shadow: 0 12px 30px -10px rgba(249, 115, 22, 0.15);
+      border-color: rgba(242, 218, 145, 0.5);
+      box-shadow: 0 12px 30px -10px rgba(242, 218, 145, 0.22);
     }
     .badge-glow {
-      box-shadow: 0 0 15px rgba(249, 115, 22, 0.3);
+      box-shadow: 0 0 15px rgba(242, 218, 145, 0.35);
     }
     /* Hide scrollbars on horizontal lists */
     .no-scrollbar::-webkit-scrollbar {
@@ -102,12 +107,12 @@
     }
   </style>
 </head>
-<body class="bg-brand-dark text-zinc-100 antialiased selection:bg-brand-orange selection:text-black">
+<body class="bg-brand-dark text-[#F2E6D8] antialiased selection:bg-brand-orange selection:text-[#262626]">
 
   <!-- ======================================================== -->
   <!-- 1. TOP UTILITY ANNOUNCEMENT TICKER -->
   <!-- ======================================================== -->
-  <div class="bg-gradient-to-r from-orange-600 via-amber-600 to-orange-600 text-black text-xs font-bold py-2 px-4 shadow-sm">
+  <div class="bg-gradient-to-r from-[#73641A] via-[#F2DA91] to-[#73641A] text-[#262626] text-xs font-black py-2 px-4 shadow-sm">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <div class="flex items-center space-x-3 overflow-hidden whitespace-nowrap">
         <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-wider bg-black text-white">PRO DEAL</span>
@@ -149,16 +154,19 @@
         </a>
 
         <!-- Desktop Navigation Anchors -->
-        <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-zinc-300">
+        <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-zinc-300">
           <a href="#flagship" class="hover:text-brand-orange transition-colors">Flagship</a>
           <a href="#videos" class="hover:text-brand-orange transition-colors flex items-center gap-1.5">
             <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
             Video Reels
           </a>
-          <a href="#catalog" class="hover:text-brand-orange transition-colors">Equipment Catalog</a>
-          <a href="#tech" class="hover:text-brand-orange transition-colors">Tech Teardown</a>
-          <a href="#reviews" class="hover:text-brand-orange transition-colors">Player Reviews</a>
-          <a href="#wholesale" class="hover:text-brand-orange transition-colors text-amber-400 font-semibold">Club Wholesale</a>
+          <a href="#catalog" class="hover:text-brand-orange transition-colors">Catalog</a>
+          <a href="#tech" class="hover:text-brand-orange transition-colors">Tech</a>
+          <a href="#reviews" class="hover:text-brand-orange transition-colors">Reviews</a>
+          <a href="#venues" class="hover:text-brand-orange transition-colors flex items-center gap-1 text-brand-gold font-semibold">
+            <span>📍</span> Venues (Hisar & Delhi)
+          </a>
+          <a href="#wholesale" class="hover:text-brand-orange transition-colors text-amber-400 font-semibold">Wholesale</a>
           <a href="#contact" class="hover:text-brand-orange transition-colors">Contact</a>
         </nav>
 
@@ -198,6 +206,7 @@
       <a href="#catalog" class="block py-2 text-zinc-200 hover:text-brand-orange font-semibold">Equipment Catalog</a>
       <a href="#tech" class="block py-2 text-zinc-200 hover:text-brand-orange font-semibold">Tech Teardown</a>
       <a href="#reviews" class="block py-2 text-zinc-200 hover:text-brand-orange font-semibold">Player Reviews</a>
+      <a href="#venues" class="block py-2 text-brand-gold hover:text-brand-orangeHover font-bold">📍 Physical Venues (Hisar & Delhi)</a>
       <a href="#wholesale" class="block py-2 text-amber-400 hover:text-amber-300 font-semibold">Academy & Court Wholesale</a>
       <a href="#contact" class="block py-2 text-zinc-200 hover:text-brand-orange font-semibold">Contact Desk</a>
       <div class="pt-2 border-t border-zinc-800">
@@ -331,17 +340,18 @@
         <div class="lg:col-span-5 space-y-4">
           <div class="relative rounded-3xl overflow-hidden glass-card border border-zinc-800 p-3 group">
             
-            <!-- Video / Image Container -->
+            <!-- Video / Image Container (Video Reel Plays First on Load) -->
             <div class="relative rounded-2xl overflow-hidden bg-black aspect-[4/5] flex items-center justify-center">
               <img id="hero-main-img" 
                    src="public/assets/products/post_2.jpg" 
                    alt="Boomstik Carbon Flagship Paddle by The Paddle Store" 
-                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                   class="hidden w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
               
-              <!-- Video Overlay Option for Boomstik Showcase -->
+              <!-- Video Overlay Option for Boomstik Showcase (Active on load) -->
               <video id="hero-preview-video" 
-                     class="hidden w-full h-full object-cover" 
+                     class="w-full h-full object-cover" 
                      src="public/assets/videos/boomstik_showcase.mp4" 
+                     autoplay 
                      playsinline 
                      webkit-playsinline 
                      loop 
@@ -350,34 +360,39 @@
               <!-- Dynamic Pill Badge -->
               <div class="absolute top-4 left-4 z-10 flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-brand-orange/60 text-xs font-bold text-white">
                 <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
-                <span>FLAGSHIP EDITION</span>
+                <span>FLAGSHIP EDITION • LIVE REEL</span>
               </div>
+
+              <!-- Floating Audio Toggle on Hero Video -->
+              <button id="hero-audio-toggle-btn" onclick="toggleHeroAudio()" class="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/80 backdrop-blur-md border border-zinc-700 text-white hover:border-brand-orange hover:text-brand-orange transition-all" title="Toggle Sound">
+                <span id="hero-audio-icon" class="text-xs">🔇</span>
+              </button>
 
               <!-- Media View Toggle Switch (Photo / Reel) -->
               <div class="absolute bottom-4 right-4 z-10 flex items-center gap-1 p-1 rounded-full bg-black/85 backdrop-blur-md border border-zinc-700 text-xs">
-                <button id="toggle-hero-photo" class="px-3 py-1 rounded-full bg-brand-orange text-black font-bold text-[11px] transition-all">
+                <button id="toggle-hero-photo" class="px-3 py-1 rounded-full text-zinc-300 hover:text-white font-bold text-[11px] transition-all">
                   Photo Specs
                 </button>
-                <button id="toggle-hero-reel" class="px-3 py-1 rounded-full text-zinc-300 hover:text-white font-bold text-[11px] transition-all flex items-center gap-1">
-                  <span>▶ Play Reel</span>
+                <button id="toggle-hero-reel" class="px-3 py-1 rounded-full bg-brand-orange text-black font-bold text-[11px] transition-all flex items-center gap-1">
+                  <span>▶ Playing Reel</span>
                 </button>
               </div>
             </div>
 
             <!-- Thumbnail Carousel Switcher -->
             <div class="grid grid-cols-4 gap-2 pt-3">
-              <button onclick="switchHeroMedia('public/assets/products/post_2.jpg', false)" class="thumb-btn border-2 border-brand-orange rounded-xl overflow-hidden aspect-square">
-                <img src="public/assets/products/post_2.jpg" class="w-full h-full object-cover" alt="Boomstik specs">
-              </button>
-              <button onclick="switchHeroMedia('public/assets/products/post_10.jpg', false)" class="thumb-btn border-2 border-transparent hover:border-zinc-600 rounded-xl overflow-hidden aspect-square">
-                <img src="public/assets/products/post_10.jpg" class="w-full h-full object-cover" alt="Boomstik edge">
-              </button>
-              <button onclick="switchHeroMedia('public/assets/products/post_3.jpg', false)" class="thumb-btn border-2 border-transparent hover:border-zinc-600 rounded-xl overflow-hidden aspect-square">
-                <img src="public/assets/products/post_3.jpg" class="w-full h-full object-cover" alt="OMNI colors">
-              </button>
-              <button onclick="playHeroReel()" class="thumb-btn border-2 border-transparent hover:border-brand-orange rounded-xl overflow-hidden aspect-square relative bg-zinc-900 flex items-center justify-center">
+              <button id="thumb-reel" onclick="playHeroReel()" class="thumb-btn border-2 border-brand-orange rounded-xl overflow-hidden aspect-square relative bg-zinc-900 flex items-center justify-center">
                 <img src="public/assets/products/post_7.jpg" class="w-full h-full object-cover opacity-60" alt="Video preview">
                 <span class="absolute inset-0 flex items-center justify-center text-white text-xs font-bold bg-black/40">▶ Reel</span>
+              </button>
+              <button id="thumb-img-1" onclick="switchHeroMedia('public/assets/products/post_2.jpg', false)" class="thumb-btn border-2 border-transparent hover:border-brand-orange rounded-xl overflow-hidden aspect-square">
+                <img src="public/assets/products/post_2.jpg" class="w-full h-full object-cover" alt="Boomstik specs">
+              </button>
+              <button id="thumb-img-2" onclick="switchHeroMedia('public/assets/products/post_10.jpg', false)" class="thumb-btn border-2 border-transparent hover:border-brand-orange rounded-xl overflow-hidden aspect-square">
+                <img src="public/assets/products/post_10.jpg" class="w-full h-full object-cover" alt="Boomstik edge">
+              </button>
+              <button id="thumb-img-3" onclick="switchHeroMedia('public/assets/products/post_3.jpg', false)" class="thumb-btn border-2 border-transparent hover:border-brand-orange rounded-xl overflow-hidden aspect-square">
+                <img src="public/assets/products/post_3.jpg" class="w-full h-full object-cover" alt="OMNI colors">
               </button>
             </div>
 
@@ -1246,7 +1261,196 @@
   </section>
 
   <!-- ======================================================== -->
-  <!-- 10. ASYNCHRONOUS FORM SUBMISSION & CONTACT DESK -->
+  <!-- 10. PHYSICAL HUBS & VENUES (HISAR, HARYANA & PITAMPURA, DELHI) -->
+  <!-- ======================================================== -->
+  <section id="venues" class="py-20 bg-brand-dark border-b border-zinc-800/80 relative overflow-hidden">
+    <!-- Ambient Glow -->
+    <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-brand-orange/5 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+    <div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-brand-bronze/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/15 border border-brand-orange/40 text-brand-orange text-xs font-black uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+          <span>PHYSICAL VENUES & EXPERIENCE HUBS</span>
+        </div>
+        <h2 class="heading-font text-4xl sm:text-5xl text-brand-ivory tracking-wide">
+          VISIT OUR PHYSICAL HUBS IN HARYANA & DELHI
+        </h2>
+        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed">
+          Want to feel the raw Toray T700 carbon friction skin or test swing weight before ordering? 
+          Drop by our physical venues in <strong class="text-brand-orange">Hisar, Haryana</strong> and <strong class="text-brand-orange">Pitampura, Delhi</strong> for live paddle demos, court testing, and instant pick-ups.
+        </p>
+      </div>
+
+      <!-- 2 Flagship Venue Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- VENUE 1: HISAR, HARYANA -->
+        <div class="rounded-3xl glass-card border border-brand-orange/30 p-8 sm:p-10 flex flex-col justify-between space-y-6 relative overflow-hidden group hover:border-brand-orange/60 transition-all duration-300">
+          
+          <div class="space-y-5">
+            <!-- Header Pill & Badge -->
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-brand-orange/20 border border-brand-orange/40 text-brand-orange text-[11px] font-black tracking-wider uppercase">
+                📍 HARYANA HUB
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs text-brand-orange font-bold">
+                <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
+                Walk-ins Welcome
+              </span>
+            </div>
+
+            <div>
+              <h3 class="heading-font text-3xl sm:text-4xl text-brand-ivory tracking-wide">
+                HISAR EXPERIENCE HUB
+              </h3>
+              <p class="text-xs sm:text-sm text-brand-orange font-semibold mt-1">
+                The Paddle Store Pro-Desk & Demo Courts • Hisar, Haryana
+              </p>
+            </div>
+
+            <!-- Features List -->
+            <div class="space-y-3 pt-2 text-xs sm:text-sm text-zinc-300">
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
+                <span class="text-base shrink-0">🏓</span>
+                <div>
+                  <strong class="text-brand-ivory block">Live On-Court Paddle Locker</strong>
+                  <span class="text-zinc-400 text-xs">Test the Boomstik 16mm Control & 14mm Power models on live courts before buying.</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
+                <span class="text-base shrink-0">🛍️</span>
+                <div>
+                  <strong class="text-brand-ivory block">Instant Store Inventory Pickup</strong>
+                  <span class="text-zinc-400 text-xs">Full stock of tournament balls, thermal protective cases, grip rolls, and replacement covers.</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
+                <span class="text-base shrink-0">👥</span>
+                <div>
+                  <strong class="text-brand-ivory block">Player Fitting & Grip Tuning</strong>
+                  <span class="text-zinc-400 text-xs">Consult with experienced players for proper sweet-spot selection and hand sizing.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Operational Meta -->
+            <div class="pt-2 border-t border-zinc-800/80 flex items-center justify-between text-xs text-zinc-400">
+              <div class="flex items-center gap-1.5">
+                <span>🕒</span>
+                <span>Open Daily: <strong>7:00 AM – 10:00 PM</strong></span>
+              </div>
+              <div class="text-brand-orange font-bold">Haryana Center</div>
+            </div>
+          </div>
+
+          <!-- Direct Inquiries Action -->
+          <div class="pt-2">
+            <a href="https://wa.me/919518241474?text=Hi%20The%20Paddle%20Store!%20I'd%20like%20to%20visit%20your%20Hisar%20venue%20in%20Haryana%20for%20paddle%20trials." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="w-full py-3.5 px-6 rounded-xl bg-brand-orange text-black font-extrabold text-xs sm:text-sm tracking-wide hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-2 shadow-lg shadow-orange-500/20 active:scale-[0.99]">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>Connect with Hisar Desk</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- VENUE 2: PITAMPURA, DELHI -->
+        <div class="rounded-3xl glass-card border border-brand-orange/30 p-8 sm:p-10 flex flex-col justify-between space-y-6 relative overflow-hidden group hover:border-brand-orange/60 transition-all duration-300">
+          
+          <div class="space-y-5">
+            <!-- Header Pill & Badge -->
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-brand-orange/20 border border-brand-orange/40 text-brand-orange text-[11px] font-black tracking-wider uppercase">
+                📍 DELHI NCR HUB
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs text-brand-orange font-bold">
+                <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
+                Pickup Station Active
+              </span>
+            </div>
+
+            <div>
+              <h3 class="heading-font text-3xl sm:text-4xl text-brand-ivory tracking-wide">
+                PITAMPURA PRO-HUB
+              </h3>
+              <p class="text-xs sm:text-sm text-brand-orange font-semibold mt-1">
+                The Paddle Store Delhi Metro Hub • Pitampura, New Delhi
+              </p>
+            </div>
+
+            <!-- Features List -->
+            <div class="space-y-3 pt-2 text-xs sm:text-sm text-zinc-300">
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
+                <span class="text-base shrink-0">⚡</span>
+                <div>
+                  <strong class="text-brand-ivory block">Delhi Same-Day Pickup Point</strong>
+                  <span class="text-zinc-400 text-xs">Place your order online or via WhatsApp and collect immediately from our Pitampura locker.</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
+                <span class="text-base shrink-0">🏓</span>
+                <div>
+                  <strong class="text-brand-ivory block">Feel & Inspect Carbon Surface</strong>
+                  <span class="text-zinc-400 text-xs">Examine the micro-textured carbon grit, edge guards, and handle circumference in person.</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-zinc-900/60 border border-zinc-800">
+                <span class="text-base shrink-0">📦</span>
+                <div>
+                  <strong class="text-brand-ivory block">Club & Bulk Crate Distribution</strong>
+                  <span class="text-zinc-400 text-xs">Direct staging center for Delhi NCR court venues, corporate tournament organizers & academies.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Operational Meta -->
+            <div class="pt-2 border-t border-zinc-800/80 flex items-center justify-between text-xs text-zinc-400">
+              <div class="flex items-center gap-1.5">
+                <span>🕒</span>
+                <span>Open Daily: <strong>8:00 AM – 9:30 PM</strong></span>
+              </div>
+              <div class="text-brand-orange font-bold">Delhi NCR Center</div>
+            </div>
+          </div>
+
+          <!-- Direct Inquiries Action -->
+          <div class="pt-2">
+            <a href="https://wa.me/919518241474?text=Hi%20The%20Paddle%20Store!%20I'd%20like%20to%20visit%20your%20Pitampura%20Delhi%20hub%20for%20gear%20pickup." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="w-full py-3.5 px-6 rounded-xl bg-brand-orange text-black font-extrabold text-xs sm:text-sm tracking-wide hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-2 shadow-lg shadow-orange-500/20 active:scale-[0.99]">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>Connect with Delhi Desk</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Navigation & Maps Note -->
+      <div class="mt-8 text-center">
+        <p class="text-xs text-zinc-400">
+          📍 Direct Google Maps coordinates & court reservation booking links will be enabled shortly. 
+          To schedule a demo session or arrange an in-person visit today, reach our team directly on WhatsApp or call <strong class="text-brand-orange">+91 95182 41474</strong>.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- 11. ASYNCHRONOUS FORM SUBMISSION & CONTACT DESK -->
   <!-- ======================================================== -->
   <section id="contact" class="py-20 bg-brand-dark relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1759,33 +1963,66 @@
     const toggleHeroPhotoBtn = document.getElementById('toggle-hero-photo');
     const toggleHeroReelBtn = document.getElementById('toggle-hero-reel');
 
-    function switchHeroMedia(src, isVideo) {
+    function updateHeroThumbs(activeId) {
+      ['thumb-reel', 'thumb-img-1', 'thumb-img-2', 'thumb-img-3'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          if (id === activeId) {
+            el.classList.add('border-brand-orange');
+            el.classList.remove('border-transparent');
+          } else {
+            el.classList.remove('border-brand-orange');
+            el.classList.add('border-transparent');
+          }
+        }
+      });
+    }
+
+    function switchHeroMedia(src, isVideo, thumbId = 'thumb-img-1') {
       if (isVideo) {
         heroMainImg.classList.add('hidden');
         heroPreviewVideo.classList.remove('hidden');
-        heroPreviewVideo.play().catch(e => console.log(e));
-        toggleHeroReelBtn.classList.add('bg-brand-orange', 'text-black');
-        toggleHeroReelBtn.classList.remove('text-zinc-300');
-        toggleHeroPhotoBtn.classList.remove('bg-brand-orange', 'text-black');
-        toggleHeroPhotoBtn.classList.add('text-zinc-300');
+        heroPreviewVideo.play().catch(e => console.log('Autoplay handled:', e));
+        toggleHeroReelBtn.className = 'px-3 py-1 rounded-full bg-brand-orange text-black font-bold text-[11px] transition-all flex items-center gap-1';
+        toggleHeroReelBtn.innerHTML = '<span>▶ Playing Reel</span>';
+        toggleHeroPhotoBtn.className = 'px-3 py-1 rounded-full text-zinc-300 hover:text-white font-bold text-[11px] transition-all';
+        updateHeroThumbs('thumb-reel');
       } else {
         heroPreviewVideo.pause();
         heroPreviewVideo.classList.add('hidden');
         heroMainImg.src = src;
         heroMainImg.classList.remove('hidden');
-        toggleHeroPhotoBtn.classList.add('bg-brand-orange', 'text-black');
-        toggleHeroPhotoBtn.classList.remove('text-zinc-300');
-        toggleHeroReelBtn.classList.remove('bg-brand-orange', 'text-black');
-        toggleHeroReelBtn.classList.add('text-zinc-300');
+        toggleHeroPhotoBtn.className = 'px-3 py-1 rounded-full bg-brand-orange text-black font-bold text-[11px] transition-all';
+        toggleHeroReelBtn.className = 'px-3 py-1 rounded-full text-zinc-300 hover:text-white font-bold text-[11px] transition-all flex items-center gap-1';
+        toggleHeroReelBtn.innerHTML = '<span>▶ Play Reel</span>';
+        updateHeroThumbs(thumbId);
       }
     }
 
     function playHeroReel() {
-      switchHeroMedia('', true);
+      switchHeroMedia('', true, 'thumb-reel');
     }
 
-    toggleHeroPhotoBtn.addEventListener('click', () => switchHeroMedia('public/assets/products/post_2.jpg', false));
+    function toggleHeroAudio() {
+      if (heroPreviewVideo) {
+        heroPreviewVideo.muted = !heroPreviewVideo.muted;
+        const icon = document.getElementById('hero-audio-icon');
+        if (icon) {
+          icon.textContent = heroPreviewVideo.muted ? '🔇' : '🔊';
+        }
+        showToast(heroPreviewVideo.muted ? 'Hero video muted' : 'Hero video audio enabled 🔊');
+      }
+    }
+
+    toggleHeroPhotoBtn.addEventListener('click', () => switchHeroMedia('public/assets/products/post_2.jpg', false, 'thumb-img-1'));
     toggleHeroReelBtn.addEventListener('click', () => playHeroReel());
+
+    // Auto-ensure video plays first on site launch
+    window.addEventListener('DOMContentLoaded', () => {
+      if (heroPreviewVideo) {
+        heroPreviewVideo.play().catch(e => console.log('Autoplay notice:', e));
+      }
+    });
 
     // Core thickness switcher
     let selectedHeroCore = '16mm Control & Reset';
