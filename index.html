@@ -32,8 +32,8 @@
               charcoal: '#262626',      /* #262626 */
               orange: '#F2DA91',        /* Primary Accent -> Radiant Gold */
               orangeHover: '#F2E5BD',   /* Accent Hover -> Cream Champagne */
-              green: '#F2DA91',         /* Action Accent -> Gold */
-              greenHover: '#F2E5BD'     /* Action Hover */
+              green: '#25D366',         /* Action Accent -> Authentic WhatsApp Green */
+              greenHover: '#20bd5a'     /* Action Hover -> WhatsApp Green Hover */
             }
           },
           fontFamily: {
@@ -248,7 +248,7 @@
       <a href="#wholesale" class="block py-2 text-amber-400 hover:text-amber-300 font-semibold">Academy & Court Wholesale</a>
       <a href="#contact" class="block py-2 text-zinc-200 hover:text-brand-orange font-semibold">Contact Desk</a>
       <div class="pt-2 border-t border-zinc-800">
-        <a href="https://wa.me/919518241474" class="w-full flex items-center justify-center gap-2 py-3 bg-brand-orange text-black font-bold rounded-xl shadow-md">
+        <a href="https://wa.me/919518241474" class="w-full flex items-center justify-center gap-2 py-3 bg-[#25D366] hover:bg-[#20bd5a] text-black font-extrabold rounded-xl shadow-md transition-all">
           <span>Order Direct via WhatsApp</span>
         </a>
       </div>
@@ -266,19 +266,21 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
         
-        <!-- HERO BLOCK 1: Top Badge & Main Headline (1st on mobile & desktop) -->
-        <div class="order-1 lg:col-span-7 space-y-3 text-left">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-700/80 text-[11px] sm:text-xs font-semibold text-zinc-300">
-            <span class="w-2 h-2 rounded-full bg-[#F2DA91] animate-pulse"></span>
-            <span>DIRECT-TO-CONSUMER DISRUPTOR</span>
-            <span class="text-zinc-500">•</span>
-            <span class="text-[#F2DA91] font-bold">SAME SPECS. SMARTER PRICE.</span>
-          </div>
-
+        <!-- HERO BLOCK 1: Title ON TOP, then Disruptor Badge/Card -->
+        <div class="order-1 lg:col-span-7 space-y-3.5 text-left">
+          <!-- Main Title on Top of Hero -->
           <h1 class="heading-font text-4xl sm:text-6xl xl:text-7xl leading-[0.98] text-white tracking-wide">
             WHY PAY <span class="text-zinc-500 line-through">₹35,000</span><br>
             WHEN YOUR PRO GAME COSTS <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-[#F2DA91] to-amber-300">JUST ₹5,500?</span>
           </h1>
+
+          <!-- Card / Badge directly after Title -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900/90 border border-[#F2DA91]/40 text-[11px] sm:text-xs font-semibold text-zinc-300 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-[#25D366] animate-pulse"></span>
+            <span class="font-bold text-white">DIRECT-TO-CONSUMER DISRUPTOR</span>
+            <span class="text-zinc-500">•</span>
+            <span class="text-[#F2DA91] font-extrabold tracking-wide">SAME SPECS. SMARTER PRICE.</span>
+          </div>
         </div>
 
         <!-- HERO BLOCK 2: Flagship Visual Reel & Thumbs (2nd on mobile directly under headline; Right Column on desktop) -->
@@ -412,8 +414,8 @@
                href="https://wa.me/919518241474?text=Hi%20The%20Paddle%20Store!%20I'd%20like%20to%20order%20the%20Boomstik%20Carbon%20Paddle%20(16mm%20Control%20Core)%20at%20₹5,500." 
                target="_blank" 
                rel="noopener noreferrer" 
-               class="w-full py-3 px-6 rounded-xl bg-zinc-900/90 border border-zinc-700 text-white font-bold text-xs sm:text-sm tracking-wide hover:border-brand-green hover:text-brand-green transition-all flex items-center justify-center gap-2">
-              <svg class="w-4 h-4 fill-current text-brand-green" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+               class="w-full py-3.5 px-6 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-black font-extrabold text-sm sm:text-base tracking-wide transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#25D366]/25 active:scale-[0.99]">
+              <svg class="w-5 h-5 fill-current text-black" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
               <span>Instant WhatsApp Order</span>
             </a>
           </div>
@@ -539,11 +541,13 @@
               <span class="text-xs text-[#73641A] font-bold bg-[#73641A]/10 px-2 py-0.5 rounded">Save 84%</span>
             </div>
             <div class="grid grid-cols-2 gap-2">
-              <button onclick="addToCart('Boomstik Carbon Flagship', 5500, 'public/assets/products/post_2.jpg', '16mm Control Core')" class="py-2.5 px-3 rounded-xl bg-[#73641A] text-white font-extrabold text-xs hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#73641A]/20">
+              <button onclick="addToCart('Boomstik Carbon Flagship', 5500, 'public/assets/products/post_2.jpg', '16mm Control Core')" class="py-2.5 px-3 rounded-xl bg-[#F2DA91] hover:bg-[#F2E5BD] text-[#262626] font-extrabold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#F2DA91]/25 active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                 <span>Add to Cart</span>
               </button>
-              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Boomstik%20Carbon%20Flagship%20for%20%E2%82%B95,500" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#F2DA91]/30 border border-[#73641A]/40 text-[#262626] font-bold text-xs hover:bg-[#F2DA91]/50 transition-all text-center">
-                WhatsApp
+              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Boomstik%20Carbon%20Flagship%20for%20%E2%82%B95,500" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-black font-extrabold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#25D366]/20 active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5 fill-current text-black" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>WhatsApp</span>
               </a>
             </div>
           </div>
@@ -581,11 +585,13 @@
               <span class="text-xs text-[#73641A] font-bold bg-[#73641A]/10 px-2 py-0.5 rounded">Festive Deal</span>
             </div>
             <div class="grid grid-cols-2 gap-2">
-              <button onclick="addToCart('OMNI Advanced Gritty Spin', 5500, 'public/assets/products/post_7.jpg', 'Gritty Spin Edition')" class="py-2.5 px-3 rounded-xl bg-[#73641A] text-white font-extrabold text-xs hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#73641A]/20">
+              <button onclick="addToCart('OMNI Advanced Gritty Spin', 5500, 'public/assets/products/post_7.jpg', 'Gritty Spin Edition')" class="py-2.5 px-3 rounded-xl bg-[#F2DA91] hover:bg-[#F2E5BD] text-[#262626] font-extrabold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#F2DA91]/25 active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                 <span>Add to Cart</span>
               </button>
-              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20OMNI%20Advanced%20Paddle%20for%20%E2%82%B95,500" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#F2DA91]/30 border border-[#73641A]/40 text-[#262626] font-bold text-xs hover:bg-[#F2DA91]/50 transition-all text-center">
-                WhatsApp
+              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20OMNI%20Advanced%20Paddle%20for%20%E2%82%B95,500" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-black font-extrabold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#25D366]/20 active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5 fill-current text-black" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>WhatsApp</span>
               </a>
             </div>
           </div>
@@ -623,11 +629,13 @@
               <span class="text-xs text-emerald-800 font-bold bg-emerald-50 px-2 py-0.5 rounded">Save ₹500</span>
             </div>
             <div class="grid grid-cols-2 gap-2">
-              <button onclick="addToCart('Agassi V Tournament Touch', 4500, 'public/assets/products/post_5_c_1.jpg', 'Touch Control')" class="py-2.5 px-3 rounded-xl bg-[#73641A] text-white font-extrabold text-xs hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#73641A]/20">
+              <button onclick="addToCart('Agassi V Tournament Touch', 4500, 'public/assets/products/post_5_c_1.jpg', 'Touch Control')" class="py-2.5 px-3 rounded-xl bg-[#F2DA91] hover:bg-[#F2E5BD] text-[#262626] font-extrabold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#F2DA91]/25 active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                 <span>Add to Cart</span>
               </button>
-              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Agassi%20V%20Paddle%20for%20%E2%82%B94,500" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#F2DA91]/30 border border-[#73641A]/40 text-[#262626] font-bold text-xs hover:bg-[#F2DA91]/50 transition-all text-center">
-                WhatsApp
+              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Agassi%20V%20Paddle%20for%20%E2%82%B94,500" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-black font-extrabold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#25D366]/20 active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5 fill-current text-black" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>WhatsApp</span>
               </a>
             </div>
           </div>
@@ -662,11 +670,13 @@
               <span class="text-xs text-purple-700 font-bold bg-purple-50 px-2 py-0.5 rounded">Save ₹500</span>
             </div>
             <div class="grid grid-cols-2 gap-2">
-              <button onclick="addToCart('Agassi V Limited Edition', 4700, 'public/assets/products/post_5_c_2.jpg', 'Metallic Limited')" class="py-2.5 px-3 rounded-xl bg-[#73641A] text-white font-extrabold text-xs hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#73641A]/20">
+              <button onclick="addToCart('Agassi V Limited Edition', 4700, 'public/assets/products/post_5_c_2.jpg', 'Metallic Limited')" class="py-2.5 px-3 rounded-xl bg-[#F2DA91] hover:bg-[#F2E5BD] text-[#262626] font-extrabold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#F2DA91]/25 active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                 <span>Add to Cart</span>
               </button>
-              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Agassi%20V%20Limited%20Edition%20for%20%E2%82%B94,700" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#F2DA91]/30 border border-[#73641A]/40 text-[#262626] font-bold text-xs hover:bg-[#F2DA91]/50 transition-all text-center">
-                WhatsApp
+              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Agassi%20V%20Limited%20Edition%20for%20%E2%82%B94,700" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-black font-extrabold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#25D366]/20 active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5 fill-current text-black" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>WhatsApp</span>
               </a>
             </div>
           </div>
@@ -701,11 +711,13 @@
               <span class="text-xs text-red-700 font-bold bg-red-50 px-2 py-0.5 rounded">Festive Price</span>
             </div>
             <div class="grid grid-cols-2 gap-2">
-              <button onclick="addToCart('Perseus V Titan', 4500, 'public/assets/products/post_5_c_6.jpg', 'Titan Power Face')" class="py-2.5 px-3 rounded-xl bg-[#73641A] text-white font-extrabold text-xs hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#73641A]/20">
+              <button onclick="addToCart('Perseus V Titan', 4500, 'public/assets/products/post_5_c_6.jpg', 'Titan Power Face')" class="py-2.5 px-3 rounded-xl bg-[#F2DA91] hover:bg-[#F2E5BD] text-[#262626] font-extrabold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#F2DA91]/25 active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                 <span>Add to Cart</span>
               </button>
-              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Perseus%20V%20Titan%20for%20%E2%82%B94,500" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#F2DA91]/30 border border-[#73641A]/40 text-[#262626] font-bold text-xs hover:bg-[#F2DA91]/50 transition-all text-center">
-                WhatsApp
+              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Perseus%20V%20Titan%20for%20%E2%82%B94,500" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-black font-extrabold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#25D366]/20 active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5 fill-current text-black" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>WhatsApp</span>
               </a>
             </div>
           </div>
@@ -740,11 +752,13 @@
               <span class="text-xs text-amber-800 font-bold bg-amber-50 px-2 py-0.5 rounded">Save ₹1,000</span>
             </div>
             <div class="grid grid-cols-2 gap-2">
-              <button onclick="addToCart('Kevlar Pro Tour Hybrid', 5000, 'public/assets/products/post_5_c_8.jpg', 'Kevlar Cross-Weave')" class="py-2.5 px-3 rounded-xl bg-[#73641A] text-white font-extrabold text-xs hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#73641A]/20">
+              <button onclick="addToCart('Kevlar Pro Tour Hybrid', 5000, 'public/assets/products/post_5_c_8.jpg', 'Kevlar Cross-Weave')" class="py-2.5 px-3 rounded-xl bg-[#F2DA91] hover:bg-[#F2E5BD] text-[#262626] font-extrabold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#F2DA91]/25 active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                 <span>Add to Cart</span>
               </button>
-              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Kevlar%20Pro%20Tour%20for%20%E2%82%B95,000" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#F2DA91]/30 border border-[#73641A]/40 text-[#262626] font-bold text-xs hover:bg-[#F2DA91]/50 transition-all text-center">
-                WhatsApp
+              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Kevlar%20Pro%20Tour%20for%20%E2%82%B95,000" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-black font-extrabold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#25D366]/20 active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5 fill-current text-black" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>WhatsApp</span>
               </a>
             </div>
           </div>
@@ -779,11 +793,13 @@
               <span class="text-xs text-[#73641A] font-bold bg-[#73641A]/10 px-2 py-0.5 rounded">3-Pack Bundle</span>
             </div>
             <div class="grid grid-cols-2 gap-2">
-              <button onclick="addToCart('AGASSI 40 Tournament Balls (3-Pack)', 499, 'public/assets/products/post_6.jpg', '3-Pack Yellow')" class="py-2.5 px-3 rounded-xl bg-[#73641A] text-white font-extrabold text-xs hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#73641A]/20">
+              <button onclick="addToCart('AGASSI 40 Tournament Balls (3-Pack)', 499, 'public/assets/products/post_6.jpg', '3-Pack Yellow')" class="py-2.5 px-3 rounded-xl bg-[#F2DA91] hover:bg-[#F2E5BD] text-[#262626] font-extrabold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#F2DA91]/25 active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                 <span>Add to Cart</span>
               </button>
-              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20AGASSI%2040%20Tournament%20Balls" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#F2DA91]/30 border border-[#73641A]/40 text-[#262626] font-bold text-xs hover:bg-[#F2DA91]/50 transition-all text-center">
-                WhatsApp
+              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20AGASSI%2040%20Tournament%20Balls" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-black font-extrabold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#25D366]/20 active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5 fill-current text-black" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>WhatsApp</span>
               </a>
             </div>
           </div>
@@ -818,11 +834,13 @@
               <span class="text-xs text-zinc-700 font-bold bg-zinc-100 px-2 py-0.5 rounded">Academy Value</span>
             </div>
             <div class="grid grid-cols-2 gap-2">
-              <button onclick="addToCart('AK-40 Club Balls (3-Pack)', 399, 'public/assets/products/post_6_c_2.jpg', '3-Pack Lime Green')" class="py-2.5 px-3 rounded-xl bg-[#73641A] text-white font-extrabold text-xs hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#73641A]/20">
+              <button onclick="addToCart('AK-40 Club Balls (3-Pack)', 399, 'public/assets/products/post_6_c_2.jpg', '3-Pack Lime Green')" class="py-2.5 px-3 rounded-xl bg-[#F2DA91] hover:bg-[#F2E5BD] text-[#262626] font-extrabold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#F2DA91]/25 active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                 <span>Add to Cart</span>
               </button>
-              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20AK-40%20Club%20Balls" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#F2DA91]/30 border border-[#73641A]/40 text-[#262626] font-bold text-xs hover:bg-[#F2DA91]/50 transition-all text-center">
-                WhatsApp
+              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20AK-40%20Club%20Balls" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-black font-extrabold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#25D366]/20 active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5 fill-current text-black" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>WhatsApp</span>
               </a>
             </div>
           </div>
@@ -857,11 +875,13 @@
               <span class="text-xs text-[#73641A] font-bold bg-[#73641A]/10 px-2 py-0.5 rounded">Save ₹900</span>
             </div>
             <div class="grid grid-cols-2 gap-2">
-              <button onclick="addToCart('Portable Ball Caddy Basket', 1599, 'public/assets/products/post_8.jpg', '60-Ball Capacity')" class="py-2.5 px-3 rounded-xl bg-[#73641A] text-white font-extrabold text-xs hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#73641A]/20">
+              <button onclick="addToCart('Portable Ball Caddy Basket', 1599, 'public/assets/products/post_8.jpg', '60-Ball Capacity')" class="py-2.5 px-3 rounded-xl bg-[#F2DA91] hover:bg-[#F2E5BD] text-[#262626] font-extrabold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#F2DA91]/25 active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                 <span>Add to Cart</span>
               </button>
-              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Portable%20Ball%20Caddy%20Basket%20for%20%E2%82%B91,599" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#F2DA91]/30 border border-[#73641A]/40 text-[#262626] font-bold text-xs hover:bg-[#F2DA91]/50 transition-all text-center">
-                WhatsApp
+              <a href="https://wa.me/919518241474?text=Hi!%20I'd%20like%20to%20order%20the%20Portable%20Ball%20Caddy%20Basket%20for%20%E2%82%B91,599" target="_blank" class="py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-black font-extrabold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#25D366]/20 active:scale-[0.98]">
+                <svg class="w-3.5 h-3.5 fill-current text-black" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>WhatsApp</span>
               </a>
             </div>
           </div>
@@ -875,45 +895,43 @@
   <!-- ======================================================== -->
   <!-- 5. 5-VIDEO REEL THEATRE & ACTION SHOWCASE (DARK THEATRE) -->
   <!-- ======================================================== -->
-  <section id="videos" class="py-20 bg-[#262626] border-b border-zinc-800 relative">
+  <section id="videos" class="py-16 sm:py-20 bg-[#262626] border-b border-zinc-800 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/15 border border-brand-orange/30 text-brand-orange text-xs font-bold uppercase tracking-wider">
-          <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
+      <!-- Section Header (Clean, No Caption Text Dump) -->
+      <div class="text-center max-w-3xl mx-auto mb-8 space-y-2">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F2DA91]/15 border border-[#F2DA91]/30 text-[#F2DA91] text-xs font-bold uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-[#F2DA91] animate-ping"></span>
           <span>Official 9:16 Video Showcase</span>
         </div>
-        <h2 class="heading-font text-4xl sm:text-5xl text-brand-ivory tracking-wide">
+        <h2 class="heading-font text-3xl sm:text-5xl text-brand-ivory tracking-wide">
           WATCH THE GEAR IN LIVE COURT ACTION
         </h2>
-        <p class="text-zinc-400 text-sm sm:text-base">
-          Explore genuine unboxings, player reviews, court rallies, and technical showcase reels. Switch between reels, tap to unmute audio, and order directly.
-        </p>
       </div>
 
-      <!-- Video Reel Tabs (Customer Reviews as FIRST TAB) -->
-      <div class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap mb-10 no-scrollbar overflow-x-auto" id="video-reel-tabs">
-        <button onclick="switchReel(0)" class="reel-tab-btn active px-4 py-2 rounded-full text-xs font-bold border border-brand-orange bg-brand-orange text-black transition-all">
+      <!-- Mobile-Friendly Horizontal Scrollable Video Tabs Bar (Single line horizontal scroll) -->
+      <div class="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar py-2 px-4 -mx-4 sm:mx-auto sm:px-0 mb-8 scroll-smooth" id="video-reel-tabs">
+        <button onclick="switchReel(0)" class="reel-tab-btn active shrink-0 px-4 py-2 rounded-full text-xs font-extrabold border border-[#F2DA91] bg-[#F2DA91] text-black shadow-md transition-all">
           ⭐ Customer Journey & Reviews
         </button>
-        <button onclick="switchReel(1)" class="reel-tab-btn px-4 py-2 rounded-full text-xs font-bold border border-zinc-700 bg-zinc-900 text-zinc-300 hover:text-white transition-all">
+        <button onclick="switchReel(1)" class="reel-tab-btn shrink-0 px-4 py-2 rounded-full text-xs font-extrabold border border-zinc-700 bg-zinc-900 text-zinc-300 hover:border-[#F2DA91] hover:text-white transition-all">
           🔥 Boomstik Showcase (₹5,500)
         </button>
-        <button onclick="switchReel(2)" class="reel-tab-btn px-4 py-2 rounded-full text-xs font-bold border border-zinc-700 bg-zinc-900 text-zinc-300 hover:text-white transition-all">
+        <button onclick="switchReel(2)" class="reel-tab-btn shrink-0 px-4 py-2 rounded-full text-xs font-extrabold border border-zinc-700 bg-zinc-900 text-zinc-300 hover:border-[#F2DA91] hover:text-white transition-all">
           🎾 Court Matchplay Action
         </button>
-        <button onclick="switchReel(3)" class="reel-tab-btn px-4 py-2 rounded-full text-xs font-bold border border-zinc-700 bg-zinc-900 text-zinc-300 hover:text-white transition-all">
+        <button onclick="switchReel(3)" class="reel-tab-btn shrink-0 px-4 py-2 rounded-full text-xs font-extrabold border border-zinc-700 bg-zinc-900 text-zinc-300 hover:border-[#F2DA91] hover:text-white transition-all">
           ⚡ Boomstik Mini Edition (₹5,800)
         </button>
-        <button onclick="switchReel(4)" class="reel-tab-btn px-4 py-2 rounded-full text-xs font-bold border border-zinc-700 bg-zinc-900 text-zinc-300 hover:text-white transition-all">
+        <button onclick="switchReel(4)" class="reel-tab-btn shrink-0 px-4 py-2 rounded-full text-xs font-extrabold border border-zinc-700 bg-zinc-900 text-zinc-300 hover:border-[#F2DA91] hover:text-white transition-all">
           🎉 Diwali & Festive Mega Sale
         </button>
       </div>
 
-      <!-- Main Active Reel Showcase Stage -->
+      <!-- Active Video Showcase Stage (9:16 Frame + Narrative & Direct Action CTAs) -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto">
         
-        <!-- Video Player Frame (9:16 Mobile Aspect Ratio - Customer Reviews Playing First) -->
+        <!-- Left / Center: 9:16 Video Player Frame -->
         <div class="lg:col-span-6 flex justify-center">
           <div class="relative w-full max-w-[340px] reel-container rounded-3xl overflow-hidden shadow-2xl shadow-black border-2 border-zinc-700 bg-black group">
             
@@ -927,83 +945,68 @@
                    autoplay 
                    onclick="toggleMainVideoPlay()"></video>
 
-            <!-- Video Controls Overlay -->
-            <div class="absolute inset-0 pointer-events-none flex flex-col justify-between p-4 bg-gradient-to-b from-black/60 via-transparent to-black/80">
-              
-              <!-- Top Badges -->
+            <!-- Video Overlay Badges & Sound Button -->
+            <div class="absolute inset-0 pointer-events-none flex flex-col justify-between p-4 bg-gradient-to-b from-black/60 via-transparent to-black/85">
               <div class="flex items-center justify-between pointer-events-auto">
-                <span id="reel-badge" class="px-2.5 py-1 rounded-full bg-brand-orange text-black font-extrabold text-[11px] tracking-wide">
-                  CUSTOMER REVIEWS
+                <span id="reel-badge" class="px-2.5 py-1 rounded-full bg-[#F2DA91] text-black font-black text-[11px] tracking-wide">
+                  ⭐ CUSTOMER REVIEWS
                 </span>
-                <!-- Sound Toggle Button -->
-                <button id="reel-sound-btn" onclick="toggleMainVideoSound()" class="p-2 rounded-full bg-black/70 border border-zinc-600 text-white hover:bg-black transition-all">
-                  <svg id="sound-icon-muted" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-                  </svg>
-                  <svg id="sound-icon-unmuted" class="w-4 h-4 hidden text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                  </svg>
+                <button id="reel-sound-btn" onclick="toggleMainVideoSound()" class="p-2 rounded-full bg-black/75 border border-zinc-600 text-white hover:text-[#F2DA91] transition-all" title="Toggle Sound">
+                  <span id="sound-icon" class="text-xs">🔇</span>
                 </button>
               </div>
-
-              <!-- Center Big Play Indicator -->
-              <div id="play-pause-indicator" class="self-center p-3 rounded-full bg-black/60 border border-white/20 text-white opacity-0 transition-opacity">
-                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-
-              <!-- Bottom Captions -->
+              
               <div class="pointer-events-auto space-y-1">
                 <div class="text-[11px] text-amber-400 font-bold uppercase tracking-wider">@the_paddle_store_</div>
-                <div id="reel-title-overlay" class="text-sm font-bold text-white line-clamp-1">PLAYER UNBOXING & CUSTOMER JOURNEY REVIEWS</div>
+                <div id="reel-title-overlay" class="text-sm font-bold text-white line-clamp-1">REAL PLAYER REVIEWS & WHATSAPP JOURNEY</div>
               </div>
-
             </div>
 
           </div>
         </div>
 
-        <!-- Right Side: Commercial Narrative, Review Notes & Instant Purchase -->
-        <div class="lg:col-span-6 space-y-6 text-left">
+        <!-- Right: Gear Narrative, Features & Direct CTAs for Active Reel -->
+        <div class="lg:col-span-6 space-y-5 text-left">
           
           <div class="space-y-2">
-            <span id="reel-model-tag" class="text-xs font-bold text-brand-orange uppercase tracking-wider">Player Feedback & Unboxing</span>
+            <span id="reel-model-tag" class="text-xs font-bold text-[#F2DA91] uppercase tracking-wider">Player Feedback & Unboxing</span>
             <h3 id="reel-narrative-title" class="heading-font text-3xl sm:text-4xl text-brand-ivory tracking-wide">
-              PLAYER UNBOXING & CUSTOMER JOURNEY REVIEWS
+              REAL PLAYER REVIEWS & WHATSAPP JOURNEY
             </h3>
             <p id="reel-narrative-desc" class="text-zinc-300 text-sm leading-relaxed">
-              Unfiltered feedback from tournament players and coaches across Delhi NCR, Haryana, and Gujarat who switched from international ₹35,000 paddles to The Paddle Store.
+              Nothing makes us happier than seeing players dominate on the court. Watch real tournament contenders share their unboxing and review feedback from across India.
             </p>
           </div>
 
           <!-- Feature Bullets Card -->
-          <div id="reel-bullets" class="p-5 rounded-2xl glass-card border border-zinc-800 space-y-2.5 text-xs text-zinc-300">
+          <div id="reel-bullets" class="p-4 sm:p-5 rounded-2xl glass-card border border-zinc-800 space-y-2.5 text-xs text-zinc-300">
             <div class="flex items-start gap-2.5">
-              <span class="text-brand-orange text-sm font-bold">✓</span>
-              <span id="reel-bullet-1">Genuine WhatsApp reactions, unboxing videos, and on-court play feedback.</span>
+              <span class="text-[#F2DA91] text-sm font-bold">✓</span>
+              <span>High ratings verified on WhatsApp from Delhi NCR, Haryana and Bengaluru.</span>
             </div>
             <div class="flex items-start gap-2.5">
-              <span class="text-brand-orange text-sm font-bold">✓</span>
-              <span id="reel-bullet-2">Players highlight immense topspin bite, lightweight resets, and zero dead spots.</span>
+              <span class="text-[#F2DA91] text-sm font-bold">✓</span>
+              <span>Praised for extreme control on third-shot drops and baseline power.</span>
             </div>
             <div class="flex items-start gap-2.5">
-              <span class="text-brand-orange text-sm font-bold">✓</span>
-              <span id="reel-bullet-3">Pan-India express 2-3 day courier delivery with Cash On Delivery (COD).</span>
+              <span class="text-[#F2DA91] text-sm font-bold">✓</span>
+              <span>100% genuine customer reviews with zero paid celebrity sponsorships.</span>
             </div>
           </div>
 
-          <!-- Purchase Action Button for this Reel -->
+          <!-- Action Buttons: Add to Cart (Standout Gold) + WhatsApp Order (Green #25D366) -->
           <div class="flex flex-col sm:flex-row gap-3 pt-2">
-            <button id="reel-order-btn" onclick="addCurrentReelProductToCart()" class="flex-1 py-3.5 px-6 rounded-xl bg-brand-orange text-black font-extrabold text-xs sm:text-sm tracking-wide hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-2 shadow-lg shadow-orange-500/20 active:scale-[0.98]">
+            <button id="reel-cart-btn" onclick="addCurrentReelProductToCart()" class="flex-1 py-3.5 px-6 rounded-xl bg-[#F2DA91] hover:bg-[#F2E5BD] text-[#262626] font-extrabold text-xs sm:text-sm tracking-wide transition-all flex items-center justify-center gap-2 shadow-lg shadow-yellow-500/20 active:scale-[0.98]">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-              <span id="reel-btn-label">Order Boomstik • ₹5,500</span>
+              <span id="reel-cart-btn-text">Add Boomstik to Cart • ₹5,500</span>
             </button>
 
-            <a href="https://wa.me/919518241474?text=Hi%20The%20Paddle%20Store!%20I'm%20watching%20your%20customer%20review%20reel%20and%20want%20to%20order." 
+            <a id="reel-whatsapp-btn" 
+               href="https://wa.me/919518241474?text=Hi%20The%20Paddle%20Store!%20I%20watched%20the%20Customer%20Reviews%20reel%20and%20want%20to%20order%20Boomstik%20Carbon%20(₹5,500)." 
                target="_blank" 
                rel="noopener noreferrer" 
-               class="py-3.5 px-6 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-bold text-xs sm:text-sm hover:border-brand-green hover:text-brand-green transition-all flex items-center justify-center gap-2">
-              <svg class="w-4 h-4 fill-current text-brand-green" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+               class="flex-1 py-3.5 px-6 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-black font-extrabold text-xs sm:text-sm tracking-wide transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#25D366]/20 active:scale-[0.98]">
+              <svg class="w-4 h-4 fill-current text-black" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
               <span>Order via WhatsApp</span>
             </a>
           </div>
@@ -1039,7 +1042,7 @@
           <!-- Review Card 1 -->
           <div class="w-[280px] sm:w-[320px] rounded-2xl bg-white border border-[#73641A]/20 p-4 shadow-sm hover:shadow-md transition-shadow shrink-0 whitespace-normal text-left space-y-2">
             <div class="flex items-center justify-between">
-              <div class="text-[#73641A] text-xs font-bold tracking-tight">★★★★★</div>
+              <div class="text-sm tracking-tight select-none">⭐⭐⭐⭐⭐</div>
               <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">DUPR 4.2</span>
             </div>
             <p class="text-[#262626] text-xs sm:text-[13px] leading-snug italic line-clamp-2">
@@ -1054,7 +1057,7 @@
           <!-- Review Card 2 -->
           <div class="w-[280px] sm:w-[320px] rounded-2xl bg-white border border-[#73641A]/20 p-4 shadow-sm hover:shadow-md transition-shadow shrink-0 whitespace-normal text-left space-y-2">
             <div class="flex items-center justify-between">
-              <div class="text-[#73641A] text-xs font-bold tracking-tight">★★★★★</div>
+              <div class="text-sm tracking-tight select-none">⭐⭐⭐⭐⭐</div>
               <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">DUPR 4.6 COACH</span>
             </div>
             <p class="text-[#262626] text-xs sm:text-[13px] leading-snug italic line-clamp-2">
@@ -1069,7 +1072,7 @@
           <!-- Review Card 3 -->
           <div class="w-[280px] sm:w-[320px] rounded-2xl bg-white border border-[#73641A]/20 p-4 shadow-sm hover:shadow-md transition-shadow shrink-0 whitespace-normal text-left space-y-2">
             <div class="flex items-center justify-between">
-              <div class="text-[#73641A] text-xs font-bold tracking-tight">★★★★★</div>
+              <div class="text-sm tracking-tight select-none">⭐⭐⭐⭐⭐</div>
               <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">CLUB PARTNER</span>
             </div>
             <p class="text-[#262626] text-xs sm:text-[13px] leading-snug italic line-clamp-2">
@@ -1084,7 +1087,7 @@
           <!-- Review Card 4 -->
           <div class="w-[280px] sm:w-[320px] rounded-2xl bg-white border border-[#73641A]/20 p-4 shadow-sm hover:shadow-md transition-shadow shrink-0 whitespace-normal text-left space-y-2">
             <div class="flex items-center justify-between">
-              <div class="text-[#73641A] text-xs font-bold tracking-tight">★★★★★</div>
+              <div class="text-sm tracking-tight select-none">⭐⭐⭐⭐⭐</div>
               <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">TOURNAMENT GOLD</span>
             </div>
             <p class="text-[#262626] text-xs sm:text-[13px] leading-snug italic line-clamp-2">
@@ -1099,7 +1102,7 @@
           <!-- Review Card 5 -->
           <div class="w-[280px] sm:w-[320px] rounded-2xl bg-white border border-[#73641A]/20 p-4 shadow-sm hover:shadow-md transition-shadow shrink-0 whitespace-normal text-left space-y-2">
             <div class="flex items-center justify-between">
-              <div class="text-[#73641A] text-xs font-bold tracking-tight">★★★★★</div>
+              <div class="text-sm tracking-tight select-none">⭐⭐⭐⭐⭐</div>
               <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">DUPR 4.8 PRO</span>
             </div>
             <p class="text-[#262626] text-xs sm:text-[13px] leading-snug italic line-clamp-2">
@@ -1119,7 +1122,7 @@
           <!-- Review Card 1 Duplicate -->
           <div class="w-[280px] sm:w-[320px] rounded-2xl bg-white border border-[#73641A]/20 p-4 shadow-sm hover:shadow-md transition-shadow shrink-0 whitespace-normal text-left space-y-2">
             <div class="flex items-center justify-between">
-              <div class="text-[#73641A] text-xs font-bold tracking-tight">★★★★★</div>
+              <div class="text-sm tracking-tight select-none">⭐⭐⭐⭐⭐</div>
               <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">DUPR 4.2</span>
             </div>
             <p class="text-[#262626] text-xs sm:text-[13px] leading-snug italic line-clamp-2">
@@ -1134,7 +1137,7 @@
           <!-- Review Card 2 Duplicate -->
           <div class="w-[280px] sm:w-[320px] rounded-2xl bg-white border border-[#73641A]/20 p-4 shadow-sm hover:shadow-md transition-shadow shrink-0 whitespace-normal text-left space-y-2">
             <div class="flex items-center justify-between">
-              <div class="text-[#73641A] text-xs font-bold tracking-tight">★★★★★</div>
+              <div class="text-sm tracking-tight select-none">⭐⭐⭐⭐⭐</div>
               <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">DUPR 4.6 COACH</span>
             </div>
             <p class="text-[#262626] text-xs sm:text-[13px] leading-snug italic line-clamp-2">
@@ -1149,7 +1152,7 @@
           <!-- Review Card 3 Duplicate -->
           <div class="w-[280px] sm:w-[320px] rounded-2xl bg-white border border-[#73641A]/20 p-4 shadow-sm hover:shadow-md transition-shadow shrink-0 whitespace-normal text-left space-y-2">
             <div class="flex items-center justify-between">
-              <div class="text-[#73641A] text-xs font-bold tracking-tight">★★★★★</div>
+              <div class="text-sm tracking-tight select-none">⭐⭐⭐⭐⭐</div>
               <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">CLUB PARTNER</span>
             </div>
             <p class="text-[#262626] text-xs sm:text-[13px] leading-snug italic line-clamp-2">
@@ -1164,7 +1167,7 @@
           <!-- Review Card 4 Duplicate -->
           <div class="w-[280px] sm:w-[320px] rounded-2xl bg-white border border-[#73641A]/20 p-4 shadow-sm hover:shadow-md transition-shadow shrink-0 whitespace-normal text-left space-y-2">
             <div class="flex items-center justify-between">
-              <div class="text-[#73641A] text-xs font-bold tracking-tight">★★★★★</div>
+              <div class="text-sm tracking-tight select-none">⭐⭐⭐⭐⭐</div>
               <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">TOURNAMENT GOLD</span>
             </div>
             <p class="text-[#262626] text-xs sm:text-[13px] leading-snug italic line-clamp-2">
@@ -1179,7 +1182,7 @@
           <!-- Review Card 5 Duplicate -->
           <div class="w-[280px] sm:w-[320px] rounded-2xl bg-white border border-[#73641A]/20 p-4 shadow-sm hover:shadow-md transition-shadow shrink-0 whitespace-normal text-left space-y-2">
             <div class="flex items-center justify-between">
-              <div class="text-[#73641A] text-xs font-bold tracking-tight">★★★★★</div>
+              <div class="text-sm tracking-tight select-none">⭐⭐⭐⭐⭐</div>
               <span class="text-[10px] font-black px-2 py-0.5 rounded bg-[#73641A]/10 text-[#73641A] border border-[#73641A]/30">DUPR 4.8 PRO</span>
             </div>
             <p class="text-[#262626] text-xs sm:text-[13px] leading-snug italic line-clamp-2">
@@ -1228,7 +1231,7 @@
             <a href="https://wa.me/919518241474?text=Hi%20The%20Paddle%20Store!%20I%20am%20a%20court%20owner/coach%20and%20want%20to%20discuss%20bulk%20wholesale%20rates." 
                target="_blank" 
                rel="noopener noreferrer" 
-               class="py-4 px-6 rounded-2xl bg-brand-orange text-black font-extrabold text-sm hover:bg-brand-orangeHover transition-all text-center shadow-xl shadow-orange-500/20 flex items-center justify-center gap-2">
+               class="py-4 px-6 rounded-2xl bg-[#25D366] hover:bg-[#20bd5a] text-black font-extrabold text-sm transition-all text-center shadow-xl shadow-[#25D366]/20 flex items-center justify-center gap-2">
               <span>Request Wholesale Pricing on WhatsApp</span>
               <span>→</span>
             </a>
@@ -1296,7 +1299,7 @@
             <a href="https://wa.me/919518241474?text=Hi%20The%20Paddle%20Store!%20I'd%20like%20to%20connect%20with%20your%20Hisar%20Desk%20for%20paddle%20trials." 
                target="_blank" 
                rel="noopener noreferrer" 
-               class="w-full py-4 px-6 rounded-xl bg-[#73641A] text-white font-extrabold text-sm tracking-wide hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#73641A]/20 active:scale-[0.99]">
+               class="w-full py-4 px-6 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-black font-extrabold text-sm tracking-wide transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#25D366]/20 active:scale-[0.99]">
               <span>Connect with Hisar Desk</span>
               <span>→</span>
             </a>
@@ -1336,7 +1339,7 @@
             <a href="https://wa.me/919518241474?text=Hi%20The%20Paddle%20Store!%20I'd%20like%20to%20connect%20with%20your%20Delhi%20Desk%20for%20gear%20pickup." 
                target="_blank" 
                rel="noopener noreferrer" 
-               class="w-full py-4 px-6 rounded-xl bg-[#73641A] text-white font-extrabold text-sm tracking-wide hover:bg-[#5a4e14] transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#73641A]/20 active:scale-[0.99]">
+               class="w-full py-4 px-6 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-black font-extrabold text-sm tracking-wide transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#25D366]/20 active:scale-[0.99]">
               <span>Connect with Delhi Desk</span>
               <span>→</span>
             </a>
@@ -1525,7 +1528,7 @@
         </div>
 
         <!-- Proceed to Checkout Button -->
-        <button id="cart-proceed-btn" onclick="goToCheckoutDetails()" class="w-full py-4 rounded-xl bg-brand-orange text-black font-extrabold text-sm tracking-wide hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-2 shadow-lg shadow-orange-500/20 active:scale-[0.99]">
+        <button id="cart-proceed-btn" onclick="goToCheckoutDetails()" class="w-full py-4 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-black font-extrabold text-sm tracking-wide transition-all flex items-center justify-center gap-2 shadow-xl shadow-[#25D366]/20 active:scale-[0.99]">
           <span>PROCEED TO CHECKOUT</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </button>
@@ -1621,7 +1624,7 @@
 
       <!-- Checkout Footer: WhatsApp Order Trigger -->
       <div class="p-5 border-t border-zinc-800 bg-zinc-950/90 space-y-3">
-        <button id="cart-whatsapp-checkout-btn" onclick="submitWhatsAppOrder()" class="w-full py-4 rounded-xl bg-brand-green text-black font-extrabold text-sm tracking-wide hover:bg-brand-greenHover transition-all flex items-center justify-center gap-2 shadow-lg shadow-green-500/25 active:scale-[0.99]">
+        <button id="cart-whatsapp-checkout-btn" onclick="submitWhatsAppOrder()" class="w-full py-4 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-black font-extrabold text-sm tracking-wide transition-all flex items-center justify-center gap-2 shadow-xl shadow-[#25D366]/30 active:scale-[0.99]">
           <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
           <span>SEND ORDER ON WHATSAPP</span>
         </button>
@@ -1695,31 +1698,176 @@
   <script>
     // ----------------------------------------------------
     // ----------------------------------------------------
-    // Horizontal 9:16 Video Shelf Controller
     // ----------------------------------------------------
-    function toggleReelPlay(idx) {
-      const vid = document.getElementById(`reel-vid-${idx}`);
-      if (vid) {
-        if (vid.paused) vid.play();
-        else vid.pause();
+    // Video Reel Data Definition (5 Authentic Videos)
+    // ----------------------------------------------------
+    const REELS = [
+      {
+        id: 'customer_reviews',
+        videoSrc: 'public/assets/videos/customer_reviews.mp4',
+        badge: '⭐ CUSTOMER REVIEWS',
+        tag: 'Player Feedback & Unboxing',
+        title: 'REAL PLAYER REVIEWS & WHATSAPP JOURNEY',
+        desc: 'Unfiltered reactions from tournament contenders across Delhi NCR, Haryana and Bengaluru who switched to The Paddle Store. Pure performance, verified on court.',
+        bullets: [
+          'High ratings verified on WhatsApp from tournament competitors.',
+          'Praised for immense topspin bite, lightweight resets & zero dead spots.',
+          '100% genuine customer reviews with zero paid celebrity sponsorships.'
+        ],
+        cartText: 'Add Boomstik to Cart • ₹5,500',
+        waText: "Hi The Paddle Store! I watched the Customer Reviews reel and want to order Boomstik Carbon (₹5,500).",
+        product: { name: 'Boomstik Carbon Flagship', price: 5500, img: 'public/assets/products/post_2.jpg', variant: '16mm Tour Edition' }
+      },
+      {
+        id: 'boomstik_showcase',
+        videoSrc: 'public/assets/videos/boomstik_showcase.mp4',
+        badge: '🔥 FLAGSHIP SHOWCASE',
+        tag: 'Featured Flagship Model',
+        title: 'BOOMSTIK MULTI-PATTERN CARBON SERIES (₹5,500)',
+        desc: 'Witness the craftsmanship, raw carbon grit texture, and high-tensile edge construction. Available in custom limited color patterns for up to 70% less than foreign retail brands.',
+        bullets: [
+          'Authentic Toray T700 3K raw carbon skin with textured friction grit.',
+          '16mm honeycomb core provides generous sweet spot and effortless resets.',
+          'Includes Free AGASSI 40 Tournament Ball & Thermal Protective Paddle Case.'
+        ],
+        cartText: 'Add Boomstik to Cart • ₹5,500',
+        waText: "Hi The Paddle Store! I watched the Boomstik Showcase reel and want to order Boomstik Multi-Pattern (₹5,500).",
+        product: { name: 'Boomstik Carbon Flagship', price: 5500, img: 'public/assets/products/post_2.jpg', variant: '16mm Multi-Pattern' }
+      },
+      {
+        id: 'matchplay_action',
+        videoSrc: 'public/assets/videos/matchplay_action.mp4',
+        badge: '🎾 COURT MATCHPLAY',
+        tag: 'Live Game Atmosphere',
+        title: 'COURT MATCHPLAY & HIGH-OCTANE RALLIES',
+        desc: 'Experience the crisp crack of the ball meeting Toray T700 raw carbon. See how the paddle holds rock-solid stability during rapid kitchen firefights and drive resets.',
+        bullets: [
+          'Crisp acoustic pop on full swings with zero dead spots on the perimeter.',
+          'Balanced 8.0 oz swing weight for lightning-fast kitchen hand speed.',
+          'Tested across 1,000+ competitive matches in tournament court conditions.'
+        ],
+        cartText: 'Add Matchplay Paddle to Cart • ₹5,500',
+        waText: "Hi The Paddle Store! I watched the Matchplay reel and want to order Boomstik Carbon (₹5,500).",
+        product: { name: 'Boomstik Carbon Flagship', price: 5500, img: 'public/assets/products/post_2.jpg', variant: 'Matchplay Pro' }
+      },
+      {
+        id: 'boomstik_mini',
+        videoSrc: 'public/assets/videos/boomstik_mini.mp4',
+        badge: '⚡ BOOMSTIK MINI',
+        tag: 'Precision & Compact Speed',
+        title: 'BOOMSTIK MINI PRECISION EDITION (₹5,800)',
+        desc: 'Designed for players looking for increased hand agility and hyper-accurate sweet spot striking. Crafted with the exact same tournament-legal foam core construction.',
+        bullets: [
+          'Slightly condensed paddle face for blistering kitchen reload speed.',
+          'Full perimeter foam dampening and shock reduction unibody core.',
+          'Includes Free AGASSI 40 Tournament Ball & Thermal Protective Paddle Case.'
+        ],
+        cartText: 'Add Boomstik Mini to Cart • ₹5,800',
+        waText: "Hi The Paddle Store! I watched the Boomstik Mini reel and want to order Boomstik Mini Precision (₹5,800).",
+        product: { name: 'Boomstik Mini Precision Edition', price: 5800, img: 'public/assets/products/post_10.jpg', variant: 'Compact Precision' }
+      },
+      {
+        id: 'festive_offers',
+        videoSrc: 'public/assets/videos/festive_offers.mp4',
+        badge: '🎉 FESTIVE SPECIAL',
+        tag: 'Limited Drop Specials',
+        title: 'DIWALI & FESTIVE MEGA SALE (UP TO 40% OFF)',
+        desc: 'Grab your tournament-level paddles at festive rates. Limited inventory drops across Agassi V, OMNI, Kevlar, and Perseus series with free PAN-India shipping.',
+        bullets: [
+          'Agassi V at ₹4,500 (Reg ₹5,000) • Agassi V Limited at ₹4,700.',
+          'Kevlar Hybrid at ₹5,000 (Reg ₹6,000) • Tesla Series at ₹5,000.',
+          'Every order includes Free AGASSI 40 Ball + Thermal Paddle Case.'
+        ],
+        cartText: 'Add Agassi V to Cart • ₹4,500',
+        waText: "Hi The Paddle Store! I watched the Festive Sale reel and want to order Agassi V (₹4,500).",
+        product: { name: 'Agassi V Tournament Touch', price: 4500, img: 'public/assets/products/post_5_c_1.jpg', variant: 'Festive Special' }
+      }
+    ];
+
+    let currentReelIndex = 0;
+
+    function switchReel(index) {
+      if (index < 0 || index >= REELS.length) return;
+      currentReelIndex = index;
+      const data = REELS[index];
+
+      // Switch & Play Video
+      const mainVideo = document.getElementById('main-active-video');
+      if (mainVideo) {
+        mainVideo.src = data.videoSrc;
+        mainVideo.load();
+        mainVideo.play().catch(e => console.log('Autoplay caught:', e));
+      }
+
+      // Update Badges & Titles
+      const badgeEl = document.getElementById('reel-badge');
+      if (badgeEl) badgeEl.textContent = data.badge;
+
+      const overlayTitle = document.getElementById('reel-title-overlay');
+      if (overlayTitle) overlayTitle.textContent = data.title;
+
+      const tagEl = document.getElementById('reel-model-tag');
+      if (tagEl) tagEl.textContent = data.tag;
+
+      const titleEl = document.getElementById('reel-narrative-title');
+      if (titleEl) titleEl.textContent = data.title;
+
+      const descEl = document.getElementById('reel-narrative-desc');
+      if (descEl) descEl.textContent = data.desc;
+
+      // Update Bullets
+      const bulletsContainer = document.getElementById('reel-bullets');
+      if (bulletsContainer && data.bullets) {
+        bulletsContainer.innerHTML = data.bullets.map(b => `
+          <div class="flex items-start gap-2.5">
+            <span class="text-[#F2DA91] text-sm font-bold">✓</span>
+            <span>${b}</span>
+          </div>
+        `).join('');
+      }
+
+      // Update Cart Button
+      const cartBtnText = document.getElementById('reel-cart-btn-text');
+      if (cartBtnText) cartBtnText.textContent = data.cartText;
+
+      // Update WhatsApp Link
+      const waBtn = document.getElementById('reel-whatsapp-btn');
+      if (waBtn) {
+        waBtn.href = `https://wa.me/919518241474?text=${encodeURIComponent(data.waText)}`;
+      }
+
+      // Update Active Tab Styling
+      const tabs = document.querySelectorAll('.reel-tab-btn');
+      tabs.forEach((tab, i) => {
+        if (i === index) {
+          tab.className = 'reel-tab-btn active shrink-0 px-4 py-2 rounded-full text-xs font-extrabold border border-[#F2DA91] bg-[#F2DA91] text-black shadow-md transition-all';
+        } else {
+          tab.className = 'reel-tab-btn shrink-0 px-4 py-2 rounded-full text-xs font-extrabold border border-zinc-700 bg-zinc-900 text-zinc-300 hover:border-[#F2DA91] hover:text-white transition-all';
+        }
+      });
+    }
+
+    function toggleMainVideoPlay() {
+      const mainVideo = document.getElementById('main-active-video');
+      if (mainVideo) {
+        if (mainVideo.paused) mainVideo.play();
+        else mainVideo.pause();
       }
     }
 
-    function toggleReelAudio(idx) {
-      const vid = document.getElementById(`reel-vid-${idx}`);
-      const icon = document.getElementById(`reel-sound-icon-${idx}`);
-      if (vid) {
-        vid.muted = !vid.muted;
-        if (icon) icon.textContent = vid.muted ? '🔇' : '🔊';
-        showToast(vid.muted ? 'Reel muted' : 'Reel audio unmuted 🔊');
+    function toggleMainVideoSound() {
+      const mainVideo = document.getElementById('main-active-video');
+      const icon = document.getElementById('sound-icon');
+      if (mainVideo) {
+        mainVideo.muted = !mainVideo.muted;
+        if (icon) icon.textContent = mainVideo.muted ? '🔇' : '🔊';
+        showToast(mainVideo.muted ? 'Video muted' : 'Audio unmuted 🔊');
       }
     }
 
-    function scrollReelsTrack(direction) {
-      const track = document.getElementById('reels-track');
-      if (track) {
-        track.scrollBy({ left: direction * 320, behavior: 'smooth' });
-      }
+    function addCurrentReelProductToCart() {
+      const p = REELS[currentReelIndex].product;
+      addToCart(p.name, p.price, p.img, p.variant);
     }
 
     // Hero Section Image / Video Switcher
