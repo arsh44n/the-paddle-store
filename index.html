@@ -1367,13 +1367,13 @@
   <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-brand-card border-l border-zinc-800 z-50 transform translate-x-full transition-transform duration-300 flex flex-col justify-between shadow-2xl">
     
     <!-- Drawer Header -->
-    <div class="p-6 border-b border-zinc-800 flex items-center justify-between">
+    <div class="p-5 border-b border-zinc-800 flex items-center justify-between">
       <div class="flex items-center space-x-2">
         <svg class="w-5 h-5 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-        <span class="heading-font text-2xl text-white tracking-wide">YOUR GEAR CART</span>
+        <span id="drawer-header-title" class="heading-font text-2xl text-white tracking-wide">YOUR GEAR CART</span>
         <span id="drawer-item-count" class="text-xs px-2 py-0.5 rounded-full bg-zinc-800 text-zinc-300 font-bold">0</span>
       </div>
-      <button onclick="closeCart()" class="p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800">
+      <button onclick="closeCart()" class="p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
       </button>
     </div>
@@ -1387,52 +1387,145 @@
       <span class="text-brand-green font-bold text-[11px]">ACTIVE</span>
     </div>
 
-    <!-- Items Scroll Area -->
-    <div id="cart-items-container" class="flex-1 overflow-y-auto p-6 space-y-4 no-scrollbar">
-      <!-- Injected by JavaScript -->
-      <div id="cart-empty-message" class="text-center py-16 space-y-3">
-        <div class="text-4xl">🏓</div>
-        <div class="text-zinc-400 text-sm">Your cart is currently empty.</div>
-        <button onclick="closeCart()" class="text-xs text-brand-orange font-bold hover:underline">
-          Browse Tournament Gear →
+    <!-- VIEW 1: CART ITEMS VIEW -->
+    <div id="cart-view-items" class="flex-1 flex flex-col justify-between overflow-hidden">
+      <!-- Items Scroll Area -->
+      <div id="cart-items-container" class="flex-1 overflow-y-auto p-5 space-y-3.5 no-scrollbar">
+        <!-- Injected by JavaScript -->
+        <div id="cart-empty-message" class="text-center py-16 space-y-3">
+          <div class="text-4xl">🏓</div>
+          <div class="text-zinc-400 text-sm">Your cart is currently empty.</div>
+          <button onclick="closeCart()" class="text-xs text-brand-orange font-bold hover:underline">
+            Browse Tournament Gear →
+          </button>
+        </div>
+      </div>
+
+      <!-- Freebies Reminder inside Cart -->
+      <div class="px-5 py-2 bg-orange-950/20 border-t border-brand-orange/20 text-[11px] text-amber-300 flex items-center gap-1.5">
+        <span>🎁</span>
+        <span>Paddles include 1x Free AGASSI 40 Ball + Thermal Cover!</span>
+      </div>
+
+      <!-- Drawer Footer: Subtotal & Proceed Button -->
+      <div class="p-5 border-t border-zinc-800 bg-zinc-950/90 space-y-3.5">
+        <div class="space-y-1.5 text-sm">
+          <div class="flex justify-between text-zinc-400 text-xs">
+            <span>Subtotal</span>
+            <span id="cart-subtotal-text" class="text-white font-bold">₹0</span>
+          </div>
+          <div class="flex justify-between text-zinc-400 text-xs">
+            <span>PAN-India Express Shipping</span>
+            <span class="text-brand-green font-bold">FREE</span>
+          </div>
+          <div class="flex justify-between text-base font-black text-white pt-2 border-t border-zinc-800">
+            <span>Total Payable</span>
+            <span id="cart-total-text" class="text-brand-orange">₹0</span>
+          </div>
+        </div>
+
+        <!-- Proceed to Checkout Button -->
+        <button id="cart-proceed-btn" onclick="goToCheckoutDetails()" class="w-full py-4 rounded-xl bg-brand-orange text-black font-extrabold text-sm tracking-wide hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-2 shadow-lg shadow-orange-500/20 active:scale-[0.99]">
+          <span>PROCEED TO CHECKOUT</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </button>
+
+        <button onclick="clearCart()" class="w-full text-center text-[11px] text-zinc-500 hover:text-zinc-300 transition-colors">
+          Empty Cart
         </button>
       </div>
     </div>
 
-    <!-- Freebies Reminder inside Cart -->
-    <div class="px-6 py-2 bg-orange-950/20 border-t border-brand-orange/20 text-[11px] text-amber-300 flex items-center gap-1.5">
-      <span>🎁</span>
-      <span>Paddles include 1x Free AGASSI 40 Ball + Thermal Cover!</span>
-    </div>
+    <!-- VIEW 2: CUSTOMER DETAILS & WHATSAPP CHECKOUT VIEW -->
+    <div id="cart-view-checkout" class="flex-1 flex flex-col justify-between overflow-hidden hidden">
+      <!-- Scrollable Form Area -->
+      <div class="flex-1 overflow-y-auto p-5 space-y-4 no-scrollbar">
+        <!-- Back Button & Order Mini Summary -->
+        <div class="flex items-center justify-between pb-2 border-b border-zinc-800">
+          <button onclick="backToCartItems()" class="inline-flex items-center gap-1.5 text-xs text-brand-orange hover:text-white font-bold transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+            <span>Back to Items</span>
+          </button>
+          <span id="checkout-mini-summary" class="text-xs font-bold text-zinc-400">Total: <strong class="text-brand-orange" id="checkout-summary-total">₹0</strong></span>
+        </div>
 
-    <!-- Drawer Footer & WhatsApp Checkout Encoder -->
-    <div class="p-6 border-t border-zinc-800 bg-zinc-950/90 space-y-4">
-      
-      <div class="space-y-1.5 text-sm">
-        <div class="flex justify-between text-zinc-400 text-xs">
-          <span>Subtotal</span>
-          <span id="cart-subtotal-text" class="text-white font-bold">₹0</span>
+        <div class="space-y-1">
+          <h4 class="text-sm font-black text-white tracking-wide uppercase">Shipping & Customer Details</h4>
+          <p class="text-[11px] text-zinc-400">Enter your delivery info to confirm and generate your order on WhatsApp.</p>
         </div>
-        <div class="flex justify-between text-zinc-400 text-xs">
-          <span>PAN-India Courier</span>
-          <span class="text-brand-green font-bold">FREE</span>
+
+        <!-- Customer Name Input -->
+        <div>
+          <label for="cust-name" class="block text-[11px] font-bold text-zinc-300 uppercase tracking-wider mb-1">Full Name <span class="text-brand-orange">*</span></label>
+          <input id="cust-name" type="text" placeholder="e.g. Rahul Sharma" autocomplete="name" required class="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-xs placeholder-zinc-500 focus:border-brand-orange focus:outline-none transition-colors">
+          <span id="err-cust-name" class="text-[10px] text-red-400 hidden mt-1 block">Please enter your name</span>
         </div>
-        <div class="flex justify-between text-base font-black text-white pt-2 border-t border-zinc-800">
-          <span>Total Payable</span>
-          <span id="cart-total-text" class="text-brand-orange">₹0</span>
+
+        <!-- Delivery Address Input -->
+        <div>
+          <label for="cust-address" class="block text-[11px] font-bold text-zinc-300 uppercase tracking-wider mb-1">Delivery Address <span class="text-brand-orange">*</span></label>
+          <textarea id="cust-address" rows="2" placeholder="Flat / House No., Building, Street, Landmark" autocomplete="street-address" required class="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-xs placeholder-zinc-500 focus:border-brand-orange focus:outline-none transition-colors resize-none"></textarea>
+          <span id="err-cust-address" class="text-[10px] text-red-400 hidden mt-1 block">Please enter your delivery address</span>
         </div>
+
+        <!-- City and PIN Code 2-Col Grid -->
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label for="cust-city" class="block text-[11px] font-bold text-zinc-300 uppercase tracking-wider mb-1">City <span class="text-brand-orange">*</span></label>
+            <input id="cust-city" type="text" placeholder="e.g. Mumbai" autocomplete="address-level2" required class="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-xs placeholder-zinc-500 focus:border-brand-orange focus:outline-none transition-colors">
+            <span id="err-cust-city" class="text-[10px] text-red-400 hidden mt-1 block">Please enter your city</span>
+          </div>
+          <div>
+            <label for="cust-pincode" class="block text-[11px] font-bold text-zinc-300 uppercase tracking-wider mb-1">PIN Code <span class="text-brand-orange">*</span></label>
+            <input id="cust-pincode" type="text" placeholder="6-digit PIN" maxlength="6" autocomplete="postal-code" required class="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-xs placeholder-zinc-500 focus:border-brand-orange focus:outline-none transition-colors">
+            <span id="err-cust-pincode" class="text-[10px] text-red-400 hidden mt-1 block">Enter valid 6-digit PIN</span>
+          </div>
+        </div>
+
+        <!-- Payment Mode Selection -->
+        <div>
+          <label class="block text-[11px] font-bold text-zinc-300 uppercase tracking-wider mb-1.5">Select Payment Mode <span class="text-brand-orange">*</span></label>
+          <div class="grid grid-cols-2 gap-2.5">
+            <!-- Payment Option: COD -->
+            <div id="payment-card-cod" onclick="selectPaymentMode('Cash on Delivery (COD)')" class="payment-card relative flex flex-col p-3 rounded-xl border border-zinc-700 bg-zinc-900/80 cursor-pointer hover:border-zinc-500 transition-all">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-base">💵</span>
+                <span id="check-icon-cod" class="w-4 h-4 rounded-full border border-zinc-600 flex items-center justify-center text-[10px] font-bold text-transparent">✓</span>
+              </div>
+              <span class="text-xs font-bold text-white">Cash on Delivery</span>
+              <span class="text-[10px] text-zinc-400 mt-0.5">Pay at doorstep</span>
+            </div>
+
+            <!-- Payment Option: UPI -->
+            <div id="payment-card-upi" onclick="selectPaymentMode('UPI / Online Payment')" class="payment-card relative flex flex-col p-3 rounded-xl border border-brand-green bg-brand-green/10 cursor-pointer transition-all">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-base">⚡</span>
+                <span id="check-icon-upi" class="w-4 h-4 rounded-full border border-brand-green bg-brand-green text-black flex items-center justify-center text-[10px] font-black">✓</span>
+              </div>
+              <span class="text-xs font-bold text-white">UPI / Online</span>
+              <span class="text-[10px] text-zinc-400 mt-0.5">GPay / PhonePe / QR</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reassurance Badge -->
+        <div class="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 text-[11px] text-zinc-400 space-y-1">
+          <div class="flex items-center gap-1.5 text-zinc-300 font-semibold">
+            <span>🛡️</span>
+            <span>Direct Pro-Desk Order Transmission</span>
+          </div>
+          <div>Your order with complete delivery instructions will be generated directly in WhatsApp for instant verification and dispatch scheduling.</div>
+        </div>
+
       </div>
 
-      <!-- 1-Click WhatsApp Checkout Encoder Button -->
-      <button id="cart-whatsapp-checkout-btn" onclick="checkoutViaWhatsApp()" class="w-full py-4 rounded-xl bg-brand-green text-black font-extrabold text-sm tracking-wide hover:bg-brand-greenHover transition-all flex items-center justify-center gap-2 shadow-lg shadow-green-500/20">
-        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-        <span>CHECKOUT ON WHATSAPP (1-CLICK)</span>
-      </button>
-
-      <button onclick="clearCart()" class="w-full text-center text-[11px] text-zinc-500 hover:text-zinc-300 transition-colors">
-        Empty Cart
-      </button>
-
+      <!-- Checkout Footer: WhatsApp Order Trigger -->
+      <div class="p-5 border-t border-zinc-800 bg-zinc-950/90 space-y-3">
+        <button id="cart-whatsapp-checkout-btn" onclick="submitWhatsAppOrder()" class="w-full py-4 rounded-xl bg-brand-green text-black font-extrabold text-sm tracking-wide hover:bg-brand-greenHover transition-all flex items-center justify-center gap-2 shadow-lg shadow-green-500/25 active:scale-[0.99]">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <span>SEND ORDER ON WHATSAPP</span>
+        </button>
+      </div>
     </div>
 
   </aside>
@@ -1800,7 +1893,61 @@
     // ----------------------------------------------------
     let cart = [];
 
+    let selectedPaymentMode = 'UPI / Online Payment';
+
+    function selectPaymentMode(mode) {
+      selectedPaymentMode = mode;
+      const codCard = document.getElementById('payment-card-cod');
+      const upiCard = document.getElementById('payment-card-upi');
+      const codCheck = document.getElementById('check-icon-cod');
+      const upiCheck = document.getElementById('check-icon-upi');
+
+      if (mode === 'Cash on Delivery (COD)') {
+        codCard.className = 'payment-card relative flex flex-col p-3 rounded-xl border border-brand-green bg-brand-green/10 cursor-pointer transition-all';
+        upiCard.className = 'payment-card relative flex flex-col p-3 rounded-xl border border-zinc-700 bg-zinc-900/80 cursor-pointer hover:border-zinc-500 transition-all';
+        codCheck.className = 'w-4 h-4 rounded-full border border-brand-green bg-brand-green text-black flex items-center justify-center text-[10px] font-black';
+        upiCheck.className = 'w-4 h-4 rounded-full border border-zinc-600 flex items-center justify-center text-[10px] font-bold text-transparent';
+      } else {
+        upiCard.className = 'payment-card relative flex flex-col p-3 rounded-xl border border-brand-green bg-brand-green/10 cursor-pointer transition-all';
+        codCard.className = 'payment-card relative flex flex-col p-3 rounded-xl border border-zinc-700 bg-zinc-900/80 cursor-pointer hover:border-zinc-500 transition-all';
+        upiCheck.className = 'w-4 h-4 rounded-full border border-brand-green bg-brand-green text-black flex items-center justify-center text-[10px] font-black';
+        codCheck.className = 'w-4 h-4 rounded-full border border-zinc-600 flex items-center justify-center text-[10px] font-bold text-transparent';
+      }
+    }
+
+    function goToCheckoutDetails() {
+      if (cart.length === 0) {
+        showToast('Your cart is empty! Add products first.');
+        return;
+      }
+
+      document.getElementById('cart-view-items').classList.add('hidden');
+      document.getElementById('cart-view-checkout').classList.remove('hidden');
+      document.getElementById('drawer-header-title').textContent = 'CHECKOUT DETAILS';
+      document.getElementById('checkout-summary-total').textContent = document.getElementById('cart-total-text').textContent;
+
+      // Auto-load saved info from localStorage
+      try {
+        const saved = JSON.parse(localStorage.getItem('the_paddle_store_customer') || '{}');
+        if (saved.name) document.getElementById('cust-name').value = saved.name;
+        if (saved.address) document.getElementById('cust-address').value = saved.address;
+        if (saved.city) document.getElementById('cust-city').value = saved.city;
+        if (saved.pincode) document.getElementById('cust-pincode').value = saved.pincode;
+        if (saved.payment) selectPaymentMode(saved.payment);
+        else selectPaymentMode('UPI / Online Payment');
+      } catch (e) {
+        selectPaymentMode('UPI / Online Payment');
+      }
+    }
+
+    function backToCartItems() {
+      document.getElementById('cart-view-checkout').classList.add('hidden');
+      document.getElementById('cart-view-items').classList.remove('hidden');
+      document.getElementById('drawer-header-title').textContent = 'YOUR GEAR CART';
+    }
+
     function openCart() {
+      backToCartItems();
       const drawer = document.getElementById('cart-drawer');
       const overlay = document.getElementById('cart-drawer-overlay');
       overlay.classList.remove('hidden');
@@ -1854,6 +2001,7 @@
       cart = [];
       updateCartBadge();
       renderCart();
+      backToCartItems();
       showToast('Cart emptied');
     }
 
@@ -1906,11 +2054,69 @@
       document.getElementById('cart-total-text').textContent = `₹${subtotal.toLocaleString('en-IN')}`;
     }
 
-    function checkoutViaWhatsApp() {
+    function submitWhatsAppOrder() {
       if (cart.length === 0) {
         showToast('Your cart is empty!');
+        backToCartItems();
         return;
       }
+
+      const nameInput = document.getElementById('cust-name');
+      const addressInput = document.getElementById('cust-address');
+      const cityInput = document.getElementById('cust-city');
+      const pincodeInput = document.getElementById('cust-pincode');
+
+      const name = nameInput.value.trim();
+      const address = addressInput.value.trim();
+      const city = cityInput.value.trim();
+      const pincode = pincodeInput.value.trim();
+
+      // Reset error styling
+      [nameInput, addressInput, cityInput, pincodeInput].forEach(inp => {
+        inp.classList.remove('border-red-500');
+      });
+      ['err-cust-name', 'err-cust-address', 'err-cust-city', 'err-cust-pincode'].forEach(id => {
+        document.getElementById(id).classList.add('hidden');
+      });
+
+      if (!name) {
+        nameInput.classList.add('border-red-500');
+        document.getElementById('err-cust-name').classList.remove('hidden');
+        nameInput.focus();
+        showToast('Please enter your full name');
+        return;
+      }
+
+      if (!address) {
+        addressInput.classList.add('border-red-500');
+        document.getElementById('err-cust-address').classList.remove('hidden');
+        addressInput.focus();
+        showToast('Please enter your delivery address');
+        return;
+      }
+
+      if (!city) {
+        cityInput.classList.add('border-red-500');
+        document.getElementById('err-cust-city').classList.remove('hidden');
+        cityInput.focus();
+        showToast('Please enter your city');
+        return;
+      }
+
+      if (!pincode || pincode.length < 6) {
+        pincodeInput.classList.add('border-red-500');
+        document.getElementById('err-cust-pincode').classList.remove('hidden');
+        pincodeInput.focus();
+        showToast('Please enter a valid 6-digit PIN code');
+        return;
+      }
+
+      // Save customer details to localStorage for convenience
+      try {
+        localStorage.setItem('the_paddle_store_customer', JSON.stringify({
+          name, address, city, pincode, payment: selectedPaymentMode
+        }));
+      } catch (e) {}
 
       let subtotal = 0;
       let itemsList = '';
@@ -1925,24 +2131,29 @@
         }
       });
 
-      let freebiesText = hasPaddles ? '🎁 Included Free: 1x AGASSI 40 Tournament Ball + 1x Thermal Paddle Case per paddle!\n' : '';
+      let freebiesText = hasPaddles ? '🎁 *Complimentary Freebies Included:*\n1x AGASSI 40 Tournament Ball + 1x Thermal Paddle Case per paddle!\n\n' : '';
 
-      const message = `🏓 *ORDER INQUIRY - THE PADDLE STORE*\n\n` +
+      const message = `🏓 *NEW ORDER - THE PADDLE STORE*\n\n` +
         `Hello! I would like to place an order for the following gear:\n\n` +
         `${itemsList}\n` +
         `*Total Order Amount:* ₹${subtotal.toLocaleString('en-IN')}\n` +
-        `*Shipping:* FREE Pan-India Express Delivery\n` +
-        `${freebiesText}\n` +
-        `*Customer Details:*\n` +
-        `• Name: \n` +
-        `• Delivery Address: \n` +
-        `• City & Pincode: \n` +
-        `• Payment Mode: [Cash On Delivery (COD) / UPI]\n\n` +
+        `*Shipping:* FREE Pan-India Express Delivery\n\n` +
+        `${freebiesText}` +
+        `📦 *Customer & Delivery Details:*\n` +
+        `• *Customer Name:* ${name}\n` +
+        `• *Delivery Address:* ${address}\n` +
+        `• *City & Pincode:* ${city} - ${pincode}\n` +
+        `• *Payment Mode:* ${selectedPaymentMode}\n\n` +
         `Please confirm order availability and dispatch time. Thank you!`;
 
       const encoded = encodeURIComponent(message);
       const whatsappUrl = `https://wa.me/919518241474?text=${encoded}`;
       window.open(whatsappUrl, '_blank');
+      showToast('Order details transmitted to WhatsApp!');
+    }
+
+    function checkoutViaWhatsApp() {
+      goToCheckoutDetails();
     }
 
     // ----------------------------------------------------
